@@ -1,0 +1,2926 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A curated list of awesome IT projects and resources. Inspired by the awesome list.">
+      
+      
+        <link rel="canonical" href="https://redhatspain.com/python/">
+      
+      
+        <meta name="author" content="info@redhatspain.com">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Python - Django & Flask - Awesome Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../static/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-168051035-1","redhatspain.com"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-header-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Awesome Kubernetes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Python - Django & Flask
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Awesome Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes" class="md-nav__link">
+      From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="Microservices FAQ & Kubernetes Native" class="md-nav__link">
+      Microservices FAQ & Kubernetes Native
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sre/" title="Site Reliability Engineering (SRE)" class="md-nav__link">
+      Site Reliability Engineering (SRE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="DevOps" class="md-nav__link">
+      DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cheatsheets/" title="Cheat Sheets" class="md-nav__link">
+      Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gitops/" title="GitOps" class="md-nav__link">
+      GitOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mlops/" title="MLOps" class="md-nav__link">
+      MLOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../demos/" title="Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more" class="md-nav__link">
+      Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Security and DevSecOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Security and DevSecOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Security and DevSecOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devsecops/" title="DevSecOps. Container Security" class="md-nav__link">
+      DevSecOps. Container Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securityascode/" title="Security Policy as Code" class="md-nav__link">
+      Security Policy as Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      NoOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="NoOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        NoOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../noops/" title="NoOps" class="md-nav__link">
+      NoOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finops/" title="FinOps - Cloud Financial Management" class="md-nav__link">
+      FinOps - Cloud Financial Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TestOps and Continuous Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestOps and Continuous Testing" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestOps and Continuous Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testops/" title="TestOps and Continuous Testing" class="md-nav__link">
+      TestOps and Continuous Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qa/" title="QA" class="md-nav__link">
+      QA
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Project Management Methodology
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Project Management Methodology" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Project Management Methodology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-methodology/" title="Project Management Methodology" class="md-nav__link">
+      Project Management Methodology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-tools/" title="Project Management Tools" class="md-nav__link">
+      Project Management Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appointment-scheduling/" title="Appointment Scheduling" class="md-nav__link">
+      Appointment Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../workfromhome/" title="Work From Home" class="md-nav__link">
+      Work From Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-tools/" title="Kubernetes Tools" class="md-nav__link">
+      Kubernetes Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rancher/" title="Rancher - Enterprise management for Kubernetes" class="md-nav__link">
+      Rancher - Enterprise management for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrix-table/" title="Kubernetes Matrix Table" class="md-nav__link">
+      Kubernetes Matrix Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-alternatives/" title="Kubernetes alternatives" class="md-nav__link">
+      Kubernetes alternatives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      OpenShift
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenShift" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        OpenShift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift/" title="OpenShift docs" class="md-nav__link">
+      OpenShift docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ocp3/" title="OCP 3" class="md-nav__link">
+      OCP 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ocp4/" title="OCP 4" class="md-nav__link">
+      OCP 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customer/" title="Customer Success Stories" class="md-nav__link">
+      Customer Success Stories
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Delivery Pipeline
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software Delivery Pipeline" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software Delivery Pipeline
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd/" title="CI/CD - Continuous Integration & Continuous Delivery" class="md-nav__link">
+      CI/CD - Continuous Integration & Continuous Delivery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git/" title="Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs" class="md-nav__link">
+      Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins/" title="Jenkins & Cloudbees" class="md-nav__link">
+      Jenkins & Cloudbees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift-pipelines/" title="OpenShift Pipelines with Jenkins, Tekton and more..." class="md-nav__link">
+      OpenShift Pipelines with Jenkins, Tekton and more...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../performance-testing-with-jenkins-and-jmeter/" title="Performance testing with Jenkins and JMeter or Gatling" class="md-nav__link">
+      Performance testing with Jenkins and JMeter or Gatling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins-alternatives/" title="Jenkins Alternatives for Continuous Integration" class="md-nav__link">
+      Jenkins Alternatives for Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-7" type="checkbox" id="nav-14-7">
+    
+    <label class="md-nav__link" for="nav-14-7">
+      Toolchain
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Toolchain" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Toolchain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container-managers/" title="Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo" class="md-nav__link">
+      Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maven-gradle/" title="Maven, Gradle & SDKMAN" class="md-nav__link">
+      Maven, Gradle & SDKMAN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sonarqube/" title="SonarQube" class="md-nav__link">
+      SonarQube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nexus-jfrog/" title="Nexus & JFrog Artifactory" class="md-nav__link">
+      Nexus & JFrog Artifactory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selenium-appium-zephyr/" title="Selenium, Cucumber, Appium & Zephyr Jira plugin" class="md-nav__link">
+      Selenium, Cucumber, Appium & Zephyr Jira plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux/" title="Linux & SSH" class="md-nav__link">
+      Linux & SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="MkDocs & GitHub Pages" class="md-nav__link">
+      MkDocs & GitHub Pages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-8" type="checkbox" id="nav-14-8">
+    
+    <label class="md-nav__link" for="nav-14-8">
+      Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web-servers/" title="Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more" class="md-nav__link">
+      Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_app_servers/" title="Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more" class="md-nav__link">
+      Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedded-servlet-containers/" title="Embedded Servlet Containers in SpringBoot" class="md-nav__link">
+      Embedded Servlet Containers in SpringBoot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../caching/" title="Caching Solutions" class="md-nav__link">
+      Caching Solutions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../monitoring/" title="Monitoring and Performance. Prometheus, Grafana, APMs and more" class="md-nav__link">
+      Monitoring and Performance. Prometheus, Grafana, APMs and more
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Configuration Management
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration Management" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argocd/" title="Argo CD - Declarative GitOps for Kubernetes" class="md-nav__link">
+      Argo CD - Declarative GitOps for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chef/" title="Chef" class="md-nav__link">
+      Chef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd-kubernetes-plugins/" title="CI/CD Kubernetes Plugins" class="md-nav__link">
+      CI/CD Kubernetes Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-client-libraries/" title="Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube" class="md-nav__link">
+      Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helm/" title="Helm Kubernetes Tool" class="md-nav__link">
+      Helm Kubernetes Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquibase/" title="Liquibase & Flyway" class="md-nav__link">
+      Liquibase & Flyway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kustomize/" title="Template-Free Kubernetes Configuration Customization with Kustomize" class="md-nav__link">
+      Template-Free Kubernetes Configuration Customization with Kustomize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yaml/" title="Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files" class="md-nav__link">
+      Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Infrastructure Management Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure Management Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Infrastructure Management Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iac/" title="IaC Infrastructure as Code" class="md-nav__link">
+      IaC Infrastructure as Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pulumi/" title="Pulumi" class="md-nav__link">
+      Pulumi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terraform/" title="Terraform & Packer" class="md-nav__link">
+      Terraform & Packer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      Databases on Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Databases on Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Databases on Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../databases/" title="Relational Databases and Database DevOps. CrunchyData Postgres Operator" class="md-nav__link">
+      Relational Databases and Database DevOps. CrunchyData Postgres Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nosql/" title="NoSQL Databases" class="md-nav__link">
+      NoSQL Databases
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../message-queue/" title="Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)" class="md-nav__link">
+      Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Service Mesh
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Service Mesh" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Service Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../servicemesh/" title="Service Mesh" class="md-nav__link">
+      Service Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../istio/" title="Istio" class="md-nav__link">
+      Istio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../storage/" title="Cloud Native Storage" class="md-nav__link">
+      Cloud Native Storage
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-22" type="checkbox" id="nav-22">
+    
+    <label class="md-nav__link" for="nav-22">
+      APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-22">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="APIs with SOAP, REST and gRPC" class="md-nav__link">
+      APIs with SOAP, REST and gRPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swagger-code-generator-for-rest-apis/" title="Swagger code generator for REST APIs" class="md-nav__link">
+      Swagger code generator for REST APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postman/" title="API Test Automation with Postman" class="md-nav__link">
+      API Test Automation with Postman
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developerportals/" title="API Marketplaces. API Management with API Gateways & Developer Portals" class="md-nav__link">
+      API Marketplaces. API Management with API Gateways & Developer Portals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23" type="checkbox" id="nav-23" checked>
+    
+    <label class="md-nav__link" for="nav-23">
+      Development & Frameworks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development & Frameworks" data-md-level="1">
+      <label class="md-nav__title" for="nav-23">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development & Frameworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../angular/" title="Angular" class="md-nav__link">
+      Angular
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dom/" title="Document Object Model (DOM)" class="md-nav__link">
+      Document Object Model (DOM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../golang/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript/" title="JavaScript - node.js & npm" class="md-nav__link">
+      JavaScript - node.js & npm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Python - Django & Flask
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Python - Django & Flask" class="md-nav__link md-nav__link--active">
+      Python - Django & Flask
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-blogs-and-forums" class="md-nav__link">
+    Python Blogs and Forums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-docs" class="md-nav__link">
+    Python docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-books" class="md-nav__link">
+    Python Books
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-django-framework" class="md-nav__link">
+    Python Django Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-flask-lightweight-framework-microframework" class="md-nav__link">
+    Python Flask Lightweight Framework (microframework)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    FastAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-pip-and-pips-wheel" class="md-nav__link">
+    Python pip and pip's wheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-feature-flags" class="md-nav__link">
+    Python Feature Flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-testing" class="md-nav__link">
+    Python testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-science" class="md-nav__link">
+    Data Science.
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Science.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-pandas-and-pivot-tables" class="md-nav__link">
+    Python Pandas and pivot tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandasdatabase" class="md-nav__link">
+    PandasDatabase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    NumPy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-standard-library-modules-and-code" class="md-nav__link">
+    Python standard library Modules and Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-and-aws" class="md-nav__link">
+    Python and AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-tools" class="md-nav__link">
+    Python Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-scraping-with-python" class="md-nav__link">
+    Web Scraping with Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jython" class="md-nav__link">
+    Jython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eclipse-ide" class="md-nav__link">
+    Eclipse IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-libraries" class="md-nav__link">
+    Python Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-snippets" class="md-nav__link">
+    Python Snippets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devel-sites/" title="Websites for web developers" class="md-nav__link">
+      Websites for web developers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-8" type="checkbox" id="nav-23-8">
+    
+    <label class="md-nav__link" for="nav-23-8">
+      Java
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Java" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_frameworks/" title="Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more" class="md-nav__link">
+      Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java-and-java-performance-optimization/" title="Java Memory Management & Java Performance Optimization" class="md-nav__link">
+      Java Memory Management & Java Performance Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jvm-parameters-matrix-table/" title="Java Parameters Matrix Table" class="md-nav__link">
+      Java Parameters Matrix Table
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-9" type="checkbox" id="nav-23-9">
+    
+    <label class="md-nav__link" for="nav-23-9">
+      Dev Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dev Environment" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Dev Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../visual-studio/" title="Visual Studio Code" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-dev-env/" title="WSL - Linux Dev Environment on Windows" class="md-nav__link">
+      WSL - Linux Dev Environment on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffolding/" title="Scaffolding Tools" class="md-nav__link">
+      Scaffolding Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ChromeDevTools/" title="Chrome & Firefox DevTools. HTTP Protocols & WebSockets" class="md-nav__link">
+      Chrome & Firefox DevTools. HTTP Protocols & WebSockets
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-24" type="checkbox" id="nav-24">
+    
+    <label class="md-nav__link" for="nav-24">
+      Public Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Public Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-24">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Public Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../public-cloud-solutions/" title="Public Cloud Solutions" class="md-nav__link">
+      Public Cloud Solutions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edge-computing/" title="Edge Computing" class="md-nav__link">
+      Edge Computing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-arch-diagrams/" title="Cloud Architecture Diagram Tools" class="md-nav__link">
+      Cloud Architecture Diagram Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GoogleCloudPlatform/" title="Google Cloud Platform" class="md-nav__link">
+      Google Cloud Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure/" title="Microsoft Azure" class="md-nav__link">
+      Microsoft Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ibm_cloud/" title="IBM & IBM Cloud" class="md-nav__link">
+      IBM & IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oraclecloud/" title="Oracle Cloud" class="md-nav__link">
+      Oracle Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../digitalocean/" title="Digital Ocean" class="md-nav__link">
+      Digital Ocean
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloudflare/" title="Cloudflare" class="md-nav__link">
+      Cloudflare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bigdata/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      More References
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="More References" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        More References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elearning/" title="E-Learning" class="md-nav__link">
+      E-Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../newsfeeds/" title="Subreddits" class="md-nav__link">
+      Subreddits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other-awesome-lists/" title="Other Awesome Lists" class="md-nav__link">
+      Other Awesome Lists
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Recruitment and Freelancing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Recruitment and Freelancing" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Recruitment and Freelancing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recruitment/" title="Recruitment" class="md-nav__link">
+      Recruitment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../freelancing/" title="Freelancing" class="md-nav__link">
+      Freelancing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../remote-tech-jobs/" title="Remote Tech Jobs" class="md-nav__link">
+      Remote Tech Jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#python-blogs-and-forums" class="md-nav__link">
+    Python Blogs and Forums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-docs" class="md-nav__link">
+    Python docs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-books" class="md-nav__link">
+    Python Books
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-django-framework" class="md-nav__link">
+    Python Django Framework
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-flask-lightweight-framework-microframework" class="md-nav__link">
+    Python Flask Lightweight Framework (microframework)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fastapi" class="md-nav__link">
+    FastAPI
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-pip-and-pips-wheel" class="md-nav__link">
+    Python pip and pip's wheel
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-feature-flags" class="md-nav__link">
+    Python Feature Flags
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-testing" class="md-nav__link">
+    Python testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-science" class="md-nav__link">
+    Data Science.
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Science.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#python-pandas-and-pivot-tables" class="md-nav__link">
+    Python Pandas and pivot tables
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pandasdatabase" class="md-nav__link">
+    PandasDatabase
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#numpy" class="md-nav__link">
+    NumPy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-standard-library-modules-and-code" class="md-nav__link">
+    Python standard library Modules and Code
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-and-aws" class="md-nav__link">
+    Python and AWS
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-tools" class="md-nav__link">
+    Python Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Python Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-scraping-with-python" class="md-nav__link">
+    Web Scraping with Python
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jython" class="md-nav__link">
+    Jython
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eclipse-ide" class="md-nav__link">
+    Eclipse IDE
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-libraries" class="md-nav__link">
+    Python Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-snippets" class="md-nav__link">
+    Python Snippets
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/redhatspain/awesome-kubernetes/edit/master/docs/python.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#python-blogs-and-forums">Python Blogs and Forums</a></li>
+<li><a href="#python-docs">Python docs</a></li>
+<li><a href="#python-books">Python Books</a></li>
+<li><a href="#python-django-framework">Python Django Framework</a></li>
+<li><a href="#python-flask-lightweight-framework-microframework">Python Flask Lightweight Framework (microframework)</a></li>
+<li><a href="#fastapi">FastAPI</a></li>
+<li><a href="#python-pip-and-pips-wheel">Python pip and pip&rsquo;s wheel</a></li>
+<li><a href="#python-feature-flags">Python Feature Flags</a></li>
+<li><a href="#python-testing">Python testing</a></li>
+<li><a href="#data-science">Data Science.</a><ul>
+<li><a href="#python-pandas-and-pivot-tables">Python Pandas and pivot tables</a></li>
+<li><a href="#pandasdatabase">PandasDatabase</a></li>
+<li><a href="#numpy">NumPy</a></li>
+</ul>
+</li>
+<li><a href="#python-standard-library-modules-and-code">Python standard library Modules and Code</a></li>
+<li><a href="#python-and-aws">Python and AWS</a></li>
+<li><a href="#python-tools">Python Tools</a><ul>
+<li><a href="#web-scraping-with-python">Web Scraping with Python</a></li>
+</ul>
+</li>
+<li><a href="#jython">Jython</a></li>
+<li><a href="#eclipse-ide">Eclipse IDE</a></li>
+<li><a href="#python-libraries">Python Libraries</a></li>
+<li><a href="#python-snippets">Python Snippets</a></li>
+</ul>
+<h2 id="python-blogs-and-forums">Python Blogs and Forums<a class="headerlink" href="#python-blogs-and-forums" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.digitalocean.com/community/tags/python">digitalocean.com python 🌟</a></li>
+<li><a href="https://www.reddit.com/r/learnpython">Learn Python &lsquo;subreddit&rsquo;</a><ul>
+<li><a href="https://www.reddit.com/r/learnpython/comments/3r2hsq/python_cheat_sheet/">reddit: python cheat sheet</a></li>
+</ul>
+</li>
+<li><a href="http://www.fullstackpython.com/">Full Stack Python is an open book that explains each Python web application stack layer and provides the best web resources for those topics</a><ul>
+<li><a href="http://www.fullstackpython.com/best-python-resources.html">Full Stack Python: Best Python Resources</a></li>
+</ul>
+</li>
+<li><a href="http://realpython.com">realpython.com</a></li>
+<li><a href="http://www.learnpython.org">LearnPython.org interactive Python tutorial</a></li>
+<li><a href="https://doughellmann.com">Dough Hellmann - Python, OpenStack and Open Source</a></li>
+<li><a href="http://docker-py.readthedocs.org">The docker-py repository: an API client for docker written in Python</a></li>
+<li><a href="https://github.com/vinta/awesome-python/">Awesome Python. A curated list of awesome Python frameworks, libraries and software</a></li>
+<li><a href="https://gitlab.com/rosarior/awesome-django">Awesome Django. A curated list of awesome Django apps, projects and resources</a></li>
+<li><a href="http://pyvideo.org">pyvideo.org</a></li>
+<li><a href="http://talkpython.fm">Talk Python To Me Podcast</a><ul>
+<li><a href="http://talkpython.fm/episodes/transcript/39/getting-your-first-dev-job-as-a-python-developer-part-1">Transcript for Episode #39: Getting your first dev job as a Python developer (part 1)</a></li>
+</ul>
+</li>
+<li><a href="https://blogs.msdn.microsoft.com/pythonengineering/">Microsoft: Python Engineering</a></li>
+<li><a href="http://www.blog.pythonlibrary.org/">blog.pythonlibrary.org 🌟</a></li>
+<li><a href="http://www.cyberciti.biz/faq/python-execute-unix-linux-command-examples/">nixCraft: Python Execute Unix/Linux Command Examples 🌟</a></li>
+<li><a href="https://fedoralovespython.org/">fedoralovespython.org 🌟</a></li>
+</ul>
+<h2 id="python-docs">Python docs<a class="headerlink" href="#python-docs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://stackoverflow.com/questions/2573135/python-progression-path-from-apprentice-to-guru">Python progression path - From apprentice to guru</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/3ylxmk/why_python/">reddit: Why Python</a></li>
+<li><a href="http://docs.quantifiedcode.com/python-code-patterns/">Python Anti-Patterns. The Little Book of Python Anti-Patterns and Worst Practice</a></li>
+<li><a href="http://staticnat.com/setting-up-python-on-osx/">Setting up Python on OSX: UPDATED</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PL6gx4Cwl9DGAcbMi1sH6oAMk4JHw91mC_">Python 3.4 Programming Tutorials - YouTube</a><ul>
+<li><a href="http://ai.berkeley.edu/tutorial.html#PythonBasics">Python mini-course</a></li>
+<li><a href="https://www.mysliderule.com/learning-paths/web-development-python-django/">Web Development using Python &amp; Django</a></li>
+<li><a href="http://www.tangowithdjango.com/">A beginner&rsquo;s guide to web development with Python 2.7 / Django 1.7</a></li>
+<li><a href="http://bugra.github.io/work/notes/2015-01-03/i-wish-i-knew-these-things-when-i-first-learned-python/">I wish I knew these things when I learned Python</a></li>
+<li><a href="http://migrateup.com/main-difference-python-3/">The Bottom-Line Single Main Difference Between Python 2 and 3</a></li>
+</ul>
+</li>
+<li><a href="https://www.codementor.io/python/tutorial/essential-python-interview-questions">15 Essential Python Interview Questions</a><ul>
+<li><a href="http://www.mypythonquiz.com/">Python mini-quiz</a></li>
+</ul>
+</li>
+<li><a href="http://www.vertabelo.com/blog/technical-articles/orms-under-the-hood">How do you handle the ORM problem? When do you say YES or NO to using ORM?</a></li>
+<li><a href="http://pyvideo.org/video/3460/dont-make-us-say-we-told-you-so-virtualenv-for">Don&rsquo;t Make Us Say We Told You So: virtualenv for New Pythonistas</a></li>
+<li><a href="http://www.commandlinefu.com/commands/view/17656/pip-install-into-current-directory-without-virtualenv">commandlinefu.com: pip install into current directory without virtualenv</a></li>
+<li><a href="http://blogs.perceptionsystem.com/infographic/java-vs-python-programming-language-productive">Java Vs. Python - Which Programming Language is More Productive? - Infographic</a></li>
+<li><a href="http://talkpython.fm/episodes/show/36/python-ides-with-the-pycharm-team">Talk Python To Me Podcast. Episode #36: Python IDEs with the PyCharm team</a></li>
+<li><a href="http://blog.rtwilson.com/my-top-5-new-python-modules-of-2015/">My top 5 ‘new’ Python modules of 2015</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/3yg2u4/modules_every_python_developer_should_know/">reddit.com: Modules every python developer should know</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/3yjlim/my_thoughts_about_moving_from_python_27_to_python/">reddit.com: My thoughts about moving from Python 2.7 to Python 3.x</a></li>
+<li><a href="http://www.snarky.ca/why-python-3-exists">Why Python 3 exists</a></li>
+<li><a href="http://stackoverflow.com/questions/34319156/create-dictionary-from-splitted-strings-from-list-of-strings">stackoverflow: Create dictionary from splitted strings from list of strings</a></li>
+<li><a href="https://github.com/kootenpv/yagmail">Yagmail: Python e-mail library</a></li>
+<li><a href="https://emptysqua.re/blog/getaddrinfo-deadlock/">How To Deadlock Your Python With getaddrinfo()</a></li>
+<li><a href="https://zerokspot.com/weblog/2015/12/31/new-string-formatting-in-python/">New String Formatting in Python 3.6</a></li>
+<li><a href="https://upload.wikimedia.org/wikipedia/commons/9/91/Python_Programming.pdf">en.wikibooks.org: Python Programming</a></li>
+<li><a href="https://github.com/noamraph/tqdm">tqdm: Instantly make your python loops show a progress meter - just wrap any iterator with &ldquo;tqdm(iterator)&rdquo;, and you&rsquo;re done!</a></li>
+<li><a href="http://stupidpythonideas.blogspot.com.es/2015/05/if-you-dont-like-exceptions-you-dont.html">If you don&rsquo;t like exceptions, you don&rsquo;t like Python</a></li>
+<li><a href="http://astrofrog.github.io/blog/2016/01/12/stop-writing-python-4-incompatible-code/">Stop writing code that will break on Python 4!</a> With the end of support for Python 2 on the horizon (in 2020), many package developers have made their packages compatible with both Python 2 and Python 3. </li>
+<li><a href="https://github.com/coodict/python3-in-one-pic">github: Python3 in one pic</a></li>
+<li><a href="https://www.reddit.com/r/learnpython/comments/40rieo/functions_vs_classes/">reddit.com: Functions vs. Classes</a></li>
+<li><a href="https://www.ics.uci.edu/~pattis/ICS-33/lectures/complexitypython.txt">Complexity of Python Operations</a></li>
+<li><a href="https://www.reddit.com/r/learnpython/comments/418z8b/multiprocessing_vs_threading/">reddit.com: Multiprocessing vs Threading?</a><ul>
+<li><a href="http://jessenoller.com/blog/2009/02/01/python-threads-and-the-global-interpreter-lock">Python Threads and the Global Interpreter Lock</a></li>
+</ul>
+</li>
+<li><a href="http://www.devbattles.com/en/sand/post-1754-Python_list_Functions_and_Methods_lists">devbattles.com: Python list. Functions and Methods lists</a></li>
+<li><a href="http://www.devbattles.com/en/sand/post-1752-Python_sorting_lists_by_sort__with__in_simple_words">devbattles.com: Python: sorting lists by .sort () with - in simple words</a></li>
+<li><a href="http://www.digitalpeer.com/blog/create-a-gui-application-using-qt-and-python-in-minutes-example-web-browser">Create a GUI Application Using Qt and Python in Minutes: Example Web Browser</a></li>
+<li><a href="http://www.vurt.ru/2013/02/python-command-line-oneliners">Python command line oneliners</a></li>
+<li><a href="https://dzone.com/articles/learn-python-overtakes-learn-java">&ldquo;Learn Python&rdquo; Overtakes &ldquo;Learn Java&rdquo; on Google Trends 🌟</a></li>
+<li><a href="http://www.infoworld.com/article/3029681/java/python-gains-the-upper-hand-against-perl-php-and-ruby.html">Python gains the upper hand against Perl, PHP, and Ruby</a></li>
+<li><a href="https://eev.ee/blog/2016/07/31/python-faq-why-should-i-use-python-3/">Python FAQ: Why should I use Python 3? 🌟</a></li>
+<li><a href="http://stackoverflow.com/questions/8087184/problems-installing-python3-on-rhel">stackoverflow: Problems installing python3 on RHEL 🌟</a></li>
+<li><a href="https://es.scribd.com/document/207247675/PEP-8-Cheatsheet-2009">PEP 8 Cheatsheet 🌟</a></li>
+<li><a href="http://nedbatchelder.com/blog/201608/lists_vs_tuples.html">Lists vs. Tuples</a> A common beginner Python question: what&rsquo;s the difference between a list and a tuple?</li>
+<li><a href="https://linuxconfig.org/python-tuples">linuxconfig.org: python tuples 🌟</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-use-the-python-map-function">digitalocean.com: How To Use the Python Map Function 🌟</a></li>
+<li><a href="https://thenextweb.com/readme/2020/09/23/6-practical-tricks-every-python-developer-should-have/">thenextweb.com: 6 practical tricks every Python developer should have</a></li>
+<li><a href="https://dzone.com/articles/best-of-dzone-python">dzone: Best of DZone: Python 🌟</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorial_series/how-to-code-in-python-3">digitalocean.com: How To Code in Python 3 🌟</a></li>
+<li><a href="https://towardsdatascience.com/top-11-github-repositories-to-learn-python-e75e8676757a">towardsdatascience.com: Top 11 Github Repositories to Learn Python 🌟</a> Popular GitHub repositories for learning Python</li>
+<li><a href="https://tryolabs.com/blog/2020/12/21/top-10-python-libraries-of-2020/">tryolabs.com: Top 10 Python libraries of 2020</a></li>
+<li><a href="https://blog.logrocket.com/django-rest-framework-alternatives/">blog.logrocket.com: Django REST framework alternatives</a></li>
+<li><a href="https://towardsdatascience.com/the-strange-size-of-python-objects-in-memory-ce87bdfbb97f">towardsdatascience.com: Unexpected Size of Python Objects in Memory</a> How much memory does a Python object take on memory?</li>
+<li><a href="https://www.learnsteps.com/devops-interview-questions-important-python-questions/">learnsteps.com: DevOps Interview Questions: Important Python questions</a></li>
+<li><a href="https://aigents.co/blog/coding-tutorial/data-structures-and-python">aigents.co: Data Structures and Python 🌟</a></li>
+<li><a href="https://doppler.com/blog/environment-variables-in-python">doppler.com: Using Environment Variables in Python for App Configuration 🌟</a> Learn how experienced developers use environment variables in Python, including managing default values and typecasting.</li>
+<li><a href="https://src-r-r.github.io/articles/how_to_log_with_a_python_cli_program/">src-r-r.github.io: How To Property Set Up Python Logging With A Command Line Program</a></li>
+<li><a href="https://realpython.com/python-microservices-grpc/">realpython.com: Python Microservices With gRPC 🌟</a></li>
+<li><a href="https://dashbird.io/blog/aws-secrets-manager-python/">dashbird.io: How I Manage Credentials in Python Using AWS Secrets Manager</a></li>
+<li><a href="https://www.freecodecamp.org/news/the-python-handbook/">freecodecamp.org: The Python Handbook 🌟</a></li>
+<li><a href="https://towardsdatascience.com/7-must-know-data-wrangling-operations-with-python-pandas-849438a90d15">towardsdatascience.com: 7 Must-Know Data Wrangling Operations with Python Pandas</a></li>
+<li><a href="https://towardsdatascience.com/all-the-important-features-and-changes-in-python-3-10-e3d1fe542fbf">towardsdatascience.com: All The Important Features and Changes in Python 3.10</a></li>
+<li><a href="https://towardsdatascience.com/data-preprocessing-in-python-pandas-part-6-dropping-duplicates-e35e46bcc9d6">towardsdatascience.com: Data Preprocessing in Python Pandas — Part 6 Dropping Duplicates</a> A quick tutorial to drop duplicates using the Python Pandas library.</li>
+<li><a href="https://antonz.org/python-packaging/">antonz.org: How to make an awesome Python package in 2021</a></li>
+<li><a href="https://www.freecodecamp.org/news/python-map-function-how-to-map-a-list-in-python-3-0-with-example-code/">freecodecamp.org: Python Map Function – How to Map a List in Python 3.0, With Example Code</a></li>
+<li><a href="https://betterprogramming.pub/3-seemingly-simple-python-features-that-confuse-beginners-313575312dcf">betterprogramming.pub: 3 Seemingly Simple Python Features That Confuse Beginners</a></li>
+<li><a href="https://analyticsindiamag.com/object-oriented-programming-python/">analyticsindiamag.com: Object-Oriented Programming with Python</a></li>
+<li><a href="https://towardsdatascience.com/python-loops-some-beginner-friendly-looping-challenge-e112fa606493">towardsdatascience.com: Python loops: Some beginner-friendly looping challenges</a> Looping through lists, tuples, dictionaries and strings.</li>
+<li><a href="https://www.lambdatest.com/learning-hub/python-tutorial">lambdatest.com: Python Tutorial 🌟</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2021/04/top-online-platforms-to-learn-python/">analyticsvidhya.com: Top Online Platforms to Learn Python</a></li>
+<li><a href="https://towardsdatascience.com/essential-python-string-processing-techniques-aa5be43a4f1f">towardsdatascience.com: Master Label Processing In Python</a> The full tutorial on working with string-type data in Python.</li>
+<li><a href="https://towardsdatascience.com/there-is-more-to-pandas-read-csv-than-meets-the-eye-8654cb2b3a03">towardsdatascience.com: There is more to ‘pandas.read_csv()’ than meets the eye</a> A deep dive into some of the parameters of the read_csv function in pandas</li>
+<li><a href="http://blog.adnansiddiqi.me/getting-started-with-elasticsearch-7-in-python/">blog.adnansiddiqi.me: Getting started with Elasticsearch 7 in Python 🌟</a></li>
+<li><a href="https://towardsdatascience.com/concurrency-and-parallelism-in-python-bbd7af8c6625">towardsdatascience.com: Concurrency and Parallelism in Python</a></li>
+<li><a href="https://pythonsimplified.com/python-sequence-types-an-introduction/">pythonsimplified.com: Introduction to Python Sequence Types 🌟</a></li>
+<li><a href="https://pub.towardsai.net/oops-concept-in-python-b5f5833d57db">pub.towardsai.net: OPs Concept in Python</a> OOPs is a highly efficient way of writing a program</li>
+<li><a href="https://developers.redhat.com/articles/2021/05/19/micropipenv-installing-python-dependencies-containerized-applications">developers.redhat.com: micropipenv: Installing Python dependencies in containerized applications 🌟</a></li>
+<li><a href="https://pythonsimplified.com/python-list-vs-tuple/">pythonsimplified.com: Python List Vs Tuple 🌟</a></li>
+<li><a href="https://opensource.com/article/21/5/python-38-features">opensource.com: Make your API better with this positional trick from Python 3.8</a> Explore positional-only parameters and two other underutilized but still useful Python features.</li>
+<li><a href="https://trstringer.com/debug-python-kubernetes/">trstringer.com: Debug a Python Application Running in Kubernetes 🌟</a></li>
+<li><a href="https://towardsdatascience.com/7-advanced-tricks-in-pandas-for-data-science-41a71632b5d9">towardsdatascience.com: 7 advanced pandas tricks for data science</a> Pandas is the go-to library for data science. These are the shortcuts I use to do repetitive data science tasks faster and simpler.</li>
+<li><a href="https://pub.towardsai.net/class-and-objects-in-python-with-examples-591c6ca95ee6">pub.towardsai.net: Class and Objects in Python with Examples</a> A handy concept for software development programs</li>
+<li><a href="https://dineshkumarkb.com/tech/how-to-specify-non-pypi-requirements-in-your-requirements-txt-file/">dineshkumarkb.com: How to specify non PYPI requirements in your requirements.txt file</a></li>
+<li><a href="https://theglitchblog.com/2021/06/17/logging-in-python-using-best-practices/">theglitchblog.com: Logging in Python Using Best Practices</a></li>
+<li><a href="https://jhhemal.medium.com/some-tips-and-tricks-for-writing-better-code-in-python-f65e4b6814fd">jhhemal.medium.com: Some Tips and Tricks for Writing Better Code in Python</a></li>
+</ul>
+<p><center>
+<blockquote class="twitter-tweet tw-align-center" data-lang="es"><p lang="en" dir="ltr">29 common beginner Python errors on one page via <a href="https://t.co/Ctvy84KXKx"><a href="https://t.co/Ctvy84KXKx">https://t.co/Ctvy84KXKx</a></a> <a href="https://twitter.com/hashtag/Python?src=hash">#Python</a> <a href="https://twitter.com/hashtag/Sysadmin?src=hash">#Sysadmin</a> <a href="https://twitter.com/hashtag/Programming?src=hash">#Programming</a> <a href="https://twitter.com/hashtag/Unix?src=hash">#Unix</a> <a href="https://twitter.com/hashtag/Linux?src=hash">#Linux</a> <a href="https://t.co/vaZaJETNPU">pic.twitter.com/vaZaJETNPU</a></p>&mdash; nixCraft (@nixcraft) <a href="https://twitter.com/nixcraft/status/706530828092731393">6 de marzo de 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center>
+<br/></p>
+<p><center>
+<div class="container">
+<p  style=" margin: 12px auto 6px auto; font-family: Helvetica,Arial,Sans-serif; font-style: normal; font-variant: normal; font-weight: normal; font-size: 14px; line-height: normal; font-size-adjust: none; font-stretch: normal; -x-system-font: none; display: block;">   <a title="View PEP-8 Cheatsheet (2009) on Scribd" href="https://www.scribd.com/document/207247675/PEP-8-Cheatsheet-2009#from_embed"  style="text-decoration: underline;" >PEP-8 Cheatsheet (2009)</a> by <a title="View Veeraj Shenoy's profile on Scribd" href="https://www.scribd.com/user/247744721/Veeraj-Shenoy#from_embed"  style="text-decoration: underline;" >Veeraj Shenoy</a> on Scribd</p><iframe class="scribd_iframe_embed" src="https://www.scribd.com/embeds/207247675/content?start_page=1&view_mode=scroll&access_key=key-10eg916shk5wa33gdrtb&show_recommendations=true" data-auto-height="false" data-aspect-ratio="1.2941176470588236" scrolling="no" id="doc_1222" width="100%" height="600" frameborder="0"></iframe>
+</div>
+</center>
+<br/>
+<br/>
+<br/></p>
+<h2 id="python-books">Python Books<a class="headerlink" href="#python-books" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">Python Data Science Handbook 🌟</a> This website contains the full text of the Python Data Science Handbook by Jake VanderPlas; the content is available on GitHub in the form of Jupyter notebooks.</li>
+</ul>
+<h2 id="python-django-framework">Python Django Framework<a class="headerlink" href="#python-django-framework" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://gettopical.com/djangoframework">gettopical.com: Get Django Latest News</a></li>
+<li><a href="https://dzone.com/articles/learn-python-django-in-4-hours">Learn Python Django in 4 Hours</a></li>
+<li><a href="https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/">realpython.com: Django Development With Docker Compose and Machine</a></li>
+<li><a href="https://realpython.com/blog/python/fun-with-djangos-new-postgres-features/">realpython.com: Fun With Django&rsquo;s New Postgres Features</a></li>
+<li><a href="https://realpython.com/blog/python/deploying-a-django-app-to-aws-elastic-beanstalk/">realpython.com: Deploying a Django App to AWS Elastic Beanstalk</a></li>
+<li><a href="http://www.marinamele.com/taskbuster-django-tutorial">TaskBuster Django Tutorial, made with Django 1.8 and Python 3</a></li>
+<li><a href="http://www.pyvideo.org/video/3509/tdd-with-django-from-scratch-a-beginners-intro">TDD with Django, from scratch: a beginner&rsquo;s intro to testing and web development</a></li>
+<li><a href="http://www.genbetadev.com/desarrolloparastartups/como-crear-un-servicio-rest-en-30-lineas-de-codigo-de-django-y-python">Cómo crear un servicio REST en 30 líneas de código de Django y Python</a></li>
+<li><a href="https://realpython.com/blog/python/django-development-with-docker-compose-and-machine/">Django Development With Docker Compose and Machine</a></li>
+<li><a href="http://www.tecmint.com/install-and-configure-django-web-framework-in-centos-debian-ubuntu/">Installing and Configuring Django Web Framework with Virtual Environments in CentOS/Debian</a></li>
+<li><a href="https://realpython.com/blog/python/development-and-deployment-of-cookiecutter-django-via-docker/">realpython.com: Development and Deployment of Cookiecutter-Django via Docker</a> A Cookiecutter template for creating production-ready Django projects quickly.</li>
+<li><a href="https://github.com/presslabs/silver/">github.com: Django app + RESTful API for automatic billing</a></li>
+<li><a href="https://www.youtube.com/user/CodingEntrepreneurs">CodingEntrepreneurs youtube channel</a><ul>
+<li><a href="https://www.youtube.com/playlist?list=PLEsfXFp6DpzQFqfCur9CJ4QnKQTVXUsRy">Interested in Learn Django 1.9? Check out my free series on YouTube</a></li>
+</ul>
+</li>
+<li><a href="http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-1/">Getting Started with Django REST Framework (DRF) and AngularJS (Part 1)</a><ul>
+<li><a href="http://engineroom.trackmaven.com/blog/getting-started-drf-angularjs-part-2/">Getting Started with Django REST Framework (DRF) and AngularJS (Part 2)</a></li>
+<li><a href="https://github.com/TrackMaven/getting-started-with-drf-angular/tree/part-2">Part 2 Supplementary Code</a></li>
+</ul>
+</li>
+<li><a href="http://www.webcodegeeks.com/python/python-django-tutorial/">webcodegeeks.com: Python Django Tutorial</a></li>
+<li><a href="https://www.digitalocean.com/community/tech_talks/building-a-rest-api-with-django-rest-framework">digitalocean.com: Building a REST API With Django REST Framework</a></li>
+<li><a href="https://github.com/AmineAsli/django-blog-site">github.com: Django Blog Site</a> A simple blog application based on Django</li>
+</ul>
+<h2 id="python-flask-lightweight-framework-microframework">Python Flask Lightweight Framework (microframework)<a class="headerlink" href="#python-flask-lightweight-framework-microframework" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Flask is a Python lightweight web application development framework with simplicity and extensibility. Flask is called <strong>“microframework”</strong> because of using a simple core and extensions are used to add other functions.</li>
+<li><a href="https://flask.palletsprojects.com/">Flask Documentation 🌟</a></li>
+<li><a href="http://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-now-with-python-3-support">The Flask Mega-Tutorial: Now with Python 3 Support</a></li>
+<li><a href="https://realpython.com/blog/python/introduction-to-flask-part-1-setting-up-a-static-site/">realpython.com: Discover Flask, Part 1 - Setting Up a Static Site </a></li>
+<li><a href="https://www.twilio.com/docs/tutorials/walkthrough/two-factor-authentication/python/flask">Two-Factor Authentication with Authy</a></li>
+<li><a href="http://www.devbattles.com/en/sand/post-1757-Python_Flask_Part_1_Hello_World">devbattles.com: Python Flask, Part 1: Hello World!</a></li>
+<li><a href="https://mherman.org/presentations/flask-kubernetes/">mherman.org: Scaling Flask with Kubernetes 🌟</a></li>
+<li><a href="https://towardsdatascience.com/create-and-deploy-a-simple-web-application-with-flask-and-heroku-103d867298eb">towardsdatascience.com: Create and Deploy a Simple Web Application with Flask and Heroku</a></li>
+<li><a href="https://towardsdatascience.com/how-to-deploy-a-flask-api-in-kubernetes-and-connect-it-with-other-micro-services-af16965b67fe">towardsdatascience.com: How to deploy a Flask API in Kubernetes and connect it with other micro-services</a> A hands-on tutorial on how to implement your micro-service architecture using the powerful container orchestration tool Kubernetes.</li>
+<li><a href="https://www.kdnuggets.com/2021/02/deploy-flask-api-kubernetes-connect-micro-services.html">kdnuggets.com: How to Deploy a Flask API in Kubernetes and Connect it with Other Micro-services</a></li>
+</ul>
+<h2 id="fastapi">FastAPI<a class="headerlink" href="#fastapi" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://fastapi.tiangolo.com/">FastAPI 🌟</a></li>
+<li><a href="http://blog.adnansiddiqi.me/create-your-first-rest-api-in-fastapi/">blog.adnansiddiqi.me: Create your first REST API in FastAPI 🌟</a> A step by step guide creating high performance APIs in Python</li>
+</ul>
+<h2 id="python-pip-and-pips-wheel">Python pip and pip&rsquo;s wheel<a class="headerlink" href="#python-pip-and-pips-wheel" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://wheel.readthedocs.org">wheel replaces Python&rsquo;s eggs</a></li>
+<li><a href="http://blog.ionelmc.ro/2015/01/02/speedup-pip-install/">Speed up pip install</a></li>
+</ul>
+<h2 id="python-feature-flags">Python Feature Flags<a class="headerlink" href="#python-feature-flags" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://featureflags.io/python-feature-flags/">Python Feature Flag Resources/Solutions</a></li>
+<li><a href="https://www.reddit.com/r/Python/comments/3zl3g4/ship_better_python_using_feature_flags/">reddit: Ship Better Python Using Feature Flags</a></li>
+</ul>
+<h2 id="python-testing">Python testing<a class="headerlink" href="#python-testing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.reddit.com/r/learnpython/comments/3zl0p6/real_examples_of_unit_testing/">reddit: Real examples of unit testing</a></li>
+<li><a href="http://it-ebooks.info/book/3778/">Testing Python</a></li>
+<li><a href="https://julien.danjou.info/blog/2015/guide-to-python-profiling-cprofile-concrete-case-carbonara">Profiling Python using cProfile: a concrete case</a></li>
+<li><a href="https://nylas.com/blog/performance">nylas.com: Profiling Python in Production</a> How We Reduced CPU Usage by 80% through Python Profiling </li>
+<li><a href="http://pypi.python.org/pypi/gabbi/">gabbi - Declarative HTTP testing library pypi</a></li>
+<li><a href="https://github.com/madisonmay/tracker">tracker: A time machine for debugging pesky stateful errors</a></li>
+</ul>
+<h2 id="data-science">Data Science.<a class="headerlink" href="#data-science" title="Permanent link">&para;</a></h2>
+<h3 id="python-pandas-and-pivot-tables">Python Pandas and pivot tables<a class="headerlink" href="#python-pandas-and-pivot-tables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.oreilly.com/learning/pivot-tables">oreilly.com: how to use pivot tables in Pandas step-by-step</a></li>
+<li><a href="http://pbpython.com/">pbpython.com: Practical Business Python</a><ul>
+<li><a href="http://pbpython.com/pandas-pivot-table-explained.html">pbpython.com: Pandas Pivot Table Explained</a></li>
+<li><a href="http://pbpython.com/pandas-google-forms-part1.html">pbpython.com: Collecting Data with Google Forms and Pandas</a></li>
+</ul>
+</li>
+<li><a href="https://nikolaygrozev.wordpress.com/2015/07/01/reshaping-in-pandas-pivot-pivot-table-stack-and-unstack-explained-with-pictures/">Reshaping in Pandas – Pivot, Pivot-Table, Stack and Unstack explained with Pictures</a></li>
+<li><a href="http://pandas.pydata.org/pandas-docs/stable/reshaping.html">pandas.pydata.org: Reshaping by pivoting DataFrame objects</a></li>
+<li><a href="http://www.analyticsvidhya.com/blog/2016/01/complete-tutorial-learn-data-science-python-scratch-2/">analyticsvidhya.com: A Complete Tutorial to Learn Data Science with Python from Scratch</a></li>
+<li><a href="http://www.analyticsvidhya.com/blog/2016/01/python-tutorial-list-comprehension-examples/">analyticsvidhya.com: Tutorial – Python List Comprehension With Examples</a></li>
+<li><a href="https://www.analyticsvidhya.com/blog/2015/06/infographic-cheat-sheet-data-exploration-python">analyticsvidhya.com: Cheat Sheet for Exploratory Data Analysis in Python 🌟</a></li>
+</ul>
+<h3 id="pandasdatabase">PandasDatabase<a class="headerlink" href="#pandasdatabase" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://pypi.python.org/pypi/pddb/">PandasDatabase is a RESTful database engine application built on top of Pandas</a></li>
+</ul>
+<h3 id="numpy">NumPy<a class="headerlink" href="#numpy" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://towardsdatascience.com/numpy-basics-cheat-sheet-2021-python-for-data-science-89c483773880">towardsdatascience.com: NumPy Basics Cheat Sheet (2021), Python for Data Science</a> The absolute basics for beginners learning NumPy in 2021</li>
+</ul>
+<h2 id="python-standard-library-modules-and-code">Python standard library Modules and Code<a class="headerlink" href="#python-standard-library-modules-and-code" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://pymotw.com">Python 3 standard library Module of the Week, Doug Hellmann</a></li>
+<li><a href="https://pymotw.com/2">Python 2 standard library Module of the Week, Doug Hellmann</a></li>
+<li><a href="http://blog.webhose.io/2015/08/16/dead-simple-for-devs-python-crawler-script-for-extracting-structured-data-from-any-almost-website-into-csv/">Dead simple {for devs} python crawler (script) for extracting structured data from any website into CSV</a></li>
+<li><a href="https://github.com/XI-lab/PyExPool">Python Multi-Process Execution Pool</a></li>
+</ul>
+<h2 id="python-and-aws">Python and AWS<a class="headerlink" href="#python-and-aws" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://cloudacademy.com/blog/ansible-aws/">Ansible and AWS: cloud IT automation management</a></li>
+<li><a href="http://it-ebooks.info/book/542/">Python and AWS Cookbook. Boto library</a></li>
+<li><a href="https://github.com/boto/boto">Boto</a></li>
+<li><a href="https://aws.amazon.com/es/blogs/developer/migrating-to-boto3/">Migrating to Boto3</a></li>
+<li><a href="http://pyvideo.org/video/2987/managing-the-cloud-with-a-few-lines-of-python">Managing the Cloud with a Few Lines of Python (EuroPython 2014)</a></li>
+<li><a href="https://pypi.python.org/pypi/ec2-ssh-yplan/">ec2-ssh-yplan: A pair of command line utilities for finding and SSH-ing into your Amazon EC2 instances by tag (such as ‘Name’)</a></li>
+</ul>
+<h2 id="python-tools">Python Tools<a class="headerlink" href="#python-tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://www.pyinstaller.org/">PyInstaller is a program that freezes (packages) Python programs into stand-alone executables, under Windows, Linux, Mac OS X, FreeBSD, Solaris and AIX</a><ul>
+<li><a href="https://github.com/pyinstaller/pyinstaller/">PyInstaller official GIT repository</a></li>
+</ul>
+</li>
+<li><a href="https://bitbucket.org/ssllab/zippy">ZipPy: Python3 on top of the JVM (faster than PyPy!)</a></li>
+<li><a href="https://github.com/ligyxy/DictMySQL">DictMySQL: A MySQL class for more convenient database manipulation with Python dictionary</a></li>
+<li><a href="http://sourceforge.net/projects/winpython/">WinPython: Portable Scientific Python &#8532; 32/64bit Distribution for Windows</a></li>
+<li><a href="https://www.kite.com/">Kite 🌟</a> Kite is the best autocompletions engine available for Python, powered by AI. Check it out — It&rsquo;s free! </li>
+<li><a href="https://github.com/pyxll/pyxll-jupyter">pyxll-jupyter: Integration for Jupyter notebooks and Microsoft Excel</a></li>
+<li><a href="https://medium.com/codestory/build-interactive-cli-tools-in-python-47303c50d75">medium: Build Interactive CLI Tools in Python</a> Bored of traditional CLIs? Develop interactive command lines with PyInquirer</li>
+<li><a href="https://github.com/thebjorn/pydeps">Pydeps 🌟</a> Python Module Dependency graphs</li>
+</ul>
+<h3 id="web-scraping-with-python">Web Scraping with Python<a class="headerlink" href="#web-scraping-with-python" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="http://scrapy.org/">Scrapy</a> An open source and collaborative framework for extracting the data you need from websites. In a fast, simple, yet extensible way.</li>
+<li><a href="https://first-web-scraper.readthedocs.org">First web scraper</a> A step-by-step guide to writing a web scraper with Python.</li>
+<li><a href="https://github.com/twintproject/twint">TWINT - Twitter Intelligence Tool</a> Twint is an advanced Twitter scraping tool written in Python that allows for scraping Tweets from Twitter profiles without using Twitter&rsquo;s API.</li>
+</ul>
+<h2 id="jython">Jython<a class="headerlink" href="#jython" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://www.oraclejavamagazine-digital.com/javamagazine_twitter/20151112?pg=43#pg43">Jython is a language that makes it easy to create projects with libraries from Python and Java.</a></li>
+</ul>
+<h2 id="eclipse-ide">Eclipse IDE<a class="headerlink" href="#eclipse-ide" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://opensource.com/life/16/2/how-use-python-hack-your-ide">opensource.com: How to use Python to hack your Eclipse IDE</a></li>
+</ul>
+<h2 id="python-libraries">Python Libraries<a class="headerlink" href="#python-libraries" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://click.palletsprojects.com/">Click 🌟</a> is a Python package for creating beautiful command line interfaces in a composable way with as little code as necessary. It&rsquo;s the &ldquo;Command Line Interface Creation Kit&rdquo;. It&rsquo;s highly configurable but comes with sensible defaults out of the box.</li>
+</ul>
+<h2 id="python-snippets">Python Snippets<a class="headerlink" href="#python-snippets" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://python.plainenglish.io/python-snippets-7e8dcbeae26e">python.plainenglish.io: 12 Python Snippets That Will Boost Your Productivity</a></li>
+</ul>
+<p><center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Python is a beautiful programming language. It contains really useful features that make writing code more efficient than ever. <br><br>Here are 5 tips for writing more efficient and compact code.<br><br>🧵🧵🧵</p>&mdash; Danny Steenman (@dannysteenman) <a href="https://twitter.com/dannysteenman/status/1314930561220313088?ref_src=twsrc%5Etfw">October 10, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">TOP Python Github repositories for you. <br><br>A Thread... 🧵<a href="https://twitter.com/hashtag/100DaysOfCode?src=hash&amp;ref_src=twsrc%5Etfw">#100DaysOfCode</a> <a href="https://twitter.com/hashtag/CodeNewbies?src=hash&amp;ref_src=twsrc%5Etfw">#CodeNewbies</a></p>&mdash; Ankur💻🎧💪 (@TheAnkurTyagi) <a href="https://twitter.com/TheAnkurTyagi/status/1318179578720919552?ref_src=twsrc%5Etfw">October 19, 2020</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../javascript/" title="JavaScript - node.js & npm" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                JavaScript - node.js & npm
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../xamarin/" title="Xamarin" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Xamarin
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            2020 <a href="https://twitter.com/RedHatSpain">Red Hat Spain</a>, <a href="https://redhatspain.com/about/">about</a>.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/redhatspain" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/groups/1937212/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/redhatspain" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.youtube.com/channel/UCCGQ2G2rGAkHzVFhhed-xVw/playlists" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://speakerdeck.com/redhatspain/stars" target="_blank" rel="noopener" title="speakerdeck.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M213.86 296H100a100 100 0 0 1 0-200h132.84a40 40 0 0 1 0 80H98c-26.47 0-26.45 40 0 40h113.82a100 100 0 0 1 0 200H40a40 40 0 0 1 0-80h173.86c26.48 0 26.46-40 0-40zM298 416a120.21 120.21 0 0 0 51.11-80h64.55a19.83 19.83 0 0 0 19.66-20V196a19.83 19.83 0 0 0-19.66-20H296.42a60.77 60.77 0 0 0 0-80h136.93c43.44 0 78.65 35.82 78.65 80v160c0 44.18-35.21 80-78.65 80z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://es.slideshare.net/RedHatSpain/favorites" target="_blank" rel="noopener" title="es.slideshare.net" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M187.7 153.7c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7s61.7-26 61.7-57.7c0-32-27.7-57.7-61.7-57.7zm143.4 0c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7 34.3 0 61.7-26 61.7-57.7.1-32-27.4-57.7-61.7-57.7zm156.6 90l-6 4.3V49.7c0-27.4-20.6-49.7-46-49.7H76.6c-25.4 0-46 22.3-46 49.7V248c-2-1.4-4.3-2.9-6.3-4.3-15.1-10.6-25.1 4-16 17.7 18.3 22.6 53.1 50.3 106.3 72C58.3 525.1 252 555.7 248.9 457.5c0-.7.3-56.6.3-96.6 5.1 1.1 9.4 2.3 13.7 3.1 0 39.7.3 92.8.3 93.5-3.1 98.3 190.6 67.7 134.3-124 53.1-21.7 88-49.4 106.3-72 9.1-13.8-.9-28.3-16.1-17.8zm-30.5 19.2c-68.9 37.4-128.3 31.1-160.6 29.7-23.7-.9-32.6 9.1-33.7 24.9-10.3-7.7-18.6-15.5-20.3-17.1-5.1-5.4-13.7-8-27.1-7.7-31.7 1.1-89.7 7.4-157.4-28V72.3c0-34.9 8.9-45.7 40.6-45.7h317.7c30.3 0 40.9 12.9 40.9 45.7v190.6z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://redhatspain.slack.com/" target="_blank" rel="noopener" title="redhatspain.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascript/extra.js"></script>
+      
+    
+  </body>
+</html>

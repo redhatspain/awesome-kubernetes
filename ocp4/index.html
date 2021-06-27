@@ -1,0 +1,4161 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A curated list of awesome IT projects and resources. Inspired by the awesome list.">
+      
+      
+        <link rel="canonical" href="https://redhatspain.com/ocp4/">
+      
+      
+        <meta name="author" content="info@redhatspain.com">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>OCP 4 - Awesome Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../static/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-168051035-1","redhatspain.com"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ocp-4" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-header-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Awesome Kubernetes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              OCP 4
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Awesome Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes" class="md-nav__link">
+      From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="Microservices FAQ & Kubernetes Native" class="md-nav__link">
+      Microservices FAQ & Kubernetes Native
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sre/" title="Site Reliability Engineering (SRE)" class="md-nav__link">
+      Site Reliability Engineering (SRE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="DevOps" class="md-nav__link">
+      DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cheatsheets/" title="Cheat Sheets" class="md-nav__link">
+      Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gitops/" title="GitOps" class="md-nav__link">
+      GitOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mlops/" title="MLOps" class="md-nav__link">
+      MLOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../demos/" title="Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more" class="md-nav__link">
+      Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Security and DevSecOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Security and DevSecOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Security and DevSecOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devsecops/" title="DevSecOps. Container Security" class="md-nav__link">
+      DevSecOps. Container Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securityascode/" title="Security Policy as Code" class="md-nav__link">
+      Security Policy as Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      NoOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="NoOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        NoOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../noops/" title="NoOps" class="md-nav__link">
+      NoOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finops/" title="FinOps - Cloud Financial Management" class="md-nav__link">
+      FinOps - Cloud Financial Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TestOps and Continuous Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestOps and Continuous Testing" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestOps and Continuous Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testops/" title="TestOps and Continuous Testing" class="md-nav__link">
+      TestOps and Continuous Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qa/" title="QA" class="md-nav__link">
+      QA
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Project Management Methodology
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Project Management Methodology" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Project Management Methodology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-methodology/" title="Project Management Methodology" class="md-nav__link">
+      Project Management Methodology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-tools/" title="Project Management Tools" class="md-nav__link">
+      Project Management Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appointment-scheduling/" title="Appointment Scheduling" class="md-nav__link">
+      Appointment Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../workfromhome/" title="Work From Home" class="md-nav__link">
+      Work From Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-tools/" title="Kubernetes Tools" class="md-nav__link">
+      Kubernetes Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rancher/" title="Rancher - Enterprise management for Kubernetes" class="md-nav__link">
+      Rancher - Enterprise management for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrix-table/" title="Kubernetes Matrix Table" class="md-nav__link">
+      Kubernetes Matrix Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-alternatives/" title="Kubernetes alternatives" class="md-nav__link">
+      Kubernetes alternatives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
+    
+    <label class="md-nav__link" for="nav-13">
+      OpenShift
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenShift" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        OpenShift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift/" title="OpenShift docs" class="md-nav__link">
+      OpenShift docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ocp3/" title="OCP 3" class="md-nav__link">
+      OCP 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        OCP 4
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="OCP 4" class="md-nav__link md-nav__link--active">
+      OCP 4
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-container-platform-4-ocp-4" class="md-nav__link">
+    OpenShift Container Platform 4 (OCP 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift Container Platform 4 (OCP 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openshift-sizing-and-subscription-guide" class="md-nav__link">
+    OpenShift sizing and subscription guide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-platform-plus" class="md-nav__link">
+    OpenShift Platform Plus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best Practices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-ocp4-on-aws" class="md-nav__link">
+    Setting up OCP4 on AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosa-red-hat-openshift-service-on-aws" class="md-nav__link">
+    ROSA Red Hat OpenShift Service on AWS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-end-to-end-day-0-day-1-day-2" class="md-nav__link">
+    OpenShift End-to-End. Day 0, Day 1 &amp; Day 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ocp-4-overview" class="md-nav__link">
+    OCP 4 Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="OCP 4 Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-new-functionalities" class="md-nav__link">
+    Three New Functionalities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-technical-components" class="md-nav__link">
+    New Technical Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-cluster-autoscaler" class="md-nav__link">
+    Installation &amp; Cluster Autoscaler
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation &amp; Cluster Autoscaler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipi-upi" class="md-nav__link">
+    IPI &amp; UPI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-autoscaler-operator" class="md-nav__link">
+    Cluster Autoscaler Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalog" class="md-nav__link">
+    Catalog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certified-opeators-olm-operators-and-red-hat-operators" class="md-nav__link">
+    Certified Opeators, OLM Operators and Red Hat Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators" class="md-nav__link">
+    Deploy and bind enterprise-grade microservices with Kubernetes Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-container-storage-operator-ocs" class="md-nav__link">
+    OpenShift Container Storage Operator (OCS)
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift Container Storage Operator (OCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ocs-3-openshift-3" class="md-nav__link">
+    OCS 3 (OpenShift 3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ocs-4-openshift-4" class="md-nav__link">
+    OCS 4 (OpenShift 4)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-network-operator-cno-routers" class="md-nav__link">
+    Cluster Network Operator (CNO) &amp; Routers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicemesh-operator" class="md-nav__link">
+    ServiceMesh Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-operator-knative" class="md-nav__link">
+    Serverless Operator (Knative)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossplane-operator-universal-control-plane-api-for-cloud-computing" class="md-nav__link">
+    Crossplane Operator (Universal Control Plane API for Cloud Computing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-observability" class="md-nav__link">
+    Monitoring &amp; Observability
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grafana" class="md-nav__link">
+    Grafana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prometheus" class="md-nav__link">
+    Prometheus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-silences" class="md-nav__link">
+    Alerts &amp; Silences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-logging-efk" class="md-nav__link">
+    Cluster Logging (EFK)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-images-next-generation-container-image-building-tools" class="md-nav__link">
+    Build Images. Next-Generation Container Image Building Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry-quay" class="md-nav__link">
+    Registry &amp; Quay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-development-environment" class="md-nav__link">
+    Local Development Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-on-azure" class="md-nav__link">
+    OpenShift on Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-youtube" class="md-nav__link">
+    OpenShift Youtube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-training" class="md-nav__link">
+    OpenShift 4 Training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-roadmap" class="md-nav__link">
+    OpenShift 4 Roadmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubevirt-virtual-machine-management-on-kubernetes" class="md-nav__link">
+    Kubevirt Virtual Machine Management on Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking-and-network-policy-in-ocp4-sdncni-plug-ins" class="md-nav__link">
+    Networking and Network Policy in OCP4. SDN/CNI plug-ins
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking and Network Policy in OCP4. SDN/CNI plug-ins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-networks-with-sdncni-plug-ins-usage-scenarios-for-an-additional-network" class="md-nav__link">
+    Multiple Networks with SDN/CNI plug-ins. Usage scenarios for an additional network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istio-cni-plug-in" class="md-nav__link">
+    Istio CNI plug-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calico-cni-plug-in" class="md-nav__link">
+    Calico CNI Plug-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-party-network-operators-with-openshift" class="md-nav__link">
+    Third Party Network Operators with OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-in-ocp-4-openshift-container-storage-ocs" class="md-nav__link">
+    Storage in OCP 4. OpenShift Container Storage (OCS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-advanced-cluster-management-for-kubernetes" class="md-nav__link">
+    Red Hat Advanced Cluster Management for Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-kubernetes-engine-oke" class="md-nav__link">
+    OpenShift Kubernetes Engine (OKE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-codeready-containers-openshift-4-on-your-laptop" class="md-nav__link">
+    Red Hat CodeReady Containers. OpenShift 4 on your laptop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-hive-cluster-as-a-service-easily-provision-new-paas-environments-for-developers" class="md-nav__link">
+    OpenShift Hive: Cluster-as-a-Service. Easily provision new PaaS environments for developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-master-api-protection-in-public-cloud" class="md-nav__link">
+    OpenShift 4 Master API Protection in Public Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-and-migrate-to-openshift-4" class="md-nav__link">
+    Backup and Migrate to OpenShift 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#okd4-openshift-4-without-enterprise-level-support" class="md-nav__link">
+    OKD4. OpenShift 4 without enterprise-level support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-serverless-with-knative" class="md-nav__link">
+    OpenShift Serverless with Knative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-charts-and-openshift-4" class="md-nav__link">
+    Helm Charts and OpenShift 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-marketplace" class="md-nav__link">
+    Red Hat Marketplace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubestone-benchmarking-operator-for-k8s-and-openshift" class="md-nav__link">
+    Kubestone. Benchmarking Operator for K8s and OpenShift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-cost-management" class="md-nav__link">
+    OpenShift Cost Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators-in-ocp-4" class="md-nav__link">
+    Operators in OCP 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quay-container-registry" class="md-nav__link">
+    Quay Container Registry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-migration-toolkit" class="md-nav__link">
+    Application Migration Toolkit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-sandbox" class="md-nav__link">
+    Developer Sandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-topology-view" class="md-nav__link">
+    OpenShift Topology View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openbuilt-platform-for-the-construction-industry" class="md-nav__link">
+    OpenBuilt Platform for the Construction Industry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    Slides
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customer/" title="Customer Success Stories" class="md-nav__link">
+      Customer Success Stories
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Delivery Pipeline
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software Delivery Pipeline" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software Delivery Pipeline
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd/" title="CI/CD - Continuous Integration & Continuous Delivery" class="md-nav__link">
+      CI/CD - Continuous Integration & Continuous Delivery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../git/" title="Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs" class="md-nav__link">
+      Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins/" title="Jenkins & Cloudbees" class="md-nav__link">
+      Jenkins & Cloudbees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift-pipelines/" title="OpenShift Pipelines with Jenkins, Tekton and more..." class="md-nav__link">
+      OpenShift Pipelines with Jenkins, Tekton and more...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../performance-testing-with-jenkins-and-jmeter/" title="Performance testing with Jenkins and JMeter or Gatling" class="md-nav__link">
+      Performance testing with Jenkins and JMeter or Gatling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins-alternatives/" title="Jenkins Alternatives for Continuous Integration" class="md-nav__link">
+      Jenkins Alternatives for Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-7" type="checkbox" id="nav-14-7">
+    
+    <label class="md-nav__link" for="nav-14-7">
+      Toolchain
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Toolchain" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Toolchain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container-managers/" title="Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo" class="md-nav__link">
+      Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maven-gradle/" title="Maven, Gradle & SDKMAN" class="md-nav__link">
+      Maven, Gradle & SDKMAN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sonarqube/" title="SonarQube" class="md-nav__link">
+      SonarQube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nexus-jfrog/" title="Nexus & JFrog Artifactory" class="md-nav__link">
+      Nexus & JFrog Artifactory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selenium-appium-zephyr/" title="Selenium, Cucumber, Appium & Zephyr Jira plugin" class="md-nav__link">
+      Selenium, Cucumber, Appium & Zephyr Jira plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux/" title="Linux & SSH" class="md-nav__link">
+      Linux & SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="MkDocs & GitHub Pages" class="md-nav__link">
+      MkDocs & GitHub Pages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-8" type="checkbox" id="nav-14-8">
+    
+    <label class="md-nav__link" for="nav-14-8">
+      Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web-servers/" title="Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more" class="md-nav__link">
+      Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_app_servers/" title="Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more" class="md-nav__link">
+      Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedded-servlet-containers/" title="Embedded Servlet Containers in SpringBoot" class="md-nav__link">
+      Embedded Servlet Containers in SpringBoot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../caching/" title="Caching Solutions" class="md-nav__link">
+      Caching Solutions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../monitoring/" title="Monitoring and Performance. Prometheus, Grafana, APMs and more" class="md-nav__link">
+      Monitoring and Performance. Prometheus, Grafana, APMs and more
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Configuration Management
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration Management" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argocd/" title="Argo CD - Declarative GitOps for Kubernetes" class="md-nav__link">
+      Argo CD - Declarative GitOps for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chef/" title="Chef" class="md-nav__link">
+      Chef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd-kubernetes-plugins/" title="CI/CD Kubernetes Plugins" class="md-nav__link">
+      CI/CD Kubernetes Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-client-libraries/" title="Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube" class="md-nav__link">
+      Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helm/" title="Helm Kubernetes Tool" class="md-nav__link">
+      Helm Kubernetes Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquibase/" title="Liquibase & Flyway" class="md-nav__link">
+      Liquibase & Flyway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kustomize/" title="Template-Free Kubernetes Configuration Customization with Kustomize" class="md-nav__link">
+      Template-Free Kubernetes Configuration Customization with Kustomize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yaml/" title="Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files" class="md-nav__link">
+      Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Infrastructure Management Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure Management Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Infrastructure Management Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iac/" title="IaC Infrastructure as Code" class="md-nav__link">
+      IaC Infrastructure as Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pulumi/" title="Pulumi" class="md-nav__link">
+      Pulumi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terraform/" title="Terraform & Packer" class="md-nav__link">
+      Terraform & Packer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      Databases on Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Databases on Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Databases on Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../databases/" title="Relational Databases and Database DevOps. CrunchyData Postgres Operator" class="md-nav__link">
+      Relational Databases and Database DevOps. CrunchyData Postgres Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nosql/" title="NoSQL Databases" class="md-nav__link">
+      NoSQL Databases
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../message-queue/" title="Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)" class="md-nav__link">
+      Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Service Mesh
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Service Mesh" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Service Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../servicemesh/" title="Service Mesh" class="md-nav__link">
+      Service Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../istio/" title="Istio" class="md-nav__link">
+      Istio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../storage/" title="Cloud Native Storage" class="md-nav__link">
+      Cloud Native Storage
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-22" type="checkbox" id="nav-22">
+    
+    <label class="md-nav__link" for="nav-22">
+      APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-22">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="APIs with SOAP, REST and gRPC" class="md-nav__link">
+      APIs with SOAP, REST and gRPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swagger-code-generator-for-rest-apis/" title="Swagger code generator for REST APIs" class="md-nav__link">
+      Swagger code generator for REST APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postman/" title="API Test Automation with Postman" class="md-nav__link">
+      API Test Automation with Postman
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developerportals/" title="API Marketplaces. API Management with API Gateways & Developer Portals" class="md-nav__link">
+      API Marketplaces. API Management with API Gateways & Developer Portals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23" type="checkbox" id="nav-23">
+    
+    <label class="md-nav__link" for="nav-23">
+      Development & Frameworks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development & Frameworks" data-md-level="1">
+      <label class="md-nav__title" for="nav-23">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development & Frameworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../angular/" title="Angular" class="md-nav__link">
+      Angular
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dom/" title="Document Object Model (DOM)" class="md-nav__link">
+      Document Object Model (DOM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../golang/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript/" title="JavaScript - node.js & npm" class="md-nav__link">
+      JavaScript - node.js & npm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python - Django & Flask" class="md-nav__link">
+      Python - Django & Flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devel-sites/" title="Websites for web developers" class="md-nav__link">
+      Websites for web developers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-8" type="checkbox" id="nav-23-8">
+    
+    <label class="md-nav__link" for="nav-23-8">
+      Java
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Java" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_frameworks/" title="Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more" class="md-nav__link">
+      Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java-and-java-performance-optimization/" title="Java Memory Management & Java Performance Optimization" class="md-nav__link">
+      Java Memory Management & Java Performance Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jvm-parameters-matrix-table/" title="Java Parameters Matrix Table" class="md-nav__link">
+      Java Parameters Matrix Table
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-9" type="checkbox" id="nav-23-9">
+    
+    <label class="md-nav__link" for="nav-23-9">
+      Dev Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dev Environment" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Dev Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../visual-studio/" title="Visual Studio Code" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-dev-env/" title="WSL - Linux Dev Environment on Windows" class="md-nav__link">
+      WSL - Linux Dev Environment on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffolding/" title="Scaffolding Tools" class="md-nav__link">
+      Scaffolding Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ChromeDevTools/" title="Chrome & Firefox DevTools. HTTP Protocols & WebSockets" class="md-nav__link">
+      Chrome & Firefox DevTools. HTTP Protocols & WebSockets
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-24" type="checkbox" id="nav-24">
+    
+    <label class="md-nav__link" for="nav-24">
+      Public Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Public Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-24">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Public Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../public-cloud-solutions/" title="Public Cloud Solutions" class="md-nav__link">
+      Public Cloud Solutions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edge-computing/" title="Edge Computing" class="md-nav__link">
+      Edge Computing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-arch-diagrams/" title="Cloud Architecture Diagram Tools" class="md-nav__link">
+      Cloud Architecture Diagram Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GoogleCloudPlatform/" title="Google Cloud Platform" class="md-nav__link">
+      Google Cloud Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure/" title="Microsoft Azure" class="md-nav__link">
+      Microsoft Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ibm_cloud/" title="IBM & IBM Cloud" class="md-nav__link">
+      IBM & IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oraclecloud/" title="Oracle Cloud" class="md-nav__link">
+      Oracle Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../digitalocean/" title="Digital Ocean" class="md-nav__link">
+      Digital Ocean
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloudflare/" title="Cloudflare" class="md-nav__link">
+      Cloudflare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bigdata/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      More References
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="More References" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        More References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elearning/" title="E-Learning" class="md-nav__link">
+      E-Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../newsfeeds/" title="Subreddits" class="md-nav__link">
+      Subreddits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other-awesome-lists/" title="Other Awesome Lists" class="md-nav__link">
+      Other Awesome Lists
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Recruitment and Freelancing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Recruitment and Freelancing" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Recruitment and Freelancing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recruitment/" title="Recruitment" class="md-nav__link">
+      Recruitment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../freelancing/" title="Freelancing" class="md-nav__link">
+      Freelancing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../remote-tech-jobs/" title="Remote Tech Jobs" class="md-nav__link">
+      Remote Tech Jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-container-platform-4-ocp-4" class="md-nav__link">
+    OpenShift Container Platform 4 (OCP 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift Container Platform 4 (OCP 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openshift-sizing-and-subscription-guide" class="md-nav__link">
+    OpenShift sizing and subscription guide
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-platform-plus" class="md-nav__link">
+    OpenShift Platform Plus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    Best Practices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setting-up-ocp4-on-aws" class="md-nav__link">
+    Setting up OCP4 on AWS
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rosa-red-hat-openshift-service-on-aws" class="md-nav__link">
+    ROSA Red Hat OpenShift Service on AWS
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#downloads" class="md-nav__link">
+    Downloads
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-end-to-end-day-0-day-1-day-2" class="md-nav__link">
+    OpenShift End-to-End. Day 0, Day 1 &amp; Day 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ocp-4-overview" class="md-nav__link">
+    OCP 4 Overview
+  </a>
+  
+    <nav class="md-nav" aria-label="OCP 4 Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-new-functionalities" class="md-nav__link">
+    Three New Functionalities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#new-technical-components" class="md-nav__link">
+    New Technical Components
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installation-cluster-autoscaler" class="md-nav__link">
+    Installation &amp; Cluster Autoscaler
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation &amp; Cluster Autoscaler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ipi-upi" class="md-nav__link">
+    IPI &amp; UPI
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-autoscaler-operator" class="md-nav__link">
+    Cluster Autoscaler Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operators" class="md-nav__link">
+    Operators
+  </a>
+  
+    <nav class="md-nav" aria-label="Operators">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalog" class="md-nav__link">
+    Catalog
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#certified-opeators-olm-operators-and-red-hat-operators" class="md-nav__link">
+    Certified Opeators, OLM Operators and Red Hat Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators" class="md-nav__link">
+    Deploy and bind enterprise-grade microservices with Kubernetes Operators
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-container-storage-operator-ocs" class="md-nav__link">
+    OpenShift Container Storage Operator (OCS)
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift Container Storage Operator (OCS)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ocs-3-openshift-3" class="md-nav__link">
+    OCS 3 (OpenShift 3)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ocs-4-openshift-4" class="md-nav__link">
+    OCS 4 (OpenShift 4)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-network-operator-cno-routers" class="md-nav__link">
+    Cluster Network Operator (CNO) &amp; Routers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servicemesh-operator" class="md-nav__link">
+    ServiceMesh Operator
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serverless-operator-knative" class="md-nav__link">
+    Serverless Operator (Knative)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crossplane-operator-universal-control-plane-api-for-cloud-computing" class="md-nav__link">
+    Crossplane Operator (Universal Control Plane API for Cloud Computing)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monitoring-observability" class="md-nav__link">
+    Monitoring &amp; Observability
+  </a>
+  
+    <nav class="md-nav" aria-label="Monitoring &amp; Observability">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grafana" class="md-nav__link">
+    Grafana
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prometheus" class="md-nav__link">
+    Prometheus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerts-silences" class="md-nav__link">
+    Alerts &amp; Silences
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cluster-logging-efk" class="md-nav__link">
+    Cluster Logging (EFK)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-images-next-generation-container-image-building-tools" class="md-nav__link">
+    Build Images. Next-Generation Container Image Building Tools
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#registry-quay" class="md-nav__link">
+    Registry &amp; Quay
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#local-development-environment" class="md-nav__link">
+    Local Development Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-on-azure" class="md-nav__link">
+    OpenShift on Azure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-youtube" class="md-nav__link">
+    OpenShift Youtube
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-training" class="md-nav__link">
+    OpenShift 4 Training
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-roadmap" class="md-nav__link">
+    OpenShift 4 Roadmap
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubevirt-virtual-machine-management-on-kubernetes" class="md-nav__link">
+    Kubevirt Virtual Machine Management on Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#networking-and-network-policy-in-ocp4-sdncni-plug-ins" class="md-nav__link">
+    Networking and Network Policy in OCP4. SDN/CNI plug-ins
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking and Network Policy in OCP4. SDN/CNI plug-ins">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-networks-with-sdncni-plug-ins-usage-scenarios-for-an-additional-network" class="md-nav__link">
+    Multiple Networks with SDN/CNI plug-ins. Usage scenarios for an additional network
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#istio-cni-plug-in" class="md-nav__link">
+    Istio CNI plug-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calico-cni-plug-in" class="md-nav__link">
+    Calico CNI Plug-in
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#third-party-network-operators-with-openshift" class="md-nav__link">
+    Third Party Network Operators with OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#storage-in-ocp-4-openshift-container-storage-ocs" class="md-nav__link">
+    Storage in OCP 4. OpenShift Container Storage (OCS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-advanced-cluster-management-for-kubernetes" class="md-nav__link">
+    Red Hat Advanced Cluster Management for Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-kubernetes-engine-oke" class="md-nav__link">
+    OpenShift Kubernetes Engine (OKE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-codeready-containers-openshift-4-on-your-laptop" class="md-nav__link">
+    Red Hat CodeReady Containers. OpenShift 4 on your laptop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-hive-cluster-as-a-service-easily-provision-new-paas-environments-for-developers" class="md-nav__link">
+    OpenShift Hive: Cluster-as-a-Service. Easily provision new PaaS environments for developers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-4-master-api-protection-in-public-cloud" class="md-nav__link">
+    OpenShift 4 Master API Protection in Public Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backup-and-migrate-to-openshift-4" class="md-nav__link">
+    Backup and Migrate to OpenShift 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#okd4-openshift-4-without-enterprise-level-support" class="md-nav__link">
+    OKD4. OpenShift 4 without enterprise-level support
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-serverless-with-knative" class="md-nav__link">
+    OpenShift Serverless with Knative
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#helm-charts-and-openshift-4" class="md-nav__link">
+    Helm Charts and OpenShift 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#red-hat-marketplace" class="md-nav__link">
+    Red Hat Marketplace
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubestone-benchmarking-operator-for-k8s-and-openshift" class="md-nav__link">
+    Kubestone. Benchmarking Operator for K8s and OpenShift
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-cost-management" class="md-nav__link">
+    OpenShift Cost Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operators-in-ocp-4" class="md-nav__link">
+    Operators in OCP 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quay-container-registry" class="md-nav__link">
+    Quay Container Registry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-migration-toolkit" class="md-nav__link">
+    Application Migration Toolkit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developer-sandbox" class="md-nav__link">
+    Developer Sandbox
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift-topology-view" class="md-nav__link">
+    OpenShift Topology View
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openbuilt-platform-for-the-construction-industry" class="md-nav__link">
+    OpenBuilt Platform for the Construction Industry
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    Slides
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/redhatspain/awesome-kubernetes/edit/master/docs/ocp4.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="ocp-4">OCP 4<a class="headerlink" href="#ocp-4" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#openshift-container-platform-4-ocp-4">OpenShift Container Platform 4 (OCP 4)</a><ul>
+<li><a href="#openshift-sizing-and-subscription-guide">OpenShift sizing and subscription guide</a></li>
+<li><a href="#openshift-platform-plus">OpenShift Platform Plus</a></li>
+<li><a href="#best-practices">Best Practices</a></li>
+<li><a href="#setting-up-ocp4-on-aws">Setting up OCP4 on AWS</a></li>
+<li><a href="#rosa-red-hat-openshift-service-on-aws">ROSA Red Hat OpenShift Service on AWS</a></li>
+</ul>
+</li>
+<li><a href="#downloads">Downloads</a></li>
+<li><a href="#openshift-end-to-end-day-0-day-1--day-2">OpenShift End-to-End. Day 0, Day 1 &amp; Day 2</a></li>
+<li><a href="#ocp-4-overview">OCP 4 Overview</a><ul>
+<li><a href="#three-new-functionalities">Three New Functionalities</a></li>
+<li><a href="#new-technical-components">New Technical Components</a></li>
+<li><a href="#installation--cluster-autoscaler">Installation &amp; Cluster Autoscaler</a><ul>
+<li><a href="#ipi--upi">IPI &amp; UPI</a></li>
+</ul>
+</li>
+<li><a href="#cluster-autoscaler-operator">Cluster Autoscaler Operator</a></li>
+<li><a href="#operators">Operators</a><ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#catalog">Catalog</a></li>
+<li><a href="#certified-opeators-olm-operators-and-red-hat-operators">Certified Opeators, OLM Operators and Red Hat Operators</a></li>
+<li><a href="#deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators">Deploy and bind enterprise-grade microservices with Kubernetes Operators</a></li>
+<li><a href="#openshift-container-storage-operator-ocs">OpenShift Container Storage Operator (OCS)</a><ul>
+<li><a href="#ocs-3-openshift-3">OCS 3 (OpenShift 3)</a></li>
+<li><a href="#ocs-4-openshift-4">OCS 4 (OpenShift 4)</a></li>
+</ul>
+</li>
+<li><a href="#cluster-network-operator-cno--routers">Cluster Network Operator (CNO) &amp; Routers</a></li>
+<li><a href="#servicemesh-operator">ServiceMesh Operator</a></li>
+<li><a href="#serverless-operator-knative">Serverless Operator (Knative)</a></li>
+<li><a href="#crossplane-operator-universal-control-plane-api-for-cloud-computing">Crossplane Operator (Universal Control Plane API for Cloud Computing)</a></li>
+</ul>
+</li>
+<li><a href="#monitoring--observability">Monitoring &amp; Observability</a><ul>
+<li><a href="#grafana">Grafana</a></li>
+<li><a href="#prometheus">Prometheus</a></li>
+<li><a href="#alerts--silences">Alerts &amp; Silences</a></li>
+<li><a href="#cluster-logging-efk">Cluster Logging (EFK)</a></li>
+</ul>
+</li>
+<li><a href="#build-images-next-generation-container-image-building-tools">Build Images. Next-Generation Container Image Building Tools</a></li>
+<li><a href="#registry--quay">Registry &amp; Quay</a></li>
+<li><a href="#local-development-environment">Local Development Environment</a></li>
+</ul>
+</li>
+<li><a href="#openshift-on-azure">OpenShift on Azure</a></li>
+<li><a href="#openshift-youtube">OpenShift Youtube</a></li>
+<li><a href="#openshift-4-training">OpenShift 4 Training</a></li>
+<li><a href="#openshift-4-roadmap">OpenShift 4 Roadmap</a></li>
+<li><a href="#kubevirt-virtual-machine-management-on-kubernetes">Kubevirt Virtual Machine Management on Kubernetes</a></li>
+<li><a href="#networking-and-network-policy-in-ocp4-sdncni-plug-ins">Networking and Network Policy in OCP4. SDN/CNI plug-ins</a><ul>
+<li><a href="#multiple-networks-with-sdncni-plug-ins-usage-scenarios-for-an-additional-network">Multiple Networks with SDN/CNI plug-ins. Usage scenarios for an additional network</a></li>
+<li><a href="#istio-cni-plug-in">Istio CNI plug-in</a></li>
+<li><a href="#calico-cni-plug-in">Calico CNI Plug-in</a></li>
+<li><a href="#third-party-network-operators-with-openshift">Third Party Network Operators with OpenShift</a></li>
+</ul>
+</li>
+<li><a href="#storage-in-ocp-4-openshift-container-storage-ocs">Storage in OCP 4. OpenShift Container Storage (OCS)</a></li>
+<li><a href="#red-hat-advanced-cluster-management-for-kubernetes">Red Hat Advanced Cluster Management for Kubernetes</a></li>
+<li><a href="#openshift-kubernetes-engine-oke">OpenShift Kubernetes Engine (OKE)</a></li>
+<li><a href="#red-hat-codeready-containers-openshift-4-on-your-laptop">Red Hat CodeReady Containers. OpenShift 4 on your laptop</a></li>
+<li><a href="#openshift-hive-cluster-as-a-service-easily-provision-new-paas-environments-for-developers">OpenShift Hive: Cluster-as-a-Service. Easily provision new PaaS environments for developers</a></li>
+<li><a href="#openshift-4-master-api-protection-in-public-cloud">OpenShift 4 Master API Protection in Public Cloud</a></li>
+<li><a href="#backup-and-migrate-to-openshift-4">Backup and Migrate to OpenShift 4</a></li>
+<li><a href="#okd4-openshift-4-without-enterprise-level-support">OKD4. OpenShift 4 without enterprise-level support</a></li>
+<li><a href="#openshift-serverless-with-knative">OpenShift Serverless with Knative</a></li>
+<li><a href="#helm-charts-and-openshift-4">Helm Charts and OpenShift 4</a></li>
+<li><a href="#red-hat-marketplace">Red Hat Marketplace</a></li>
+<li><a href="#kubestone-benchmarking-operator-for-k8s-and-openshift">Kubestone. Benchmarking Operator for K8s and OpenShift</a></li>
+<li><a href="#openshift-cost-management">OpenShift Cost Management</a></li>
+<li><a href="#operators-in-ocp-4">Operators in OCP 4</a></li>
+<li><a href="#quay-container-registry">Quay Container Registry</a></li>
+<li><a href="#application-migration-toolkit">Application Migration Toolkit</a></li>
+<li><a href="#developer-sandbox">Developer Sandbox</a></li>
+<li><a href="#openshift-topology-view">OpenShift Topology View</a></li>
+<li><a href="#openbuilt-platform-for-the-construction-industry">OpenBuilt Platform for the Construction Industry</a></li>
+<li><a href="#slides">Slides</a></li>
+</ul>
+<h2 id="openshift-container-platform-4-ocp-4">OpenShift Container Platform 4 (OCP 4)<a class="headerlink" href="#openshift-container-platform-4-ocp-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.com/introducing-red-hat-openshift-4/">blog.openshift.com: Introducing Red Hat OpenShift 4</a></li>
+<li><a href="https://www.nextplatform.com/2018/10/15/red-hat-flexes-coreos-muscle-in-openshift-kubernetes-platform/">nextplatform.com: red hat flexes CoreOS muscle in openshift kubernetes platform</a></li>
+<li><a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/">OpenShift 4 documentation 🌟</a></li>
+<li><a href="https://dzone.com/articles/whats-in-openshift-4">Dzone: What’s in OpenShift 4?</a></li>
+<li><a href="https://blog.openshift.com/openshift-4-install-experience/">blog.openshift.com: OpenShift 4 Install Experience</a></li>
+<li><a href="https://operatorhub.io/">operatorhub.io</a> OperatorHub.io is a new home for the Kubernetes community to share Operators. Find an existing Operator or list your own today.</li>
+<li><a href="https://cloudowski.com/articles/honest-review-of-openshift-4/">cloudowski.com: Honest review of OpenShift 4 🌟</a>  </li>
+<li><a href="https://blog.openshift.com/enabling-openshift-4-clusters-to-stop-and-resume-cluster-vms/">Enabling OpenShift 4 Clusters to Stop and Resume Cluster VMs</a></li>
+<li><a href="https://blog.openshift.com/simplifying-openshift-case-information-gathering-workflow-must-gather-operator/">blog.openshift.com: Simplifying OpenShift Case Information Gathering Workflow: <strong>Must-Gather Operator</strong> (In the context of Red Hat OpenShift 4.x and Kubernetes, <strong>it is considered a bad practice to ssh into a node and perform debugging actions</strong>) 🌟</a></li>
+<li><a href="https://blog.openshift.com/configure-the-openshift-image-registry-backed-by-openshift-container-storage/">blog.openshift.com: Configure the OpenShift Image Registry backed by OpenShift Container Storage</a></li>
+<li><a href="https://blog.openshift.com/500_pods_per_node/">blog.openshift.com: OpenShift Scale: Running 500 Pods Per Node 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/enterprise-kubernetes-with-openshift-part-one">blog.openshift.com: Enterprise Kubernetes with OpenShift (Part one) 🌟</a></li>
+<li><a href="https://devclass.com/2020/05/04/openshift-4-4-goes-all-out-on-mixed-workloads-puts-observability-at-devs-fingertips/">devclass.com: OpenShift 4.4 goes all out on mixed workloads, puts observability at devs’ fingertips 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-4.5-node-improvements">OpenShift 4.5: Node Improvements</a></li>
+<li><a href="https://www.zdnet.com/google-amp/article/red-hat-takes-kubernetes-to-the-clouds-edge/">OpenShift 4.5: Red Hat takes Kubernetes to the cloud&rsquo;s edge</a> Red Hat agrees that edge computing is the future and it&rsquo;s getting ready for this next stage in cloud computing with its latest OpenShift release.</li>
+<li><a href="https://www.openshift.com/blog/fully-automated-openshift-deployments-with-vmware-vsphere">Fully Automated OpenShift Deployments With VMware vSphere</a></li>
+<li><a href="https://medium.com/faun/openshift-4-under-the-hood-ab854c3439dd">OpenShift 4 “under-the-hood” 🌟</a></li>
+<li><a href="https://thenewstack.io/red-hat-launches-an-openshift-based-marketplace-to-aid-multicloud-portability/">thenewstack.io: Red Hat Launches an OpenShift-Based Marketplace to Aid Multicloud Portability 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-upi-using-static-ips">openshift.com: OpenShift UPI using static IPs</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/08/14/openshift-for-kubernetes-developers-getting-started/">developers.redhat.com: OpenShift for Kubernetes developers: Getting started 🌟</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/10/01/command-line-cluster-management-with-red-hat-openshifts-new-web-terminal-tech-preview/">developers.redhat.com: Command-line cluster management with Red Hat OpenShift’s new web terminal (tech preview)</a></li>
+<li><a href="https://www.openshift.com/blog/improved-tooling-and-best-practices-to-help-you-migrate-to-openshift-4">Improved tooling and best practices to help you migrate to OpenShift 4</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-architectures-for-the-edge-with-openshift-4.6">openshift.com: OpenShift Architectures for the Edge With OpenShift 4.6</a></li>
+<li><a href="https://dzone.com/refcardz/getting-started-with-openshift">dzone refcard: Getting Started With OpenShift 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/nested-openshift-using-openshift-virtualization">openshift.com: Nested OpenShift using OpenShift Virtualization</a></li>
+<li><a href="https://developers.redhat.com/blog/2021/02/08/deploying-kubernetes-operators-with-operator-lifecycle-manager-bundles/">developers.redhat.com: Deploying Kubernetes Operators with Operator Lifecycle Manager bundles</a></li>
+<li><a href="https://www.openshift.com/blog/8-answers-to-7-openshift-questions">openshift.com: 8 Answers to 7 OpenShift Questions 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/red-hat-openshift-4.7-is-now-available">openshift.com: Red Hat OpenShift 4.7 Is Now Available</a><ul>
+<li>Kubernetes 1.20</li>
+<li>Updated OpenShift Virtualization</li>
+<li>Virtualization Migrations</li>
+<li>Windows Containers on vSphere</li>
+<li>Simplified Bare Metal installs</li>
+<li>Horizontal Pod Autoscaler (CPU &amp; Memory)</li>
+<li>New RHACM integrations</li>
+<li>and much, much more!!</li>
+</ul>
+</li>
+<li><a href="https://www.zdnet.com/google-amp/article/red-hat-opens-the-door-for-both-vms-and-containers-in-its-latest-openshift-release/">zdnet.com: Red Hat opens the door for both VMs and containers in its latest OpenShift release</a> Red Hat&rsquo;s OpenShift 4.7 can help you manage your entire cloud application stack.</li>
+<li><a href="https://finance.yahoo.com/news/ibms-red-hat-openshift-platform-143702224.html">finance.yahoo.com: IBM&rsquo;s Red Hat OpenShift Platform to be Leveraged by Siemens</a></li>
+<li><a href="https://www.openshift.com/blog/how-to-offer-service-running-on-openshift-on-aws-to-other-aws-vpcs-privately">openshift.com: How to Offer Service Running on OpenShift on AWS to Other AWS VPCs, Privately 🌟</a></li>
+<li><a href="https://developers.redhat.com/blog/2021/03/09/a-guide-to-red-hat-openshift-4-5-installer-provisioned-infrastructure-on-vsphere/">developers.redhat.com: A guide to Red Hat OpenShift 4.5 installer-provisioned infrastructure on vSphere 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-security-best-practices-for-kubernetes-cluster-design">openshift.com: OpenShift Security Best Practices for Kubernetes Cluster Design 🌟</a></li>
+<li><a href="https://www.fiercetelecom.com/platforms/red-hat-bundles-security-management-into-openshift-plus">fiercetelecom.com: Red Hat bundles security, management into OpenShift Plus</a> IBM subsidiary Red Hat put its recently acquired StackRox assets to work, rolling out a new version of its OpenShift cloud platform that incorporates security, cluster management and registry capabilities in a single package.</li>
+<li><a href="https://www.openshift.com/blog/descheduler-ga-in-openshift-4.7">openshift.com: Descheduler GA in OpenShift 4.7 🌟</a> The <a href="https://github.com/kubernetes-sigs/descheduler">Descheduler</a> is an upstream Kubernetes subproject owned by SIG-Scheduling. Its purpose is to serve as a complement to the stock kube-scheduler, which assigns new pods to nodes based on the myriad criteria and algorithms it provides.</li>
+<li><a href="https://www.opensourcerers.org/2021/04/26/automated-application-packaging-and-distribution-with-openshift-part-12/ 🌟">opensourcerers.org: Automated Application Packaging and Distribution with OpenShift – Part &frac12;</a> Learn how to automate application deployment and packaging with openshift and tools like source-to-image, templates, kustomize. </li>
+<li><a href="https://www.openshift.com/blog/how-to-configure-ldap-sync-with-cronjobs-in-openshift">openshift.com: How to Configure LDAP Sync With CronJobs in OpenShift 🌟</a></li>
+<li><a href="https://www.schabell.org/2021/03/codeready-containers-howto-setup-openshift-47-on-local-machine.html">schabell.org: How to setup the OpenShift Container Platform 4.7 on your local machine</a></li>
+<li><a href="https://developers.redhat.com/blog/2021/04/29/containerize-net-for-red-hat-openshift-use-a-windows-vm-like-a-container">developers.redhat.com: Containerize .NET for Red Hat OpenShift: Use a Windows VM like a container</a></li>
+<li><a href="https://www.openshift.com/blog/a-brief-introduction-to-red-hat-advanced-cluster-security-for-kubernetes">openshift.com: A Brief Introduction to Red Hat Advanced Cluster Security for Kubernetes</a></li>
+<li><a href="https://www.openshift.com/blog/customizing-virtual-machine-templates-in-openshift-1">openshift.com: Customizing Virtual Machine Templates in OpenShift</a></li>
+</ul>
+<h3 id="openshift-sizing-and-subscription-guide">OpenShift sizing and subscription guide<a class="headerlink" href="#openshift-sizing-and-subscription-guide" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.redhat.com/en/resources/openshift-subscription-sizing-guide-detail">redhat.com: OpenShift sizing and subscription guide for enterprise Kubernetes 🌟</a></li>
+</ul>
+<h3 id="openshift-platform-plus">OpenShift Platform Plus<a class="headerlink" href="#openshift-platform-plus" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.openshift.com/products/platform-plus">Red Hat OpenShift Platform Plus 🌟</a> Build, deploy, run, manage, and secure intelligent applications at scale across the hybrid cloud.</li>
+<li><a href="https://thenewstack.io/red-hat-offers-a-complete-kubernetes-stack-with-openshift-platform-plus/">thenewstack.io: Red Hat Offers a ‘Complete Kubernetes Stack’ with OpenShift Platform Plus 🌟</a></li>
+</ul>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://developers.redhat.com/blog/2020/07/20/best-practices-using-health-checks-in-the-openshift-4-5-web-console/">developers.redhat.com - Best practices: Using health checks in the OpenShift 4.5 web console 🌟</a> 3 types of health checks offered in OpenShift 4.5 to improve application reliability and uptime</li>
+<li><a href="https://redhat-cop.github.io/openshift-migration-best-practices/">redhat-cop.github.io: Best practices for migrating from OpenShift Container Platform 3 to 4 🌟</a> This guide provides recommendations and best practices for migrating from OpenShift Container Platform 3.9+ to OpenShift 4.x with the Migration Tookit for Containers (MTC).</li>
+<li><a href="https://www.openshift.com/blog/applications-here-applications-there-part-3-application-migration">openshift.com: Applications Here, Applications There! - Part 3 - Application Migration</a> Application Migration on Advanced Cluster Management</li>
+<li><a href="https://github.com/e-minguez/openshift-yolo">openshift-yolo</a> OpenShift CronJob to check if updates are available, and if so, upgrade the cluster to the latest version.</li>
+</ul>
+<h3 id="setting-up-ocp4-on-aws">Setting up OCP4 on AWS<a class="headerlink" href="#setting-up-ocp4-on-aws" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md">AWS Account Set Up 🌟</a>).</li>
+<li><a href="https://aws.amazon.com/blogs/opensource/openshift-4-on-aws-quick-start/">OpenShift 4 on AWS Quick Starts 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/control-regional-access-to-your-service-on-openshift-running-on-aws">openshift.com: Control Regional Access to Your Service on OpenShift Running on AWS</a></li>
+</ul>
+<h3 id="rosa-red-hat-openshift-service-on-aws">ROSA Red Hat OpenShift Service on AWS<a class="headerlink" href="#rosa-red-hat-openshift-service-on-aws" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.redhat.com/en/about/press-releases/amazon-and-red-hat-announce-general-availability-red-hat-openshift-service-aws-rosa">redhat.com: Amazon and Red Hat Announce the General Availability of Red Hat OpenShift Service on AWS (ROSA)</a></li>
+<li><a href="https://aws.amazon.com/es/blogs/aws/red-hat-openshift-service-on-aws-now-generally-availably/">amazon.com: Red Hat OpenShift Service on AWS Now GA</a></li>
+<li><a href="https://www.infoq.com/news/2021/04/red-hat-openshift-aws/">infoq.com: AWS Announces the General Availability of the Red Hat OpenShift Service on AWS</a></li>
+<li><a href="https://www.datacenterknowledge.com/devops/red-hat-brings-its-managed-openshift-kubernetes-service-aws">datacenterknowledge.com: Red Hat Brings Its Managed OpenShift Kubernetes Service to AWS</a></li>
+<li><a href="https://aws.amazon.com/es/blogs/containers/red-hat-openshift-service-on-aws-architecture-and-networking/">aws.amazon.com: Red Hat OpenShift Service on AWS: architecture and networking</a></li>
+<li><a href="https://www.openshift.com/blog/using-vpc-peering-to-connect-an-openshift-service-on-an-aws-rosa-cluster-to-an-amazon-rds-mysql-database-in-a-different-vpc">openshift.com: Using VPC Peering to Connect an OpenShift Service on an AWS (ROSA) Cluster to an Amazon RDS MySQL Database in a Different VPC</a></li>
+</ul>
+<p><center>
+<a href="https://www.openshift.com/blog/enterprise-kubernetes-with-openshift-part-one"><img alt="OCP 4 Architecture" src="../images/ocp4_arch.png" /></a>
+</center></p>
+<h2 id="downloads">Downloads<a class="headerlink" href="#downloads" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://mirror.openshift.com/pub/openshift-v4/">https://mirror.openshift.com/pub/openshift-v4/</a></li>
+</ul>
+<h2 id="openshift-end-to-end-day-0-day-1-day-2">OpenShift End-to-End. Day 0, Day 1 &amp; Day 2<a class="headerlink" href="#openshift-end-to-end-day-0-day-1-day-2" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.openshift.com/blog/openshift-end-to-end-plan-and-deploy">OpenShift End-to-End: <strong>Day 0</strong> - Plan and Deploy</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-end-to-end-core-services">OpenShift End-to-End: <strong>Day 1</strong> - Core Services</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-end-to-end-cluster-customization">OpenShift End-to-End: <strong>Day 2</strong> - Cluster Customization 🌟</a><ul>
+<li><a href="https://www.openshift.com/blog/ask-an-openshift-admin-office-hour-day-2-operations-part-1">Ask an OpenShift Admin Office Hour - Day 2 Operations, Part 1</a></li>
+<li><a href="https://www.openshift.com/blog/ask-an-openshift-admin-office-hour-day-2-operations-part-2">Ask an OpenShift Admin Office Hour - Day 2 Operations, Part 2</a></li>
+</ul>
+</li>
+</ul>
+<p><center>
+<a href="https://www.openshift.com/blog/openshift-end-to-end-plan-and-deploy"><img alt="OCP 4 Pland and Deploy" src="../images/ocp_plan_deploy.png" /></a>
+</center></p>
+<h2 id="ocp-4-overview">OCP 4 Overview<a class="headerlink" href="#ocp-4-overview" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Result of RedHat’s (now IBM) acquisition of CoreOS -&gt; <a href="https://docs.openshift.com/container-platform/4.4/architecture/architecture-rhcos.html">RHCOS</a> (Red Hat Enterprise Linux CoreOS)</li>
+<li>Merge of two leading Kubernetes distributions, Tectonic and OpenShift:<ul>
+<li><strong>CoreOS Tectonic</strong>:<ul>
+<li><a href="https://www.openshift.com/learn/topics/operators">Operator Framework</a></li>
+<li><a href="https://quay.io/">quay.io</a> container build and registry service</li>
+<li>Stable tiny Linux distribution with <a href="https://coreos.com/ignition/docs/latest/what-is-ignition.html">ignition bootstrap</a> and transaction-based update engine.</li>
+</ul>
+</li>
+<li><strong>OpenShift</strong>:<ul>
+<li><a href="https://www.openshift.com/#success-stories-intro">Wide enterprise adoption</a></li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/authentication/managing-security-context-constraints.html">Security</a></li>
+<li><a href="https://www.slideshare.net/Smals_ICT/20171010-multitenancy-in-openshift">Multi-tenancy features</a> (self-service)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>OpenShift 4 is built on top of Kubernetes 1.13+ </li>
+<li><a href="https://assets.openshift.com/hubfs/Commons-London-OpenShift-Container-Platform-4.3-Roadmap.pdf">Roadmap</a></li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/release_notes/ocp-4-4-release-notes.html">Release Notes</a></li>
+</ul>
+<p><center>
+<img alt="tenant" src="../images/tenant.png" />
+</center>
+<br/></p>
+<h3 id="three-new-functionalities">Three New Functionalities<a class="headerlink" href="#three-new-functionalities" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Self-Managing Platform</li>
+<li>Application Lifecycle Management (<a href="https://docs.openshift.com/container-platform/4.4/operators/understanding_olm/olm-understanding-olm.html">OLM</a>):<ul>
+<li><strong>OLM Operator</strong>:<ul>
+<li>Responsible for deploying applications defined by <a href="https://docs.openshift.com/container-platform/4.4/operators/understanding_olm/olm-understanding-olm.html#olm-csv_olm-understanding-olm">ClusterServiceVersion (CSV) manifest</a>.</li>
+<li>Not concerned with the creation of the required resources; users can choose to manually create these resources using the CLI, or  users can choose to create these resources using the Catalog Operator.</li>
+</ul>
+</li>
+<li><strong>Catalog Operator</strong>:<ul>
+<li>Responsible for resolving and installing CSVs and the required resources they specify. It is also responsible for watching CatalogSources for updates to packages in channels and upgrading them (optionally automatically) to the latest available versions.</li>
+<li>A user that wishes to track a package in a channel creates a <strong>Subscription resource</strong> configuring the desired <strong>package, channel, and the CatalogSource</strong> from which to pull updates. When updates are found, an appropriate <strong>InstallPlan</strong> is written into the namespace on behalf of the user.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Automated Infrastructure Management (<a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.1/pdf/updating_clusters/OpenShift_Container_Platform-4.1-Updating_clusters-en-US.pdf">Over-The-Air Updates</a>)</li>
+</ol>
+<p><center>
+<img alt="ocp update1" src="../images/ocp_update1.png" /> <img alt="ocp update2" src="../images/ocp_update2.png" /> <img alt="ocp update3" src="../images/ocp_update3.png" />
+</center>
+<br/></p>
+<h3 id="new-technical-components">New Technical Components<a class="headerlink" href="#new-technical-components" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong><a href="https://cloud.redhat.com/openshift/install">New Installer</a>:</strong><ul>
+<li><a href="https://try.openshift.com/">try.openshift.com</a></li>
+<li><a href="https://github.com/openshift/installer">github.com/openshift/installer</a></li>
+</ul>
+</li>
+<li><strong>Storage:</strong> Cloud integrated storage capability used by default via <a href="https://github.com/openshift/ocs-operator">OCS Operator</a> (Red Hat)<ul>
+<li>There are a number of persistent storage options available to you through the OperatorHub / Storage vendors that don’t involve Red Hat, NFS or Gluster.</li>
+<li>Kubernetes-native persistent storage technologies available (non-RedHat solutions):<ul>
+<li><a href="https://operatorhub.io/operator/rook-ceph">Rook-Ceph</a>: <a href="https://www.redhat.com/en/blog/rook-ceph-storage-operator-now-operatorhubio">Rook-Ceph storage Operator now on OperatorHub.io</a></li>
+<li><a href="https://operatorhub.io/operator/robin-operator">Robin Storage Operator</a>: <a href="https://get.robin.io/">get.robin.io</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Operators End-To-End!:</strong> responsible for reconciling the system to the desired state<ul>
+<li>Cluster configuration kept as API objects that ease its maintenance (“everything-as-code” approach):<ul>
+<li>Every component is configured with <a href="https://docs.openshift.com/container-platform/4.4/operators/crds/crd-managing-resources-from-crds.html">Custom Resources (CR)</a> that are processed by operators. </li>
+<li>No more painful upgrades and synchronization among multiple nodes and no more configuration drift.</li>
+</ul>
+</li>
+<li>List of operators that configure cluster components (API objects):<ul>
+<li>API server</li>
+<li>Nodes via Machine API</li>
+<li>Ingress</li>
+<li>Internal DNS</li>
+<li>Logging (EFK) and Monitoring (Prometheus)</li>
+<li>Sample applications</li>
+<li>Networking</li>
+<li>Internal Registry</li>
+<li>Oauth (and authentication in general)</li>
+<li>etc</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>At the Node Level:</strong><ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/architecture/architecture-rhcos.html">RHEL CoreOS</a> is the result of merging CoreOS Container Linux and RedHat Atomic host functionality and is currently the only supported OS to host OpenShift 4.</li>
+<li>Node provisioning with <a href="https://coreos.com/blog/introducing-ignition.html">ignition</a>, which came with CoreOS Container Linux</li>
+<li>Atomic host updates with <a href="https://github.com/coreos/rpm-ostree">rpm-ostree</a></li>
+<li><a href="https://cri-o.io/">CRI-O</a> as a container runtime</li>
+<li><a href="https://www.slideshare.net/openshift/openshift-18812162">SELinux</a> enabled by default</li>
+</ul>
+</li>
+<li><a href="https://github.com/openshift/machine-api-operator/tree/master">Machine API</a>: Provisioning of nodes. Abstraction mechanism added (API objects to declaratively manage the cluster):<ul>
+<li>Based on <a href="https://github.com/kubernetes-sigs/cluster-api">Kubernetes Cluster API project</a></li>
+<li>Provides a new set of machine resources: <ul>
+<li>Machine</li>
+<li>Machine Deployment</li>
+<li>MachineSet: <ul>
+<li>distributes easily your nodes among different Availability Zones</li>
+<li>manages multiple node pools (e.g. pool for testing, pool for machine learning with GPU attached, etc)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Everything “just another pod”</strong></li>
+</ul>
+<h3 id="installation-cluster-autoscaler">Installation &amp; Cluster Autoscaler<a class="headerlink" href="#installation-cluster-autoscaler" title="Permanent link">&para;</a></h3>
+<ul>
+<li>New installer openshift-install tool, replacement for the old Ansible scripts.  </li>
+<li>40 min (AWS). Terraform.</li>
+<li>2 installation patterns:<ol>
+<li><strong>Installer Provisioned Infrastructure (IPI)</strong></li>
+<li><strong>User Provisioned Infrastructure (UPI)</strong></li>
+</ol>
+</li>
+<li>The whole process can be done in one command and requires minimal infrastructure knowledge (IPI): <code>openshift-install create cluster</code></li>
+</ul>
+<p><center>
+<img alt="OCP IPI" src="../images/ocp-ipi.png" /></p>
+<p><img alt="OCP IPI UPI" src="../images/ocp_ipi_upi.png" />
+</center>
+<br/></p>
+<h4 id="ipi-upi">IPI &amp; UPI<a class="headerlink" href="#ipi-upi" title="Permanent link">&para;</a></h4>
+<ul>
+<li>2 installation patterns:<ol>
+<li><strong>Installer Provisioned Infrastructure (IPI):</strong> On supported platforms, the installer is capable of provisioning the underlying infrastructure for the cluster. The installer programmatically creates all portions of the networking, machines, and operating systems required to support the cluster. Think of it as best-practice reference architecture implemented in code.  It is recommended that most users make use of this functionality to avoid having to provision their own infrastructure.  The installer will create and destroy the infrastructure components it needs to be successful over the life of the cluster.</li>
+<li><strong>User Provisioned Infrastructure (UPI):</strong> For other platforms or in scenarios where installer provisioned infrastructure would be incompatible, the installer can stop short of creating the infrastructure, and allow the platform administrator to provision their own using the cluster assets generated by the install tool. Once the infrastructure has been created, OpenShift 4 is installed, maintaining its ability to support automated operations and over-the-air platform updates.</li>
+</ol>
+</li>
+</ul>
+<p><center>
+<img alt="OCP IPI2" src="../images/ocp_ipi2.png" /></p>
+<p><img alt="OCP UPI" src="../images/ocp_upi.png" />
+</center>
+<br/></p>
+<h3 id="cluster-autoscaler-operator">Cluster Autoscaler Operator<a class="headerlink" href="#cluster-autoscaler-operator" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Adjusts the size of an OpenShift Container Platform cluster to meet its current deployment needs. It uses declarative, Kubernetes-style arguments</li>
+<li>Increases the size of the cluster when there are pods that failed to schedule on any of the current nodes due to insufficient resources or when another node is necessary to meet deployment needs. The ClusterAutoscaler does not increase the cluster resources beyond the limits that you specify.</li>
+<li>A huge improvement over the manual, error-prone process used in the previous version of OpenShift and RHEL nodes.</li>
+</ul>
+<p><center>
+<img alt="OCP Autoscaler1" src="../images/ocp4_autoscaler1.png" /> <img alt="OCP Autoscaler2" src="../images/ocp4_autoscaler2.png" />
+</center>
+<br/></p>
+<h3 id="operators">Operators<a class="headerlink" href="#operators" title="Permanent link">&para;</a></h3>
+<h4 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Core of the platform</li>
+<li>The hierarchy of operators, with clusterversion at the top, is the single door for configuration changes and is responsible for reconciling the system to the desired state.</li>
+<li>For example, if you break a critical cluster resource directly, the system automatically recovers itself. </li>
+<li>Similarly to cluster maintenance, <a href="https://www.redhat.com/en/blog/introducing-operator-framework-building-apps-kubernetes">operator framework</a> used for applications. As a user, you get SDK, <a href="https://docs.openshift.com/container-platform/4.4/operators/understanding_olm/olm-understanding-olm.html">OLM</a> (Lifecycle Manager of all Operators and their associated services running across their clusters) and embedded <a href="https://www.redhat.com/en/blog/new-kubernetes-operatorhub-red-hat-openshift-enable-hybrid-cloud-flexibility-enterprises">operator hub</a>.</li>
+<li><a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/design/architecture.md">OLM Arquitecture</a></li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/operators/olm-adding-operators-to-cluster.html">Adding Operators to a Cluster</a> (They can be added via <strong>CatalogSource</strong>)</li>
+<li>The supported method of using <strong>Helm charts</strong> with Openshift is via the <a href="https://www.openshift.com/blog/build-kubernetes-operators-from-helm-charts-in-5-steps">Helm Operator</a></li>
+<li><a href="https://twitter.com/operatorhubio">twitter.com/operatorhubio</a></li>
+<li>View the list of Operators available to the cluster from the OperatorHub:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>$ oc get packagemanifests -n openshift-marketplace 
+NAME AGE 
+amq-streams 14h 
+packageserver 15h 
+couchbase-enterprise 14h 
+mongodb-enterprise 14h 
+etcd 14h myoperator 14h 
+...
+</code></pre></div>
+
+<p><center>
+<img alt="OCP Operators" src="../images/ocp_operators.png" />
+</center>
+<br/></p>
+<h4 id="catalog">Catalog<a class="headerlink" href="#catalog" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Developer Catalog</li>
+<li>Installed Operators</li>
+<li>OperatorHub (OLM)</li>
+<li>Operator Management:<ul>
+<li><strong>Operator Catalogs</strong> are groups of Operators you can make available on the cluster. They can be added via <strong>CatalogSource</strong> (i.e. “catalogsource.yaml”). Subscribe and grant a namespace access to use the installed Operators. </li>
+<li><strong>Operator Subscriptions</strong> keep your services up to date by tracking a channel in a package. The approval strategy determines either manual or automatic updates.</li>
+</ul>
+</li>
+</ul>
+<p><center>
+<img alt="Operator Subscriptions" src="../images/operator_subscriptions.png" />
+</center>
+<br/></p>
+<h4 id="certified-opeators-olm-operators-and-red-hat-operators">Certified Opeators, OLM Operators and Red Hat Operators<a class="headerlink" href="#certified-opeators-olm-operators-and-red-hat-operators" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Certified Operators</strong> packaged by Certified:<ul>
+<li>Not provided by Red Hat </li>
+<li>Supported by Red Hat</li>
+<li>Deployed via “Package Server” OLM Operator</li>
+</ul>
+</li>
+<li><strong>OLM Operators</strong>:<ul>
+<li>Packaged by Red Hat  </li>
+<li><strong>“Package Server”</strong> OLM Operator includes a CatalogSource provided by Red Hat</li>
+</ul>
+</li>
+<li><strong>Red Hat Operators</strong>:<ul>
+<li>Packaged by Red Hat  </li>
+<li>Deployed via “Package Server” OLM Operator</li>
+</ul>
+</li>
+<li><strong>Community Edition Operators</strong>:<ul>
+<li>Deployed by any means</li>
+<li><strong>Not supported</strong> by Red Hat</li>
+</ul>
+</li>
+</ul>
+<p><center>
+<img alt="OCP Certified Operators" src="../images/ocp_certified_operators.png" />
+</center>
+<br/></p>
+<h4 id="deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators">Deploy and bind enterprise-grade microservices with Kubernetes Operators<a class="headerlink" href="#deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://developers.redhat.com/blog/2020/05/18/deploy-and-bind-enterprise-grade-microservices-with-kubernetes-operators/">Deploy and bind enterprise-grade microservices with Kubernetes Operators</a></li>
+</ul>
+<h4 id="openshift-container-storage-operator-ocs">OpenShift Container Storage Operator (OCS)<a class="headerlink" href="#openshift-container-storage-operator-ocs" title="Permanent link">&para;</a></h4>
+<h5 id="ocs-3-openshift-3">OCS 3 (OpenShift 3)<a class="headerlink" href="#ocs-3-openshift-3" title="Permanent link">&para;</a></h5>
+<ul>
+<li>OpenShift Container Storage based on <a href="https://www.gluster.org/">GlusterFS</a> technology.</li>
+<li>Not OpenShift 4 compliant: Migration tooling will be available to facilitate the move to OCS 4.x (OpenShift Gluster APP Mitration Tool).</li>
+</ul>
+<h5 id="ocs-4-openshift-4">OCS 4 (OpenShift 4)<a class="headerlink" href="#ocs-4-openshift-4" title="Permanent link">&para;</a></h5>
+<ul>
+<li><strong>OCS Operator</strong> based on Rook.io with Operator LifeCycle Manager (OLM).</li>
+<li>Tech Stack:<ul>
+<li><a href="https://rook.io">Rook</a> (don&rsquo;t confuse this with non-redhat <a href="https://operatorhub.io/operator/rook-ceph">&ldquo;Rook Ceph&rdquo;</a> -&gt; <a href="https://www.redhat.com/en/blog/rook-ceph-storage-operator-now-operatorhubio">RH ref</a>).<ul>
+<li>Replaces <a href="https://github.com/heketi/heketi">Heketi</a>  (OpenShift 3)</li>
+<li>Uses <strong>Red Hat Ceph Storage</strong> and <strong>Noobaa</strong>.</li>
+</ul>
+</li>
+<li><a href="https://ceph.io">Red Hat Ceph Storage</a></li>
+<li><a href="https://www.noobaa.io">Noobaa</a>:<ul>
+<li>Red Hat Multi Cloud Gateway (AWS, Azure, GCP, etc)</li>
+<li>Asynchronous replication of data between my local ceph and my cloud provider</li>
+<li>Deduplication</li>
+<li>Compression</li>
+<li>Encryption</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Backups available in OpenShift 4.2+ (Snapshots + Restore of Volumes)</li>
+<li>OCS Dashboard in OCS Operator</li>
+</ul>
+<p><center>
+<img alt="OCS Dashboard" src="../images/ocs_dashboard.png" />
+</center>
+<br/></p>
+<h4 id="cluster-network-operator-cno-routers">Cluster Network Operator (CNO) &amp; Routers<a class="headerlink" href="#cluster-network-operator-cno-routers" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Cluster Network Operator (CNO): The cluster network is now configured and managed by an Operator. The Operator upgrades and monitors the cluster network.</li>
+<li><a href="https://docs.openshift.com/container-platform/3.11/install_config/router/index.html">Router plug-ins in OCP3:</a><ul>
+<li>A « route » is the external entrypoint to a <a href="https://kubernetes.io/docs/concepts/services-networking/service/">Kubernetes Service</a>. This is one of the biggest differences between <a href="https://kubernetes.io/">Kubernetes</a> and <a href="https://www.openshift.com/">OpenShift Enterprise (= OCP)</a> and <a href="https://www.okd.io/">origin</a>. </li>
+<li>OpenShift router has the endpoints as targets and therefore the pod of the application.</li>
+<li><a href="https://dzone.com/articles/session-stickiness-in-openshift">Shared/Stikcy sessions are enabled by default</a></li>
+<li><a href="https://docs.openshift.com/container-platform/3.11/architecture/networking/assembly_available_router_plugins.html#architecture-haproxy-router">HAProxy template router</a> (default router): HTTP(s) &amp; TLS-enabled traffic via SIN.<ul>
+<li><a href="https://dzone.com/articles/updating-haproxy-configurations-openshift">dzone.com/articles/updating-haproxy-configurations-openshift</a></li>
+<li><a href="https://dzone.com/articles/openshift-egress-options">dzone.com/articles/openshift-egress-options</a> </li>
+</ul>
+</li>
+<li>F5 BIG-IP Router plug-in integrates with an existing F5 BIG-IP system in your environment</li>
+<li>Since the 9<sup>th</sup> May 2018, <a href="https://www.openshift.com/blog/introducing-nginx-and-nginx-plus-routers-for-openshift">NGINX</a> is also available as « router ».</li>
+</ul>
+</li>
+<li>Routers in OCP4: <ul>
+<li><a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">Ingress Controller</a> is the most common way to allow external access to an OpenShift Container Platform cluster</li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/networking/ingress-operator.html">Configuring Ingress Operator in OCP4</a></li>
+<li>Limited to HTTP, HTTPS using SNI, and TLS using SNI (sufficient for web applications and services)</li>
+<li>Has two replicas by default, which means it should be running on two worker nodes.</li>
+<li>Can be scaled up to have more replicas on more nodes.</li>
+<li>The Ingress Operator implements the ingresscontroller API and is the component responsible for enabling external access to OpenShift Container Platform cluster services. </li>
+<li>The operator makes this possible by deploying and managing one or more HAProxy-based <a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">Ingress Controllers</a> to handle routing.</li>
+</ul>
+</li>
+<li><a href="https://blog.openshift.com/openshift-and-network-security-zones-coexistence-approaches/">Network Security Zones in Openshift (DMZ)</a></li>
+<li><a href="https://www.openshift.com/blog/global-load-balancer-for-openshift-clusters-an-operator-based-approach">openshift.com: Global Load Balancer for OpenShift clusters: an Operator-Based Approach</a></li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>oc describe clusteroperators/ingress
+oc logs --namespace<span class="o">=</span>openshift-ingress-operator deployments/ingress-operator
+</code></pre></div>
+<br/></p>
+<h4 id="servicemesh-operator">ServiceMesh Operator<a class="headerlink" href="#servicemesh-operator" title="Permanent link">&para;</a></h4>
+<ul>
+<li>ServiceMesh: <a href="https://istio.io/">Istio</a> + <a href="https://kiali.io/">kiali</a> + <a href="https://www.jaegertracing.io/">Jaeger</a></li>
+<li>ServiceMesh Community Edition: <a href="https://github.com/maistra/istio">github.com/maistra/istio</a><ul>
+<li>Red Hat community installer compliant with OCP 4.1: <a href="https://maistra.io/docs/getting_started/install">maistra.io/docs/getting_started/install</a></li>
+<li>Outcome: publicly known errors in 2 or 3 components.</li>
+</ul>
+</li>
+<li><strong>Certified ServiceMesh Operator</strong><ul>
+<li><a href="https://access.redhat.com/documentation/en-us/openshift_container_platform/4.4/html-single/service_mesh/index">ServiceMesh</a> GA in September 2019 (available in OperatorHub):<ul>
+<li><a href="https://blog.openshift.com/red-hat-openshift-service-mesh-is-now-available-what-you-should-know/">blog.openshift.com/red-hat-openshift-service-mesh-is-now-available-what-you-should-know/</a> </li>
+</ul>
+</li>
+<li>Certified &amp; Packaged by Red Hat</li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/service_mesh/service_mesh_install/installing-ossm.html">“One-click” deployment</a></li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/service_mesh/service_mesh_install/preparing-ossm-installation.html">Preparing to install Red Hat OpenShift Service Mesh</a>. To install the Red Hat OpenShift Service Mesh Operator, you must first install these Operators:<ul>
+<li>Elasticsearch</li>
+<li>Jaeger</li>
+<li>Kiali</li>
+</ul>
+</li>
+<li>Do not install Community versions of the Operators. Community Operators are not supported.</li>
+</ul>
+</li>
+</ul>
+<p><center>
+<img alt="OCS Servicemesh 1" src="../images/ocp_servicemesh1.png" /> <img alt="OCS Servicemesh 2" src="../images/ocp_servicemesh2.png" /> <img alt="OCS Servicemesh 3" src="../images/ocp_servicemesh3.png" /></p>
+<p><img alt="OCS Servicemesh 4" src="../images/ocp_servicemesh4.png" />
+</center>
+<br/></p>
+<h4 id="serverless-operator-knative">Serverless Operator (Knative)<a class="headerlink" href="#serverless-operator-knative" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Operator install on OperatorHub.io</li>
+<li>Knative Eventing (Camel-K, Kafka, Cron, etc)</li>
+<li>Integration with Openshift ServiceMesh, Logging, Monitoring.</li>
+<li><a href="https://www.openshift.com/learn/topics/serverless">openshift.com/learn/topics/serverless</a></li>
+<li><a href="https://redhat-developer-demos.github.io/knative-tutorial">redhat-developer-demos.github.io/knative-tutorial</a>  </li>
+</ul>
+<h4 id="crossplane-operator-universal-control-plane-api-for-cloud-computing">Crossplane Operator (Universal Control Plane API for Cloud Computing)<a class="headerlink" href="#crossplane-operator-universal-control-plane-api-for-cloud-computing" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://blog.crossplane.io/crossplane-openshift-operator-cloud-native-services/">Crossplane as an OpenShift Operator to manage and provision cloud-native services</a></li>
+</ul>
+<h3 id="monitoring-observability">Monitoring &amp; Observability<a class="headerlink" href="#monitoring-observability" title="Permanent link">&para;</a></h3>
+<h4 id="grafana">Grafana<a class="headerlink" href="#grafana" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Integrated Grafana v5.4.3 (deployed by default): </li>
+<li>Monitoring -&gt; Dashboards</li>
+<li>Project “openshift-monitoring”</li>
+<li><a href="https://grafana.com/docs/v5.4/">grafana.com/docs/v5.4/</a> </li>
+</ul>
+<h4 id="prometheus">Prometheus<a class="headerlink" href="#prometheus" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Integrated Prometheus v2.7.2 (deployed by default): </li>
+<li>Monitoring -&gt; metrics</li>
+<li>Project “openshift-monitoring”</li>
+<li><a href="https://prometheus.io/docs/prometheus/2.7/getting_started/">prometheus.io/docs/prometheus/2.7/getting_started/</a> </li>
+</ul>
+<h4 id="alerts-silences">Alerts &amp; Silences<a class="headerlink" href="#alerts-silences" title="Permanent link">&para;</a></h4>
+<ul>
+<li>Integrated Alertmanager 0.16.2 (deployed by default):<ul>
+<li>Monitoring -&gt; Alerts</li>
+<li>Monitoring -&gt; Silences </li>
+<li>Silences temporarily mute alerts based on a set of conditions that you define. Notifications are not sent for alerts that meet the given conditions.</li>
+</ul>
+</li>
+<li>Project “openshift-monitoring”</li>
+<li><a href="https://prometheus.io/docs/alerting/alertmanager/">prometheus.io/docs/alerting/alertmanager/</a></li>
+</ul>
+<h4 id="cluster-logging-efk">Cluster Logging (EFK)<a class="headerlink" href="#cluster-logging-efk" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://thenewstack.io/log-management-for-red-hat-openshift/">thenewstack.io: Log Management for Red Hat OpenShift</a></li>
+<li>EFK: Elasticsearch + Fluentd + Kibana</li>
+<li>Cluster Logging EFK <strong>not deployed by default</strong></li>
+<li>As an OpenShift Container Platform cluster administrator, you can deploy cluster logging to aggregate logs for a range of OpenShift Container Platform services.</li>
+<li>The OpenShift Container Platform cluster logging solution requires that you <strong>install both the Cluster Logging Operator and Elasticsearch Operator</strong>. There is no use case in OpenShift Container Platform for installing the operators individually. You must <strong>install the Elasticsearch Operator using the CLI</strong> following the directions below. You can <strong>install the Cluster Logging Operator using the web console or CLI.</strong>
+Deployment procedure based on CLI + web console: <ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/logging/cluster-logging-deploying.html">docs.openshift.com/container-platform/4.4/logging/cluster-logging-deploying.html</a> </li>
+<li><strong>Elasticsearch Operator</strong> must be installed in Project <strong>“openshift-operators-redhat”</strong></li>
+<li><strong>Cluster Logging Operator</strong> must be deployed in Project <strong>“openshift-logging”</strong></li>
+<li><strong>CatalogSourceConfig</strong> added to enable Elasticsearch Operator on the cluster</li>
+<li>etc.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">OCP Release</th>
+<th align="left">Elasticsearch</th>
+<th align="left">Fluentd</th>
+<th align="left">Kibana</th>
+<th align="left">EFK deployed by default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">OpenShift 3.11</td>
+<td align="left">5.6.13.6</td>
+<td align="left">0.12.43</td>
+<td align="left">5.6.13</td>
+<td align="left">No</td>
+</tr>
+<tr>
+<td align="left">OpenShift 4.1</td>
+<td align="left">5.6.16</td>
+<td align="left">?</td>
+<td align="left">5.6.16</td>
+<td align="left">No</td>
+</tr>
+</tbody>
+</table>
+<p><br/></p>
+<h3 id="build-images-next-generation-container-image-building-tools">Build Images. Next-Generation Container Image Building Tools<a class="headerlink" href="#build-images-next-generation-container-image-building-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Redesign of how images are built on the platform.</li>
+<li>Instead of relying on a daemon on the host to manage containers, image creation, and image pushing, we are leveraging <a href="https://buildah.io/">Buildah</a> running inside our build pods.</li>
+<li>This aligns with the general OpenShift 4 theme of making everything “just another pod”</li>
+<li>A simplified set of build workflows, not dependent on the node host having a specific container runtime available. </li>
+<li>Dockerfiles that built under OpenShift 3.x will continue to build under OpenShift 4.x and S2I builds will continue to function as well.</li>
+<li>The actual BuildConfig API is unchanged, so a BuildConfig from a v3.x cluster can be imported into a v4.x cluster and work without modification.</li>
+<li><a href="https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users/">Podman &amp; Buildah for docker users</a></li>
+<li><a href="https://cloudowski.com/articles/why-managing-container-images-on-openshift-is-better-than-on-kubernetes/">Openshift ImageStreams</a></li>
+<li><a href="https://www.openshift.com/blog/openshift-4-image-builds">Openshift 4 image builds</a></li>
+<li><a href="https://docs.openshift.com/container-platform/4.4/builds/custom-builds-buildah.html">Custom image builds with Buildah</a></li>
+<li><a href="https://www.redhat.com/sysadmin/rootless-podman-nfs">Rootless podman and NFS</a></li>
+</ul>
+<p><center>
+<img alt="Buildah" src="../images/Buildah.png" />
+</center>
+<br/></p>
+<h3 id="registry-quay">Registry &amp; Quay<a class="headerlink" href="#registry-quay" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A Docker registry is a place to store and distribute Docker images.</li>
+<li>It serves as a target for your docker push and docker pull commands.</li>
+<li><a href="https://cloudowski.com/articles/why-managing-container-images-on-openshift-is-better-than-on-kubernetes/">Openshift ImageStreams</a></li>
+<li>The registry is now managed by an Operator instead of <code>oc adm</code> registry.</li>
+<li><a href="https://quay.io/">Quay.io</a> is a hosted Docker registry from CoreOS:<ul>
+<li>Main features:<ul>
+<li>“Powerful build triggers” </li>
+<li>“Advanced team permissions”</li>
+<li>“Secure storage”</li>
+</ul>
+</li>
+<li>One of the more enterprise-friendly options out there, offering fine-grained permission controls.</li>
+<li>They support any git server and let you build advanced workflows by doing things like mapping git branches to Docker tags so that when you commit code it automatically builds a corresponding image.</li>
+<li>Quay offers unlimited free public repositories. Otherwise, you pay by the number of private repositories. There’s no extra charge for storage or bandwidth.</li>
+</ul>
+</li>
+<li><a href="https://www.redhat.com/en/blog/introducing-red-hat-quay-3-registry-your-linux-and-windows-containers">Quay 3.0 released in May 2019</a>: support for multiple architectures, Windows containers, and a <a href="https://www.redhat.com/en/technologies/linux-platforms/enterprise-linux">Red Hat Enterprise Linux (RHEL)</a>-based image to this container image registry.</li>
+<li><a href="https://www.redhat.com/en/blog/red-hat-quay-31-now-even-better-across-distributed-environments">Quay 3.1 released in September 2019</a>: The newest Quay feature is repository mirroring, which complements our existing geographic replication features. Repository mirroring reflects content between distinct, different registries. With this, you can synchronize whitelisted repositories or a source registry subset into Quay. This makes it much easier to distribute images and related data through Quay. </li>
+<li><a href="https://github.com/redhat-cop/quay-operator">Quay Community Edition operator</a></li>
+<li><a href="https://www.openshift.com/products/quay">Quay 3.1 Certified Operator is not available in Openshift and must be purchased</a></li>
+<li>Open Source <a href="https://www.projectquay.io/">ProjectQuay.io</a> Container Registry: <ul>
+<li><a href="https://www.redhat.com/en/blog/red-hat-introduces-open-source-project-quay-container-registry">Red Hat Introduces open source Project Quay container registry</a> </li>
+<li><a href="https://github.com/quay">github.com/quay</a></li>
+</ul>
+</li>
+<li><a href="https://www.openshift.com/blog/keep-your-applications-secure-with-automatic-rebuilds">openshift.com: Keep Your Applications Secure With Automatic Rebuilds</a></li>
+</ul>
+<h3 id="local-development-environment">Local Development Environment<a class="headerlink" href="#local-development-environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li>For version 3 we have <a href="https://developers.redhat.com/products/cdk/overview">Container Development Kit</a> (or its open source equivalent for OKD - <a href="https://github.com/minishift/minishift/releases">minishift</a>) which launches a single node VM with Openshift and it does it in a few minutes. It’s perfect for testing also as a part of CI/CD pipeline.</li>
+<li>Openshift 4 on your laptop: There is a working solution for single node OpenShift cluster. It is provided by a new project called <a href="https://github.com/code-ready/crc/">CodeReady Containers</a>.</li>
+<li><a href="https://developers.redhat.com/blog/2019/09/05/red-hat-openshift-4-on-your-laptop-introducing-red-hat-codeready-containers/">Procedure:</a></li>
+</ul>
+<div class="highlight"><pre><span></span><code>untar
+crc setup
+crc start
+environment variables
+oc login
+</code></pre></div>
+
+<ul>
+<li><a href="https://developers.redhat.com/blog/2019/09/05/red-hat-openshift-4-on-your-laptop-introducing-red-hat-codeready-containers/">Red Hat OpenShift 4.2 on your laptop: Introducing Red Hat CodeReady Containers</a>
+<br/></li>
+</ul>
+<h2 id="openshift-on-azure">OpenShift on Azure<a class="headerlink" href="#openshift-on-azure" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.openshift.com/blog/introducing-azure-red-hat-openshift-on-openshift-4">Introducing Azure Red Hat OpenShift on OpenShift 4 🌟</a></li>
+</ul>
+<h2 id="openshift-youtube">OpenShift Youtube<a class="headerlink" href="#openshift-youtube" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/user/rhopenshift/videos">OpenShift Youtube</a></li>
+<li><a href="https://www.youtube.com/watch?v=kQJxGtsqphk">youtube: Installing OpenShift 4 on AWS with operatorhub.io integration 🌟</a></li>
+<li><a href="https://www.youtube.com/watch?v=eFxFtUpAT9s">youtube: OpenShift 4 OAuth Identity Providers</a></li>
+<li><a href="https://www.youtube.com/watch?v=G-baPg3XhBo">youtube: OpenShift on Google Cloud, AWS, Azure and localhost</a></li>
+<li><a href="https://www.redhat.com/en/about/videos/getting-started-openshift-4-security">youtube: Getting Started with OpenShift 4 Security 🌟</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLaR6Rq6Z4Iqcy9rg0JF6SCFst5lyyftQ-">youtube playlist: London 2020 | OpenShift Commons Gathering 🌟</a> OCP4 Updates &amp; Roadmaps, Customer Stories, OpenShift Hive (case study), Operator Ecosystem. </li>
+</ul>
+<h2 id="openshift-4-training">OpenShift 4 Training<a class="headerlink" href="#openshift-4-training" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/openshift/training">github.com: Openshift 4 training</a></li>
+<li><a href="https://learn.openshift.com/">learn.openshift.com</a><ul>
+<li><a href="https://learn.openshift.com/playgrounds/openshift44">OpenShift 4.4</a></li>
+</ul>
+</li>
+<li><a href="https://learn.crunchydata.com/">learn.crunchydata.com</a></li>
+<li><a href="https://www.redhat.com/en/blog/red-hat-shares-%E2%80%95-learning-kubernetes">Red Hat Shares ― Learning Kubernetes</a></li>
+</ul>
+<h2 id="openshift-4-roadmap">OpenShift 4 Roadmap<a class="headerlink" href="#openshift-4-roadmap" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://assets.openshift.com/hubfs/Commons-London-OpenShift-Container-Platform-4.3-Roadmap.pdf">blog.openshift.com: OpenShift 4 Roadmap (slides) - this link may change</a></li>
+<li><a href="https://blog.openshift.com/wp-content/uploads/OPENSHIFT-CONTAINER-STORAGE.pdf">blog.openshift.com: OpenShift Container Storage (OCS 3 &amp; 4 slides)</a><ul>
+<li>This link is now broken. <a href="https://github.com/redhatspain/awesome-kubernetes/tree/master/pdf">Grab a copy from here</a></li>
+</ul>
+</li>
+<li><a href="https://blog.openshift.com/wp-content/uploads/OpenShift-4-Roadmap-Update-William-Markito-and-Chris-Blum.pdf">blog.openshift.com: OpenShift 4 Roadmap Update (slides)</a><ul>
+<li>This link is now broken. <a href="https://github.com/redhatspain/awesome-kubernetes/tree/master/pdf">Grab a copy from here</a> </li>
+</ul>
+</li>
+</ul>
+<h2 id="kubevirt-virtual-machine-management-on-kubernetes">Kubevirt Virtual Machine Management on Kubernetes<a class="headerlink" href="#kubevirt-virtual-machine-management-on-kubernetes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kubevirt.io/">kubevirt.io 🌟</a> </li>
+<li><a href="https://blog.openshift.com/getting-started-with-kubevirt/">Getting Started with KubeVirt Containers and Virtual Machines Together</a></li>
+<li><a href="https://containerjournal.com/topics/container-management/red-hat-integrates-kubevirt-with-kubernetes-management-platform-from-sap/">containerjournal.com: Red Hat Integrates KubeVirt With Kubernetes Management Platform From SAP</a></li>
+</ul>
+<h2 id="networking-and-network-policy-in-ocp4-sdncni-plug-ins">Networking and Network Policy in OCP4. SDN/CNI plug-ins<a class="headerlink" href="#networking-and-network-policy-in-ocp4-sdncni-plug-ins" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/networking/understanding-networking.html">Networking in OCP4</a></li>
+<li>Currently, the <strong>default OpenShift CNI is OpenShift SDN (network-policy)</strong>, which configures an <strong>overlay network using Open vSwitch</strong> (OVS 2.11). The following diagram shows the CNI options for OpenShift and the status of each (supported, validated, etc. …):</li>
+<li><a href="https://www.redhat.com/en/blog/network-traffic-control-containers-red-hat-openshift">redhat.com: Network traffic control for containers in Red Hat OpenShift</a></li>
+</ul>
+<p><center>
+<a href="https://www.openshift.com/blog/demystifying-multus"><img alt="ocp4 cni arch" src="../images/ocp4_cni_arch.png" /></a>
+</center></p>
+<h3 id="multiple-networks-with-sdncni-plug-ins-usage-scenarios-for-an-additional-network">Multiple Networks with SDN/CNI plug-ins. Usage scenarios for an additional network<a class="headerlink" href="#multiple-networks-with-sdncni-plug-ins-usage-scenarios-for-an-additional-network" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/networking/multiple_networks/understanding-multiple-networks.html">Understanding multiple networks</a> In Kubernetes, container networking is delegated to networking plug-ins that implement the Container Network Interface (CNI). OpenShift Container Platform uses the <a href="https://github.com/openshift/multus-cni">Multus CNI plug-in</a> to allow chaining of CNI plug-ins. During cluster installation, you configure your default Pod network. The default network handles all ordinary network traffic for the cluster. You can define an additional network based on the available CNI plug-ins and attach one or more of these networks to your Pods. You can define more than one additional network for your cluster, depending on your needs. This gives you flexibility when you configure Pods that deliver network functionality, such as switching or routing. </li>
+<li>You can use an additional network in situations where network isolation is needed, including data plane and control plane separation. Isolating network traffic is useful for the following performance and security reasons:<ul>
+<li><strong>Performance:</strong> You can send traffic on two different planes in order to manage how much traffic is along each plane.</li>
+<li><strong>Security:</strong> You can send sensitive traffic onto a network plane that is managed specifically for security considerations, and you can separate private data that must not be shared between tenants or customers.</li>
+</ul>
+</li>
+<li><strong>All of the Pods in the cluster still use the cluster-wide default network to maintain connectivity across the cluster.</strong> Every Pod has an eth0 interface that is attached to the cluster-wide Pod network. You can view the interfaces for a Pod by using the oc exec -it <pod_name> &ndash; ip a command. If you add additional network interfaces that use Multus CNI, they are named net1, net2, …​, netN.</li>
+<li>To attach additional network interfaces to a Pod, you must create configurations that define how the interfaces are attached. You specify each interface by using a Custom Resource (CR) that has a NetworkAttachmentDefinition type. A CNI configuration inside each of these CRs defines how that interface is created.</li>
+<li><a href="https://www.openshift.com/blog/demystifying-multus">openshift.com: Demystifying Multus 🌟</a></li>
+</ul>
+<h3 id="istio-cni-plug-in">Istio CNI plug-in<a class="headerlink" href="#istio-cni-plug-in" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/service_mesh/service_mesh_arch/ossm-vs-community.html#ossm-cni_ossm-vs-istio">Istio CNI plug-in 🌟</a> Red Hat OpenShift Service Mesh includes CNI plug-in, which provides you with an alternate way to configure application pod networking. The CNI plug-in replaces the init-container network configuration eliminating the need to grant service accounts and projects access to Security Context Constraints (SCCs) with elevated privileges.</li>
+</ul>
+<h3 id="calico-cni-plug-in">Calico CNI Plug-in<a class="headerlink" href="#calico-cni-plug-in" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.openshift.com/blog/operator-based-calico-cni-plug-in-is-supported-on-openshift-4">Operator-based Calico CNI Plug-In is Supported on OpenShift 4 🌟</a></li>
+<li><a href="https://docs.projectcalico.org/getting-started/openshift/installation">docs.projectcalico.org: Install an OpenShift 4 cluster with Calico</a></li>
+</ul>
+<h3 id="third-party-network-operators-with-openshift">Third Party Network Operators with OpenShift<a class="headerlink" href="#third-party-network-operators-with-openshift" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://redhat-connect.gitbook.io/certified-operator-guide/appendix/using-third-party-network-operators-with-openshift">Using Third Party Network Operators with OpenShift</a></li>
+</ul>
+<h2 id="storage-in-ocp-4-openshift-container-storage-ocs">Storage in OCP 4. OpenShift Container Storage (OCS)<a class="headerlink" href="#storage-in-ocp-4-openshift-container-storage-ocs" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.openshift.com/products/container-storage/">Red Hat OpenShift Container Storage 4</a> </li>
+<li><a href="https://www.openshift.com/blog/state-of-openshift-container-storage-eran-tamir-and-duncan-hardie-red-hat">State of OpenShift Container Storage</a></li>
+</ul>
+<h2 id="red-hat-advanced-cluster-management-for-kubernetes">Red Hat Advanced Cluster Management for Kubernetes<a class="headerlink" href="#red-hat-advanced-cluster-management-for-kubernetes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.redhat.com/en/technologies/management/advanced-cluster-management">Red Hat Advanced Cluster Management for Kubernetes 🌟</a></li>
+<li><a href="https://containerjournal.com/features/red-hat-simplifies-kubernetes-cluster-management/">containerjournal.com: Red Hat Simplifies Kubernetes Cluster Management</a></li>
+</ul>
+<h2 id="openshift-kubernetes-engine-oke">OpenShift Kubernetes Engine (OKE)<a class="headerlink" href="#openshift-kubernetes-engine-oke" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://docs.openshift.com/container-platform/4.4/welcome/oke_about.html">Similarities and differences between OpenShift Kubernetes Engine and OpenShift Container Platform</a></li>
+</ul>
+<p><a href="https://docs.openshift.com/container-platform/4.4/welcome/oke_about.html"><img alt="openshift4 architecture" src="../images/openshift4-architecture.png" /></a></p>
+<h2 id="red-hat-codeready-containers-openshift-4-on-your-laptop">Red Hat CodeReady Containers. OpenShift 4 on your laptop<a class="headerlink" href="#red-hat-codeready-containers-openshift-4-on-your-laptop" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developers.redhat.com/topics/kubernetes/">developers.redhat.com: Developing applications on Kubernetes 🌟</a></li>
+<li><a href="https://code-ready.github.io/crc/">code-ready.github.io/crc: Getting Strated Guide 🌟</a></li>
+<li><a href="https://developers.redhat.com/blog/2019/09/05/red-hat-openshift-4-on-your-laptop-introducing-red-hat-codeready-containers/">Red Hat OpenShift 4.2 on your laptop: Introducing <strong>Red Hat CodeReady Containers</strong></a></li>
+<li><a href="https://dzone.com/articles/code-ready-containers-decision-management-develope">dzone: Code Ready Containers - Decision Management Developer Tools Update</a></li>
+<li><a href="https://gist.github.com/tmckayus/8e843f90c44ac841d0673434c7de0c6a">Overview: running crc on a remote server</a></li>
+<li><a href="https://dzone.com/articles/code-ready-containers-installing-process-automatio">dzone: Code Ready Containers: Installing Process Automation</a> Learn how to make better use of Red Hat&rsquo;s Code Ready Containers platform by installing process automation from a catalog.</li>
+<li><a href="https://developers.redhat.com/blog/2020/06/12/how-to-install-codeready-workspaces-in-a-restricted-openshift-4-environment/">developers.redhat.com: How to install CodeReady Workspaces in a restricted OpenShift 4 environment</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/09/09/install-red-hat-openshift-operators-on-your-laptop-using-red-hat-codeready-containers-and-red-hat-marketplace/">Install Red Hat OpenShift Operators on your laptop using Red Hat CodeReady Containers and Red Hat Marketplace</a></li>
+<li><a href="https://www.schabell.org/2020/09/how-to-setup-openshift-container-platform-45.html">schabell.org: How to setup OpenShift Container Platform 4.5 on your local machine in minutes</a></li>
+<li><a href="https://dzone.com/articles/codeready-containers-getting-started-with-openshif-1">dzone: CodeReady Containers - Getting Started with OpenShift 4.5 and Process Automation Tooling</a> What can you do with the fully stocked container registry provided to you? There is no better way to learn about container technologies, cloud native methods&hellip;</li>
+</ul>
+<h2 id="openshift-hive-cluster-as-a-service-easily-provision-new-paas-environments-for-developers">OpenShift Hive: Cluster-as-a-Service. Easily provision new PaaS environments for developers<a class="headerlink" href="#openshift-hive-cluster-as-a-service-easily-provision-new-paas-environments-for-developers" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.comopenshift-hive-cluster-as-a-service/">blog.openshift.com: openshift hive cluster as a service</a></li>
+<li><a href="https://github.com/openshift/hive">github.com/openshift/hive</a> <strong>API driven OpenShift 4 cluster provisioning and management.</strong> Hive is an operator which runs as a service on top of Kubernetes/OpenShift. The Hive service can be used to provision and perform initial configuration of OpenShift clusters. <strong>OpenShift Hive</strong> is an operator which enables operations teams to easily provision new PaaS environments for developers improving productivity and reducing process burden due to internalIT regulations.</li>
+<li><a href="https://www.youtube.comwatch?v=b_NOrGxfH5Y">youtube: how to deliver OpenShift as a service (just like Red Hat)</a></li>
+</ul>
+<h2 id="openshift-4-master-api-protection-in-public-cloud">OpenShift 4 Master API Protection in Public Cloud<a class="headerlink" href="#openshift-4-master-api-protection-in-public-cloud" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.com/introducing-red-hat-openshift-4-3-to-enhance-kubernetes-security/">blog.openshift.com: Introducing Red Hat OpenShift 4.3 to Enhance Kubernetes Security 🌟</a> OpenShift 4.3 adds new capabilities and platforms to the installer, helping customers to embrace their company’s best security practices and gain greater access control across hybrid cloud environments. Customers can deploy OpenShift clusters to customer-managed, pre-existing VPN / VPC (Virtual Private Network / Virtual Private Cloud) and subnets on AWS, Microsoft Azure and Google Cloud Platform. They can also install OpenShift clusters with private facing load balancer endpoints, not publicly accessible from the Internet, on AWS, Azure and GCP.</li>
+<li><a href="https://containerjournal.com/topics/container-management/red-hat-delivers-latest-kubernetes-enhancements/">containerjournal.com: Red Hat Delivers Latest Kubernetes Enhancements</a></li>
+<li><a href="https://access.redhat.com/solutions/4363731">Create an OpenShift 4.2 Private Cluster in AWS 🌟</a></li>
+<li><a href="https://cloud.ibm.com/docs/openshift?topic=openshift-security">cloud.ibm.com: openshift-security</a></li>
+<li><a href="https://docs.aporeto.com/docs/main/guides/okd-master-api-protection/">docs.aporeto.com: OpenShift Master API Protection</a></li>
+</ul>
+<h2 id="backup-and-migrate-to-openshift-4">Backup and Migrate to OpenShift 4<a class="headerlink" href="#backup-and-migrate-to-openshift-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.com/migrating-your-applications-to-openshift-4/">blog.openshift.com: Migrating your applications to OpenShift 4 🌟</a><ul>
+<li><a href="https://github.com/vmware-tanzu/velero"><strong>Velero</strong></a> Backup and migrate Kubernetes applications and their persistent volumes </li>
+<li><a href="https://restic.net/"><strong>Restic</strong></a> Backups done right!</li>
+</ul>
+</li>
+</ul>
+<h2 id="okd4-openshift-4-without-enterprise-level-support">OKD4. OpenShift 4 without enterprise-level support<a class="headerlink" href="#okd4-openshift-4-without-enterprise-level-support" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.okd.io/">OKD.io:</a> The Community Distribution of Kubernetes that powers Red Hat OpenShift.</li>
+<li><a href="https://docs.okd.io/">docs.okd.io 🌟</a></li>
+<li><a href="https://github.com/openshift/okd/blob/master/README.md">GitHub: OKD4</a></li>
+<li><a href="https://www.youtube.com/watch?v=_nl-45ulj1s">youtube.com: OKD4</a></li>
+<li><a href="https://blog.openshift.com/wp-content/uploads/DevConf-CZ-2020_OKD4_FCOS__Mueller.pdf"><strong>OKD4 Roadmap</strong>: The Road To OKD4: Operators, FCOS and K8S 🌟</a></li>
+<li><a href="https://github.com/openshift/community/blob/master/ROADMAP.md">github.com: OKD 4 Roadmap</a></li>
+<li><a href="https://www.youtube.com/watch?v=2UwQD0diUxk">youtube.com: How To Install OKD4 on GCP - Vadim Rutkovsky (Red Hat)</a></li>
+<li><a href="https://blog.openshift.com/guide-to-installing-an-okd-4-4-cluster-on-your-home-lab/">blog.openshift.com: Guide to Installing an OKD 4.4 Cluster on your Home Lab</a></li>
+<li><a href="https://cgruver.github.io/okd4-upi-lab-setup/">okd4-upi-lab-setup: Building an OpenShift - OKD 4.X Lab</a> Installing OKD4.X with User Provisioned Infrastructure. Libvirt, iPXE, and FCOS</li>
+<li><a href="https://www.redhat.com/sysadmin/kubernetes-cluster-laptop">redhat.com: How to run a Kubernetes cluster on your laptop 🌟</a> Want containers? Learn how to set up and run a Kubernetes container cluster on your laptop with OKD.</li>
+<li><a href="https://www.openshift.com/blog/deploy-a-multi-master-okd-4.5-cluster-using-a-single-command-in-30-minutes">openshift.com: Deploy a multi-master OKD 4.5 cluster using a single command in ~30 minutes</a></li>
+<li><a href="https://dustymabe.com/2020/09/28/openshift-okd-on-fedora-coreos-on-digitalocean-part-4-recorded-demo/">dustymabe.com: OpenShift OKD on Fedora CoreOS on DigitalOcean Part 4: Recorded Demo</a></li>
+<li><a href="https://medium.com/swlh/guide-okd-4-5-single-node-cluster-832693cb752b">medium: Guide OKD 4.5 Single Node Cluster</a></li>
+</ul>
+<h2 id="openshift-serverless-with-knative">OpenShift Serverless with Knative<a class="headerlink" href="#openshift-serverless-with-knative" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.redhat.com/en/topics/microservices/what-is-knative">redhat.com: What is knative?</a></li>
+<li><a href="https://developers.redhat.com/topics/serverless-architecture/">developers.redhat.com: <strong>Serverless Architecture</strong></a></li>
+<li><a href="https://www.datacenterknowledge.com/open-source/explaining-knative-project-liberate-serverless-cloud-giants">datacenterknowledge.com: Explaining Knative, the Project to Liberate Serverless from Cloud Giants</a></li>
+<li><a href="https://blog.openshift.com/announcing-openshift-serverless-1-5-0-tech-preview-a-sneak-peek-of-our-ga/">Announcing OpenShift Serverless 1.5.0 Tech Preview – A sneak peek of our GA</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/04/30/serverless-applications-made-faster-and-simpler-with-openshift-serverless-ga/">Serverless applications made faster and simpler with <strong>OpenShift Serverless GA</strong></a></li>
+</ul>
+<h2 id="helm-charts-and-openshift-4">Helm Charts and OpenShift 4<a class="headerlink" href="#helm-charts-and-openshift-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.combuild-kubernetes-operators-from-helm-charts-in-5-steps/">The supported method of using Helm charts with Openshift4 is via the Helm Operator</a></li>
+<li><a href="https://www.youtube.com/watch?v=6NM6sqXIsoA">youtube</a></li>
+<li><a href="https://blog.openshift.comhelm-and-operators-on-openshift-part-1/">blog.openshift.com: Helm and Operators on OpenShift, Part 1</a></li>
+<li><a href="https://blog.openshift.comhelm-and-operators-on-openshift-part-2/">blog.openshift.com: Helm and Operators on OpenShift, Part 2</a></li>
+</ul>
+<h2 id="red-hat-marketplace">Red Hat Marketplace<a class="headerlink" href="#red-hat-marketplace" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://marketplace.redhat.com/">marketplace.redhat.com 🌟</a> A simpler way to buy and manage enterprise software, with automated deployment to any cloud. </li>
+<li><a href="https://developers.redhat.com/blog/2020/04/27/building-kubernetes-applications-on-openshift-with-red-hat-marketplace/">developers.redhat.com: Building Kubernetes applications on OpenShift with Red Hat Marketplace</a></li>
+</ul>
+<h2 id="kubestone-benchmarking-operator-for-k8s-and-openshift">Kubestone. Benchmarking Operator for K8s and OpenShift<a class="headerlink" href="#kubestone-benchmarking-operator-for-k8s-and-openshift" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://kubestone.io">kubestone.io</a></li>
+<li><a href="https://operatorhub.io/operator/kubestone">operatorhub.io: kubestone</a></li>
+</ul>
+<h2 id="openshift-cost-management">OpenShift Cost Management<a class="headerlink" href="#openshift-cost-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://blog.openshift.com/tech-preview-get-visibility-into-your-openshift-costs-across-your-hybrid-infrastructure/">blog.openshift.com: Tech Preview: Get visibility into your OpenShift costs across your hybrid infrastructure 🌟</a></li>
+<li><a href="https://www.openshift.com/blog/cost-management-and-openshift-sergio-oc%C3%B3n-c%C3%A1rdenas-red-hat">Cost Management and OpenShift - Sergio Ocón-Cárdenas (Red Hat) 🌟</a></li>
+</ul>
+<h2 id="operators-in-ocp-4">Operators in OCP 4<a class="headerlink" href="#operators-in-ocp-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://github.com/operator-framework/operator-lifecycle-manager/">OLM operator lifecycle manager</a><ul>
+<li><a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/design/architecture.md">OLM Architecture 🌟</a></li>
+<li><a href="https://github.com/operator-framework/operator-lifecycle-manager/blob/master/doc/design/philosophy.md">OLM Philosophy</a></li>
+<li><a href="https://developers.redhat.com/openshift-commons/Operator-Lifecycle-Management">developers.redhat.com: OpenShift Commons Briefing: Operator Lifecycle Management (video)</a></li>
+</ul>
+</li>
+<li><a href="https://blog.openshift.com/top-kubernetes-operators-advancing-across-the-operator-capability-model/">Top Kubernetes Operators</a></li>
+<li><a href="https://operatorhub.io/">operatorhub.io</a></li>
+<li><a href="https://learn.crunchydata.com/">learn.crunchydata.com</a> </li>
+<li><a href="https://developers.redhat.com/blog/2020/01/22/operator-pattern-rest-api-for-kubernetes-and-red-hat-openshift/">developers.redhat.com: Operator pattern: REST API for Kubernetes and Red Hat OpenShift 🌟</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/09/11/5-tips-for-developing-kubernetes-operators-with-the-new-operator-sdk/">developers.redhat.com: 5 tips for developing Kubernetes Operators with the new Operator SDK</a></li>
+<li><a href="https://medium.com/@bherta/using-kubernetes-operators-to-manage-the-lifecycle-of-ai-applications-5682c3b372b3">medium: Using Kubernetes Operators to Manage the Lifecycle of AI Applications</a></li>
+</ul>
+<h2 id="quay-container-registry">Quay Container Registry<a class="headerlink" href="#quay-container-registry" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.redhat.com/en/blog/red-hat-introduces-open-source-project-quay-container-registry">Red Hat Introduces open source Project Quay container registry</a></li>
+<li><a href="https://www.openshift.com/products/quay">Red Hat Quay</a></li>
+<li><a href="https://www.projectquay.io/">projectquay.io</a></li>
+<li><a href="https://quay.io/">quay.io</a></li>
+<li><a href="https://github.com/quay/quay">GitHub Quay (OSS)</a></li>
+<li><a href="https://blog.openshift.com/introducing-red-hat-quay/">blog.openshift.com: Introducing Red Hat Quay</a></li>
+<li><a href="https://operatorhub.io/operator/quay">operatorhub.io/operator/quay</a></li>
+<li><a href="https://www.openshift.com/blog/keep-your-applications-secure-with-automatic-rebuilds">openshift.com: Keep Your Applications Secure With Automatic Rebuilds 🌟</a> <ul>
+<li>OpenShift Container Platform historically has addressed this challenge by using Image Streams. An image stream is an abstraction for referencing container images from within OpenShift while the referenced images are an image registry such as OpenShift internal registry, Quay, or other external registries. Image streams are capable of defining triggers which allow your builds and deployments to be automatically invoked when a new version of an image is available in the backing image registry. This in effect enables rebuilding all images that are based on a particular base image as soon as a new version of the base image is available in the Red Hat container catalog and therefore updates all images with the latest bug, CVE, and vulnerability fixes delivered in the latest base image. The challenge, however, is that this capability is limited to BuildConfigs in OpenShift and does not allow more complex workflows to be triggered when images are updated in the Red Hat container catalog. Furthermore, it is also limited to the scope of a single cluster and its internal OpenShift registry. </li>
+<li>Fortunately, though, using Red Hat Quay as a central registry in combination with OpenShift Pipelines enables infinite possibilities in designing sophisticated workflows for ensuring a secure software supply chain and automatically performing any set of actions whenever images are pushed, updated, or security vulnerabilities are discovered in the Red Hat container catalog. </li>
+<li>In this blog post, we will highlight how Red Hat Quay can be integrated with Tekton pipelines to trigger application rebuilds when images are updated in the Red Hat container catalog. At a high level, the flow will look like this:</li>
+</ul>
+</li>
+</ul>
+<h2 id="application-migration-toolkit">Application Migration Toolkit<a class="headerlink" href="#application-migration-toolkit" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developers.redhat.com/products/mta/overview">Red Hat Application Migration Toolkit</a> is an assembly of open source tools that enables large-scale application migrations and modernizations. The tooling consists of multiple individual components that provide support for each phase of a migration process.</li>
+<li><a href="https://github.com/windup/">windup</a> upstream project for Red Hat Application Migration Toolkit</li>
+<li><a href="https://carlosthe19916.wordpress.com/2020/04/12/rhamt-in-github-actions/">RHAMT in Github Actions</a> You can embed the Migration Toolkit for Application MTA (now still RHAMT) in your GitHub  to ensure your app is JEE / Tomcat compliant (and more &hellip;)</li>
+<li><a href="https://developers.redhat.com/blog/2020/09/04/migrate-your-java-apps-to-containers-with-migration-toolkit-for-applications-5-0/#more-768337">Migrate your Java apps to containers with Migration Toolkit for Applications 5.0</a></li>
+<li><a href="https://developers.redhat.com/blog/2020/12/08/spring-boot-to-quarkus-migrations-and-more-in-red-hats-migration-toolkit-for-applications-5-1-0/">developers.redhat.com: Spring Boot to Quarkus migrations and more in Red Hat’s migration toolkit for applications 5.1.0</a> </li>
+</ul>
+<h2 id="developer-sandbox">Developer Sandbox<a class="headerlink" href="#developer-sandbox" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://developers.redhat.com/blog/2020/01/22/operator-pattern-rest-api-for-kubernetes-and-red-hat-openshift/">developers.redhat.com: Operator pattern: REST API for Kubernetes and Red Hat OpenShift 🌟</a></li>
+<li><a href="https://developers.redhat.com/developer-sandbox">developers.redhat.com: Welcome to the Developer Sandbox for Red Hat OpenShift </a> Get free access to the Developer Sandbox for Red Hat OpenShift and deploy your application code as a container on this self-service, cloud-hosted experience. Skip installations and deployment and jump directly into OpenShift.</li>
+</ul>
+<h2 id="openshift-topology-view">OpenShift Topology View<a class="headerlink" href="#openshift-topology-view" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.redhat.com/en/blog/openshift-topology-view-milestone-towards-better-developer-experience">OpenShift topology view: A milestone towards a better developer experience</a></li>
+</ul>
+<h2 id="openbuilt-platform-for-the-construction-industry">OpenBuilt Platform for the Construction Industry<a class="headerlink" href="#openbuilt-platform-for-the-construction-industry" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://openbuilt.io/">OpenBuilt</a> </li>
+<li><a href="https://www.infoq.com/news/2021/04/ibm-redhat-openbuilt/">infoq.com: IBM, Red Hat and Cobuilder Develop OpenBuilt, a Platform for the Construction Industry</a></li>
+</ul>
+<h2 id="slides">Slides<a class="headerlink" href="#slides" title="Permanent link">&para;</a></h2>
+<p><center>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/qc1rIHqvXuiuzj" scrolling="no" allowfullscreen> </iframe> <div style="margin-bottom:0px"> <strong> <a href="//www.slideshare.net/KangarootLinux/openshift-4-the-smarter-kubernetes-platform" title="OpenShift 4, the smarter Kubernetes platform" target="_blank">OpenShift 4, the smarter Kubernetes platform</a> </strong> from <strong><a href="https://www.slideshare.net/KangarootLinux" target="_blank">Kangaroot</a></strong> </div></p>
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/ko4KgmpBYmqhyf" scrolling="no" allowfullscreen> </iframe>
+
+<p><div style="margin-bottom:0px"> <strong> <a href="//www.slideshare.net/wintonjkt/open-shift-4-infra-deep-dive" title="Open shift 4 infra deep dive" target="_blank">Open shift 4 infra deep dive</a> </strong> from <strong><a href="https://www.slideshare.net/wintonjkt" target="_blank">Winton Winton</a></strong> </div></p>
+<script async class="speakerdeck-embed" data-id="7b2d9055749147ba83ad89acfd11b8b6" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+<p></center>
+<br/></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../ocp3/" title="OCP 3" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                OCP 3
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../customer/" title="Customer Success Stories" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Customer Success Stories
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            2020 <a href="https://twitter.com/RedHatSpain">Red Hat Spain</a>, <a href="https://redhatspain.com/about/">about</a>.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/redhatspain" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/groups/1937212/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/redhatspain" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.youtube.com/channel/UCCGQ2G2rGAkHzVFhhed-xVw/playlists" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://speakerdeck.com/redhatspain/stars" target="_blank" rel="noopener" title="speakerdeck.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M213.86 296H100a100 100 0 0 1 0-200h132.84a40 40 0 0 1 0 80H98c-26.47 0-26.45 40 0 40h113.82a100 100 0 0 1 0 200H40a40 40 0 0 1 0-80h173.86c26.48 0 26.46-40 0-40zM298 416a120.21 120.21 0 0 0 51.11-80h64.55a19.83 19.83 0 0 0 19.66-20V196a19.83 19.83 0 0 0-19.66-20H296.42a60.77 60.77 0 0 0 0-80h136.93c43.44 0 78.65 35.82 78.65 80v160c0 44.18-35.21 80-78.65 80z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://es.slideshare.net/RedHatSpain/favorites" target="_blank" rel="noopener" title="es.slideshare.net" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M187.7 153.7c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7s61.7-26 61.7-57.7c0-32-27.7-57.7-61.7-57.7zm143.4 0c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7 34.3 0 61.7-26 61.7-57.7.1-32-27.4-57.7-61.7-57.7zm156.6 90l-6 4.3V49.7c0-27.4-20.6-49.7-46-49.7H76.6c-25.4 0-46 22.3-46 49.7V248c-2-1.4-4.3-2.9-6.3-4.3-15.1-10.6-25.1 4-16 17.7 18.3 22.6 53.1 50.3 106.3 72C58.3 525.1 252 555.7 248.9 457.5c0-.7.3-56.6.3-96.6 5.1 1.1 9.4 2.3 13.7 3.1 0 39.7.3 92.8.3 93.5-3.1 98.3 190.6 67.7 134.3-124 53.1-21.7 88-49.4 106.3-72 9.1-13.8-.9-28.3-16.1-17.8zm-30.5 19.2c-68.9 37.4-128.3 31.1-160.6 29.7-23.7-.9-32.6 9.1-33.7 24.9-10.3-7.7-18.6-15.5-20.3-17.1-5.1-5.4-13.7-8-27.1-7.7-31.7 1.1-89.7 7.4-157.4-28V72.3c0-34.9 8.9-45.7 40.6-45.7h317.7c30.3 0 40.9 12.9 40.9 45.7v190.6z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://redhatspain.slack.com/" target="_blank" rel="noopener" title="redhatspain.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascript/extra.js"></script>
+      
+    
+  </body>
+</html>

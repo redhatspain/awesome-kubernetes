@@ -1,0 +1,3463 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A curated list of awesome IT projects and resources. Inspired by the awesome list.">
+      
+      
+        <link rel="canonical" href="https://redhatspain.com/git/">
+      
+      
+        <meta name="author" content="info@redhatspain.com">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs - Awesome Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.89dc9fe3.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../static/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-168051035-1","redhatspain.com"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-and-patterns-for-managing-source-code-branches-merge-bots" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-header-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Awesome Kubernetes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Awesome Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../introduction/" title="From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes" class="md-nav__link">
+      From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="Microservices FAQ & Kubernetes Native" class="md-nav__link">
+      Microservices FAQ & Kubernetes Native
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../sre/" title="Site Reliability Engineering (SRE)" class="md-nav__link">
+      Site Reliability Engineering (SRE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devops/" title="DevOps" class="md-nav__link">
+      DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cheatsheets/" title="Cheat Sheets" class="md-nav__link">
+      Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../gitops/" title="GitOps" class="md-nav__link">
+      GitOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mlops/" title="MLOps" class="md-nav__link">
+      MLOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../demos/" title="Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more" class="md-nav__link">
+      Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Security and DevSecOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Security and DevSecOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Security and DevSecOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devsecops/" title="DevSecOps. Container Security" class="md-nav__link">
+      DevSecOps. Container Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../securityascode/" title="Security Policy as Code" class="md-nav__link">
+      Security Policy as Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      NoOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="NoOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        NoOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../noops/" title="NoOps" class="md-nav__link">
+      NoOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../finops/" title="FinOps - Cloud Financial Management" class="md-nav__link">
+      FinOps - Cloud Financial Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TestOps and Continuous Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestOps and Continuous Testing" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestOps and Continuous Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../testops/" title="TestOps and Continuous Testing" class="md-nav__link">
+      TestOps and Continuous Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../qa/" title="QA" class="md-nav__link">
+      QA
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Project Management Methodology
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Project Management Methodology" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Project Management Methodology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-methodology/" title="Project Management Methodology" class="md-nav__link">
+      Project Management Methodology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../project-management-tools/" title="Project Management Tools" class="md-nav__link">
+      Project Management Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../appointment-scheduling/" title="Appointment Scheduling" class="md-nav__link">
+      Appointment Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../workfromhome/" title="Work From Home" class="md-nav__link">
+      Work From Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-tools/" title="Kubernetes Tools" class="md-nav__link">
+      Kubernetes Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../rancher/" title="Rancher - Enterprise management for Kubernetes" class="md-nav__link">
+      Rancher - Enterprise management for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../matrix-table/" title="Kubernetes Matrix Table" class="md-nav__link">
+      Kubernetes Matrix Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-alternatives/" title="Kubernetes alternatives" class="md-nav__link">
+      Kubernetes alternatives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      OpenShift
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenShift" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        OpenShift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift/" title="OpenShift docs" class="md-nav__link">
+      OpenShift docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ocp3/" title="OCP 3" class="md-nav__link">
+      OCP 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ocp4/" title="OCP 4" class="md-nav__link">
+      OCP 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../customer/" title="Customer Success Stories" class="md-nav__link">
+      Customer Success Stories
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14" checked>
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Delivery Pipeline
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software Delivery Pipeline" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software Delivery Pipeline
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd/" title="CI/CD - Continuous Integration & Continuous Delivery" class="md-nav__link">
+      CI/CD - Continuous Integration & Continuous Delivery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs" class="md-nav__link md-nav__link--active">
+      Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-distributed-version-control-system" class="md-nav__link">
+    Git Distributed Version-Control System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-interview-questions" class="md-nav__link">
+    Git Interview Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    Shields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-by-contract" class="md-nav__link">
+    Design By Contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-cheat-sheets" class="md-nav__link">
+    Git Cheat Sheets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monorepo-vs-polyrepo" class="md-nav__link">
+    Monorepo VS Polyrepo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns-for-managing-source-code-branches-branching-modelsworkflows" class="md-nav__link">
+    Patterns for Managing Source Code Branches (Branching Models/Workflows)
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns for Managing Source Code Branches (Branching Models/Workflows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-workflows" class="md-nav__link">
+    Git Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development" class="md-nav__link">
+    Trunk Based Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-branch-development-aka-gitflow" class="md-nav__link">
+    Feature Branch Development (aka GitFlow)
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Branch Development (aka GitFlow)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-flow" class="md-nav__link">
+    Git Flow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development-vs-git-flow" class="md-nav__link">
+    Trunk-based Development vs. Git Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-branching-models" class="md-nav__link">
+    Alternative Branching Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternative Branching Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-flags-feature-toggles" class="md-nav__link">
+    Feature Flags (Feature Toggles)
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Flags (Feature Toggles)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keystone-interface-and-keystone-flags" class="md-nav__link">
+    Keystone Interface and Keystone Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-commands" class="md-nav__link">
+    Git Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitbucket" class="md-nav__link">
+    BitBucket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    GitLab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    GitHub Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-marketplace" class="md-nav__link">
+    GitHub Actions Marketplace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-and-openshift" class="md-nav__link">
+    GitHub Actions and OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitea" class="md-nav__link">
+    Gitea
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-tools" class="md-nav__link">
+    Git Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-release-cicd-semantic-release-workflow-semantic-versioning-commit-format-and-releases" class="md-nav__link">
+    Semantic-release. CI/CD semantic release workflow (semantic Versioning, commit format and releases)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-devops-formerly-known-as-vsts" class="md-nav__link">
+    Azure DevOps (formerly known as VSTS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-commit-hooks" class="md-nav__link">
+    Pre Commit Hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-bots" class="md-nav__link">
+    Merge BOTs
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge BOTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-for-git-merges" class="md-nav__link">
+    Jenkins for git merges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitbucket-for-git-merges" class="md-nav__link">
+    Bitbucket for git merges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitlab-for-git-merges" class="md-nav__link">
+    GitLab for git merges
+  </a>
+  
+    <nav class="md-nav" aria-label="GitLab for git merges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marge-gitlab-bot" class="md-nav__link">
+    Marge GitLab bot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-x-bots" class="md-nav__link">
+    Jenkins-X bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plastic-scm-bot" class="md-nav__link">
+    Plastic SCM bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergify-bot" class="md-nav__link">
+    Mergify bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-bots" class="md-nav__link">
+    GitHub bots
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub bots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bors-github-bot" class="md-nav__link">
+    Bors GitHub bot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins/" title="Jenkins & Cloudbees" class="md-nav__link">
+      Jenkins & Cloudbees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../openshift-pipelines/" title="OpenShift Pipelines with Jenkins, Tekton and more..." class="md-nav__link">
+      OpenShift Pipelines with Jenkins, Tekton and more...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../performance-testing-with-jenkins-and-jmeter/" title="Performance testing with Jenkins and JMeter or Gatling" class="md-nav__link">
+      Performance testing with Jenkins and JMeter or Gatling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jenkins-alternatives/" title="Jenkins Alternatives for Continuous Integration" class="md-nav__link">
+      Jenkins Alternatives for Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-7" type="checkbox" id="nav-14-7">
+    
+    <label class="md-nav__link" for="nav-14-7">
+      Toolchain
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Toolchain" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Toolchain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../container-managers/" title="Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo" class="md-nav__link">
+      Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../maven-gradle/" title="Maven, Gradle & SDKMAN" class="md-nav__link">
+      Maven, Gradle & SDKMAN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../sonarqube/" title="SonarQube" class="md-nav__link">
+      SonarQube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nexus-jfrog/" title="Nexus & JFrog Artifactory" class="md-nav__link">
+      Nexus & JFrog Artifactory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../selenium-appium-zephyr/" title="Selenium, Cucumber, Appium & Zephyr Jira plugin" class="md-nav__link">
+      Selenium, Cucumber, Appium & Zephyr Jira plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux/" title="Linux & SSH" class="md-nav__link">
+      Linux & SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mkdocs/" title="MkDocs & GitHub Pages" class="md-nav__link">
+      MkDocs & GitHub Pages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-8" type="checkbox" id="nav-14-8">
+    
+    <label class="md-nav__link" for="nav-14-8">
+      Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../web-servers/" title="Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more" class="md-nav__link">
+      Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_app_servers/" title="Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more" class="md-nav__link">
+      Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../embedded-servlet-containers/" title="Embedded Servlet Containers in SpringBoot" class="md-nav__link">
+      Embedded Servlet Containers in SpringBoot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../caching/" title="Caching Solutions" class="md-nav__link">
+      Caching Solutions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../monitoring/" title="Monitoring and Performance. Prometheus, Grafana, APMs and more" class="md-nav__link">
+      Monitoring and Performance. Prometheus, Grafana, APMs and more
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Configuration Management
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration Management" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../argocd/" title="Argo CD - Declarative GitOps for Kubernetes" class="md-nav__link">
+      Argo CD - Declarative GitOps for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../chef/" title="Chef" class="md-nav__link">
+      Chef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cicd-kubernetes-plugins/" title="CI/CD Kubernetes Plugins" class="md-nav__link">
+      CI/CD Kubernetes Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kubernetes-client-libraries/" title="Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube" class="md-nav__link">
+      Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../helm/" title="Helm Kubernetes Tool" class="md-nav__link">
+      Helm Kubernetes Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../liquibase/" title="Liquibase & Flyway" class="md-nav__link">
+      Liquibase & Flyway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../kustomize/" title="Template-Free Kubernetes Configuration Customization with Kustomize" class="md-nav__link">
+      Template-Free Kubernetes Configuration Customization with Kustomize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../yaml/" title="Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files" class="md-nav__link">
+      Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Infrastructure Management Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure Management Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Infrastructure Management Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../iac/" title="IaC Infrastructure as Code" class="md-nav__link">
+      IaC Infrastructure as Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../pulumi/" title="Pulumi" class="md-nav__link">
+      Pulumi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../terraform/" title="Terraform & Packer" class="md-nav__link">
+      Terraform & Packer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      Databases on Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Databases on Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Databases on Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../databases/" title="Relational Databases and Database DevOps. CrunchyData Postgres Operator" class="md-nav__link">
+      Relational Databases and Database DevOps. CrunchyData Postgres Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../nosql/" title="NoSQL Databases" class="md-nav__link">
+      NoSQL Databases
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../message-queue/" title="Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)" class="md-nav__link">
+      Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Service Mesh
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Service Mesh" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Service Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../servicemesh/" title="Service Mesh" class="md-nav__link">
+      Service Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../istio/" title="Istio" class="md-nav__link">
+      Istio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../storage/" title="Cloud Native Storage" class="md-nav__link">
+      Cloud Native Storage
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-22" type="checkbox" id="nav-22">
+    
+    <label class="md-nav__link" for="nav-22">
+      APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-22">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="APIs with SOAP, REST and gRPC" class="md-nav__link">
+      APIs with SOAP, REST and gRPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../swagger-code-generator-for-rest-apis/" title="Swagger code generator for REST APIs" class="md-nav__link">
+      Swagger code generator for REST APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../postman/" title="API Test Automation with Postman" class="md-nav__link">
+      API Test Automation with Postman
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../developerportals/" title="API Marketplaces. API Management with API Gateways & Developer Portals" class="md-nav__link">
+      API Marketplaces. API Management with API Gateways & Developer Portals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23" type="checkbox" id="nav-23">
+    
+    <label class="md-nav__link" for="nav-23">
+      Development & Frameworks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development & Frameworks" data-md-level="1">
+      <label class="md-nav__title" for="nav-23">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development & Frameworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../angular/" title="Angular" class="md-nav__link">
+      Angular
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../dom/" title="Document Object Model (DOM)" class="md-nav__link">
+      Document Object Model (DOM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../golang/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../javascript/" title="JavaScript - node.js & npm" class="md-nav__link">
+      JavaScript - node.js & npm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../python/" title="Python - Django & Flask" class="md-nav__link">
+      Python - Django & Flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../devel-sites/" title="Websites for web developers" class="md-nav__link">
+      Websites for web developers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-8" type="checkbox" id="nav-23-8">
+    
+    <label class="md-nav__link" for="nav-23-8">
+      Java
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Java" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java_frameworks/" title="Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more" class="md-nav__link">
+      Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../java-and-java-performance-optimization/" title="Java Memory Management & Java Performance Optimization" class="md-nav__link">
+      Java Memory Management & Java Performance Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../jvm-parameters-matrix-table/" title="Java Parameters Matrix Table" class="md-nav__link">
+      Java Parameters Matrix Table
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-9" type="checkbox" id="nav-23-9">
+    
+    <label class="md-nav__link" for="nav-23-9">
+      Dev Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dev Environment" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Dev Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../visual-studio/" title="Visual Studio Code" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../linux-dev-env/" title="WSL - Linux Dev Environment on Windows" class="md-nav__link">
+      WSL - Linux Dev Environment on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../scaffolding/" title="Scaffolding Tools" class="md-nav__link">
+      Scaffolding Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ChromeDevTools/" title="Chrome & Firefox DevTools. HTTP Protocols & WebSockets" class="md-nav__link">
+      Chrome & Firefox DevTools. HTTP Protocols & WebSockets
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-24" type="checkbox" id="nav-24">
+    
+    <label class="md-nav__link" for="nav-24">
+      Public Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Public Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-24">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Public Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../public-cloud-solutions/" title="Public Cloud Solutions" class="md-nav__link">
+      Public Cloud Solutions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../edge-computing/" title="Edge Computing" class="md-nav__link">
+      Edge Computing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloud-arch-diagrams/" title="Cloud Architecture Diagram Tools" class="md-nav__link">
+      Cloud Architecture Diagram Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../GoogleCloudPlatform/" title="Google Cloud Platform" class="md-nav__link">
+      Google Cloud Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../azure/" title="Microsoft Azure" class="md-nav__link">
+      Microsoft Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../ibm_cloud/" title="IBM & IBM Cloud" class="md-nav__link">
+      IBM & IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../oraclecloud/" title="Oracle Cloud" class="md-nav__link">
+      Oracle Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../digitalocean/" title="Digital Ocean" class="md-nav__link">
+      Digital Ocean
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cloudflare/" title="Cloudflare" class="md-nav__link">
+      Cloudflare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../bigdata/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      More References
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="More References" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        More References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../elearning/" title="E-Learning" class="md-nav__link">
+      E-Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../newsfeeds/" title="Subreddits" class="md-nav__link">
+      Subreddits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../other-awesome-lists/" title="Other Awesome Lists" class="md-nav__link">
+      Other Awesome Lists
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Recruitment and Freelancing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Recruitment and Freelancing" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Recruitment and Freelancing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../recruitment/" title="Recruitment" class="md-nav__link">
+      Recruitment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../freelancing/" title="Freelancing" class="md-nav__link">
+      Freelancing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../remote-tech-jobs/" title="Remote Tech Jobs" class="md-nav__link">
+      Remote Tech Jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#git-distributed-version-control-system" class="md-nav__link">
+    Git Distributed Version-Control System
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-interview-questions" class="md-nav__link">
+    Git Interview Questions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shields" class="md-nav__link">
+    Shields
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#design-by-contract" class="md-nav__link">
+    Design By Contract
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-cheat-sheets" class="md-nav__link">
+    Git Cheat Sheets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monorepo-vs-polyrepo" class="md-nav__link">
+    Monorepo VS Polyrepo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#patterns-for-managing-source-code-branches-branching-modelsworkflows" class="md-nav__link">
+    Patterns for Managing Source Code Branches (Branching Models/Workflows)
+  </a>
+  
+    <nav class="md-nav" aria-label="Patterns for Managing Source Code Branches (Branching Models/Workflows)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-workflows" class="md-nav__link">
+    Git Workflows
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development" class="md-nav__link">
+    Trunk Based Development
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#feature-branch-development-aka-gitflow" class="md-nav__link">
+    Feature Branch Development (aka GitFlow)
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Branch Development (aka GitFlow)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#git-flow" class="md-nav__link">
+    Git Flow
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trunk-based-development-vs-git-flow" class="md-nav__link">
+    Trunk-based Development vs. Git Flow
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alternative-branching-models" class="md-nav__link">
+    Alternative Branching Models
+  </a>
+  
+    <nav class="md-nav" aria-label="Alternative Branching Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#feature-flags-feature-toggles" class="md-nav__link">
+    Feature Flags (Feature Toggles)
+  </a>
+  
+    <nav class="md-nav" aria-label="Feature Flags (Feature Toggles)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keystone-interface-and-keystone-flags" class="md-nav__link">
+    Keystone Interface and Keystone Flags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-commands" class="md-nav__link">
+    Git Commands
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bitbucket" class="md-nav__link">
+    BitBucket
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitlab" class="md-nav__link">
+    GitLab
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github" class="md-nav__link">
+    GitHub
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions" class="md-nav__link">
+    GitHub Actions
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub Actions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-marketplace" class="md-nav__link">
+    GitHub Actions Marketplace
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-actions-and-openshift" class="md-nav__link">
+    GitHub Actions and OpenShift
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gitea" class="md-nav__link">
+    Gitea
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-tools" class="md-nav__link">
+    Git Tools
+  </a>
+  
+    <nav class="md-nav" aria-label="Git Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#semantic-release-cicd-semantic-release-workflow-semantic-versioning-commit-format-and-releases" class="md-nav__link">
+    Semantic-release. CI/CD semantic release workflow (semantic Versioning, commit format and releases)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#azure-devops-formerly-known-as-vsts" class="md-nav__link">
+    Azure DevOps (formerly known as VSTS)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-commit-hooks" class="md-nav__link">
+    Pre Commit Hooks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#merge-bots" class="md-nav__link">
+    Merge BOTs
+  </a>
+  
+    <nav class="md-nav" aria-label="Merge BOTs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tips" class="md-nav__link">
+    Tips
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-for-git-merges" class="md-nav__link">
+    Jenkins for git merges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bitbucket-for-git-merges" class="md-nav__link">
+    Bitbucket for git merges
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gitlab-for-git-merges" class="md-nav__link">
+    GitLab for git merges
+  </a>
+  
+    <nav class="md-nav" aria-label="GitLab for git merges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#marge-gitlab-bot" class="md-nav__link">
+    Marge GitLab bot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-x-bots" class="md-nav__link">
+    Jenkins-X bots
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plastic-scm-bot" class="md-nav__link">
+    Plastic SCM bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mergify-bot" class="md-nav__link">
+    Mergify bot
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#github-bots" class="md-nav__link">
+    GitHub bots
+  </a>
+  
+    <nav class="md-nav" aria-label="GitHub bots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bors-github-bot" class="md-nav__link">
+    Bors GitHub bot
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/redhatspain/awesome-kubernetes/edit/master/docs/git.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="git-and-patterns-for-managing-source-code-branches-merge-bots">Git and Patterns for Managing Source Code Branches. Merge BOTs<a class="headerlink" href="#git-and-patterns-for-managing-source-code-branches-merge-bots" title="Permanent link">&para;</a></h1>
+<ul>
+<li><a href="#git-distributed-version-control-system">Git Distributed Version-Control System</a></li>
+<li><a href="#git-interview-questions">Git Interview Questions</a></li>
+<li><a href="#shields">Shields</a></li>
+<li><a href="#design-by-contract">Design By Contract</a></li>
+<li><a href="#git-cheat-sheets">Git Cheat Sheets</a></li>
+<li><a href="#monorepo-vs-polyrepo">Monorepo VS Polyrepo</a></li>
+<li><a href="#patterns-for-managing-source-code-branches-branching-modelsworkflows">Patterns for Managing Source Code Branches (Branching Models/Workflows)</a><ul>
+<li><a href="#git-workflows">Git Workflows</a></li>
+<li><a href="#trunk-based-development">Trunk Based Development</a></li>
+<li><a href="#feature-branch-development-aka-gitflow">Feature Branch Development (aka GitFlow)</a><ul>
+<li><a href="#git-flow">Git Flow</a></li>
+</ul>
+</li>
+<li><a href="#trunk-based-development-vs-git-flow">Trunk-based Development vs. Git Flow</a></li>
+<li><a href="#alternative-branching-models">Alternative Branching Models</a><ul>
+<li><a href="#feature-flags-feature-toggles">Feature Flags (Feature Toggles)</a><ul>
+<li><a href="#keystone-interface-and-keystone-flags">Keystone Interface and Keystone Flags</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#git-commands">Git Commands</a></li>
+<li><a href="#bitbucket">BitBucket</a></li>
+<li><a href="#gitlab">GitLab</a></li>
+<li><a href="#github">GitHub</a><ul>
+<li><a href="#github-actions">GitHub Actions</a><ul>
+<li><a href="#github-actions-marketplace">GitHub Actions Marketplace</a></li>
+</ul>
+</li>
+<li><a href="#github-actions-and-openshift">GitHub Actions and OpenShift</a></li>
+</ul>
+</li>
+<li><a href="#gitea">Gitea</a></li>
+<li><a href="#git-tools">Git Tools</a><ul>
+<li><a href="#semantic-release-cicd-semantic-release-workflow-semantic-versioning-commit-format-and-releases">Semantic-release. CI/CD semantic release workflow (semantic Versioning, commit format and releases)</a></li>
+</ul>
+</li>
+<li><a href="#azure-devops-formerly-known-as-vsts">Azure DevOps (formerly known as VSTS)</a></li>
+<li><a href="#pre-commit-hooks">Pre Commit Hooks</a></li>
+<li><a href="#merge-bots">Merge BOTs</a><ul>
+<li><a href="#tips">Tips</a></li>
+<li><a href="#jenkins-for-git-merges">Jenkins for git merges</a></li>
+<li><a href="#bitbucket-for-git-merges">Bitbucket for git merges</a></li>
+<li><a href="#gitlab-for-git-merges">GitLab for git merges</a><ul>
+<li><a href="#marge-gitlab-bot">Marge GitLab bot</a></li>
+</ul>
+</li>
+<li><a href="#jenkins-x-bots">Jenkins-X bots</a></li>
+<li><a href="#plastic-scm-bot">Plastic SCM bot</a></li>
+<li><a href="#mergify-bot">Mergify bot</a></li>
+<li><a href="#github-bots">GitHub bots</a><ul>
+<li><a href="#bors-github-bot">Bors GitHub bot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="git-distributed-version-control-system">Git Distributed Version-Control System<a class="headerlink" href="#git-distributed-version-control-system" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Git">Wikipedia: Git</a></li>
+<li><a href="https://git-scm.com/">Git</a><ul>
+<li><a href="https://git-scm.com/book">git-scm.com/book</a></li>
+</ul>
+</li>
+<li><a href="https://devdocs.io/git/">devdocs.io/git/</a></li>
+<li><a href="https://tutorialzine.com/2016/06/learn-git-in-30-minutes">tutorialzine.com: Learn git in 30 minutes 🌟</a></li>
+<li><a href="https://dev.to/gonedark/3-git-commands-i-use-every-day">3 Git Commands I Use Every Day</a></li>
+<li><a href="https://red-badger.com/blog/2016/11/29/gitgithub-in-plain-english">Git and Github in Plain English</a></li>
+<li><a href="https://opensource.com/life/16/7/how-restore-older-file-versions-git">opensource.com: How to restore older file versions in Git</a></li>
+<li><a href="https://tychoish.com/post/9-awesome-git-tricks/">9 awesome git tricks</a></li>
+<li><a href="https://github.com/dictcp/awesome-git">Awesome Git 🌟</a></li>
+<li><a href="https://dzone.com/articles/intro-git">dzone.com: intro git 🌟</a></li>
+<li><a href="https://dzone.com/articles/top-20-git-commands-with-examples">dzone.com: Top 20 git commands with examples 🌟</a></li>
+<li><a href="https://dzone.com/articles/8-useful-but-not-well-known-git-concepts">dzone.com: 8 Useful But Not Well-Known Git Concepts</a> These lesser-known Git tricks can help you solve problems that are not handled well by the GitHub and BitBucket GUIs</li>
+<li><a href="https://dzone.com/articles/git-commands-tutorial-part-1">dzone.com: Git Commands Tutorial - Part 1</a></li>
+<li><a href="https://dzone.com/articles/git-commands-tutorial-part-2">dzone.com: Git Commands Tutorial - Part 2</a></li>
+<li><a href="https://dzone.com/refcardz/getting-started-git">Dzone refcard: Getting started with Git</a></li>
+<li><a href="https://ohshitgit.com/">Oh shit, git!</a></li>
+<li><a href="https://datree.io/blog/git-commit-message-conventions-for-readable-git-log/">How to Get More Out of Your Git Commit Message</a></li>
+<li><a href="https://datree.io/blog/useful-git-commands-list/">10 useful Git commands you wish existed – and their alternatives</a></li>
+<li><a href="https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/">github.blog: How to undo (almost) anything with Git</a></li>
+<li><a href="https://dev.to/milu_franz/git-explained-the-basics-igc">dev.to: Git Explained - The Basics</a></li>
+<li><a href="https://medium.com/javarevisited/7-best-courses-to-master-git-and-github-for-programmers-d671859a68b2">medium: 7 Best Courses to Master Git and Github for Programmers</a> These are the best courses to learn Git from scratch and also advanced concepts like branching and merging. It also includes a free course to learn git.</li>
+<li><a href="https://medium.com/@atif.ramzan89/top-7-cloud-source-code-management-tools-features-and-pricing-plans-105f4eb88a3a">medium: Top 7 Cloud Source Code Management Tools Features and Pricing Plans</a></li>
+<li><a href="https://towardsdatascience.com/the-only-6-git-commands-you-need-to-know-995065db1ae0">towardsdatascience.com: The 6 Git Commands Data Scientist Should Know</a> An introduction to using Git for machine learning projects.</li>
+<li><a href="https://dev.to/g_abud/advanced-git-reference-1o9j">dev.to: Git Concepts I Wish I Knew Years Ago 🌟</a></li>
+<li><a href="https://opensource.com/article/20/7/git-repos-best-practices">opensource.com: 6 best practices for managing Git repos</a> Resist the urge to add things in Git that will make it harder to manage; here&rsquo;s what to do instead.</li>
+<li><a href="https://codeburst.io/debug-your-code-using-git-bisect-45db2983cc69">codeburst.io: Debug your code using git bisect</a></li>
+<li><a href="https://github.blog/2020-07-27-highlights-from-git-2-28/">github.blog: Highlights from Git 2.28</a></li>
+<li><a href="https://codeburst.io/a-resource-for-all-things-git-b63d6626beca">codeburst.io: A Resource for all Things Git</a></li>
+<li><a href="https://stu2b50.dev/posts/things-you-wante9665">Things You Want to Do in Git and How to Do Them</a></li>
+<li><a href="https://learngitbranching.js.org/">Learn Git Branching 🌟</a> An interactive Git visualization tool to educate and challenge!</li>
+<li><a href="https://livecodestream.dev/post/2020-08-21-git-concepts-and-workflow-for-beginners/">livecodestream.dev: Git Concepts and Workflow for Beginners</a></li>
+<li><a href="https://thenextweb.com/syndication/2020/09/02/a-beginners-guide-to-the-most-popular-git-commands/">thenextweb.com: A beginner’s guide to the most popular Git commands</a></li>
+<li><a href="https://www.devroom.io/2011/07/05/git-squash-your-latests-commits-into-one/">devroom.io: Git Squash your latests commits into one </a></li>
+<li><a href="https://julien.danjou.info/stop-merging-your-pull-request-manually/">julien.danjou.info: Stop merging your pull requests manually 🌟</a> -&gt; <a href="https://mergify.io/">mergify 🌟</a></li>
+<li><a href="https://about.gitlab.com/blog/2020/11/23/keep-git-history-clean-with-interactive-rebase/">gitlab.com: How to keep your Git history clean with interactive rebase</a> Interactive rebase is one of Git’s most versatile tools. Here&rsquo;s how to use it to correct commit messages, fix mistakes, and more.</li>
+<li><a href="https://opensource.com/article/20/11/git-aliases">opensource.com: 8 Git aliases that make me more efficient</a> Use aliases to create shortcuts for your most-used or complex Git commands.</li>
+<li><a href="https://www.gitkraken.com/learn/git/tutorials">gitkraken.com: Git Tutorials: Instructional Training Videos 🌟</a></li>
+<li><a href="https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/">github.blog: Token authentication requirements for Git operations</a></li>
+<li><a href="https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/">github.blog: Commits are snapshots, not diffs</a></li>
+<li><a href="https://github.blog/2020-12-21-get-up-to-speed-with-partial-clone-and-shallow-clone/">github.blog: Get up to speed with partial clone and shallow clone</a></li>
+<li><a href="https://about.gitlab.com/blog/2020/03/13/partial-clone-for-massive-repositories/">about.gitlab.com: How Git Partial Clone lets you fetch only the large file you need</a> </li>
+<li><a href="https://www.gitkraken.com/learn/git/problems/rename-git-branch">gitkraken.com: How do you rename a Git branch?</a></li>
+<li><a href="https://intellipaat.com/blog/tutorial/devops-tutorial/git-tutorial/">intellipaat.com: Git Tutorial - Learn Git 🌟</a></li>
+<li><a href="https://www.freecodecamp.org/news/git-checkout-remote-branch-tutorial/">freecodecamp.org: Git Checkout Remote Branch Tutorial</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-handle-multiple-git-configurations-in-one-machine/">freecodecamp.org: How to Use Multiple Git Configs on One Computer 🌟</a></li>
+<li><a href="https://www.freecodecamp.org/news/how-to-use-branches-in-git/">freecodecamp.org: How to Use Branches in Git – the Ultimate Cheatsheet 🌟</a></li>
+<li><a href="https://dev.to/purveshshende2/git-for-beginners-3il6">dev.to: Git for beginners</a></li>
+<li><a href="https://blog.gitguardian.com/rewriting-git-history-cheatsheet/">blog.gitguardian.com: Rewriting your git history, removing files permanently - cheatsheet &amp; guide</a></li>
+<li><a href="https://www.smashingmagazine.com/2021/02/getting-the-most-out-of-git/">smashingmagazine.com: Getting The Most Out Of Git</a></li>
+<li><a href="https://thenewstack.io/why-open-source-project-maintainers-are-reluctant-to-use-digital-signatures-two-factor-authentication/">thenewstack.io: Why Open Source Project Maintainers are Reluctant to use Digital Signatures, Two-Factor Authentication</a></li>
+<li><a href="https://www.geeksforgeeks.org/how-to-write-good-commit-messages-in-github/">geeksforgeeks.org: How to Write Good Commit Messages in GitHub?</a></li>
+<li><a href="https://www.freecodecamp.org/news/what-is-git-learn-git-version-control">freecodecamp.org: What is Git? A Beginner&rsquo;s Guide to Git Version Control</a></li>
+<li><a href="https://dev.to/karaluton/explain-like-i-m-five-git-rebase-vs-merging-1k69">dev.to: ELI5: Git Rebase vs. Merge 🌟</a></li>
+<li><a href="https://www.c-sharpcorner.com/article/20-git-commands-you-should-know/">c-sharpcorner.com: 0 Git Commands You Should Know</a></li>
+<li><a href="https://opensource.com/article/21/3/git-cherry-pick">opensource.com: 3 reasons I use the Git cherry-pick command</a> Cherry-picking solves a lot of problems in Git repositories. Here are three ways to fix your mistakes with git cherry-pick.</li>
+<li><a href="https://opensource.com/article/21/4/git-whatchanged">opensource.com: Find what changed in a Git commit</a> Git offers several ways you can quickly see which files changed in a commit.</li>
+<li><a href="https://www.freecodecamp.org/news/practical-git-and-git-workflows/">freecodecamp.org: How to Use Git and Git Workflows – a Practical Guide</a></li>
+<li><a href="https://opensource.com/article/21/4/git-stash">opensource.com: A practical guide to using the git stash command</a> Learn how to use the git stash command and when you should use it.</li>
+<li><a href="https://stackoverflow.blog/2021/04/05/a-look-under-the-hood-how-branches-work-in-git/">stackoverflow.blog: A look under the hood: how branches work in Git</a> Git branches allow you to keep different versions of your code cleanly separated. Here&rsquo;s a look at how they work and why you should know about them.</li>
+<li><a href="https://about.gitlab.com/blog/2021/03/18/iteration-and-code-review/">about.gitlab.com: Why small merge requests are key to a great review 🌟</a></li>
+<li><a href="https://opensource.com/article/21/4/context-switching-git">opensource.com: 4 tips for context switching in Git</a> Compare the pros and cons of four options to switch branches while working in Git.</li>
+<li><a href="https://dzone.com/articles/gitops-how-to-ops-your-git-the-right-way">dzone: GitOps: How to Ops Your Git the Right Way 🌟</a> In this article we’ll look into the specifics of creating Git repositories structures  —  the very core of the GitOps approach.</li>
+<li><a href="https://www.freecodecamp.org/news/git-push-to-remote-branch-how-to-push-a-local-branch-to-origin/">freecodecamp.org: Git Push to Remote Branch – How to Push a Local Branch to Origin</a></li>
+<li><a href="https://www.honeybadger.io/blog/git-tricks/">honeybadger.io: Top Ten Git Tips &amp; Tricks</a> </li>
+<li><a href="https://blog.balasundar.com/automate-git-operations-using-python">blog.balasundar.com: Automate Git Operations Using Python</a> Automate your git operations using GitPython.</li>
+<li><a href="https://www.cloudbees.com/blog/13-git-commands-to-know-in-order">cloudbees.com: Git Commands: The 13 You Must Know, In Order 🌟</a></li>
+</ul>
+<h2 id="git-interview-questions">Git Interview Questions<a class="headerlink" href="#git-interview-questions" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://intellipaat.com/blog/interview-question/git-interview-questions-answers/">intellipaat.com: Top Git Interview Questions And Answers 🌟</a></li>
+<li><a href="https://automationreinvented.blogspot.com/2021/05/top-git-interview-question-set-03-for.html">automationreinvented.blogspot.com: Top GIT Interview question Set-03 for SDET/Testers/Developers/DevOps?</a></li>
+</ul>
+<h2 id="shields">Shields<a class="headerlink" href="#shields" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://shields.io/">shields.io 🌟</a></li>
+</ul>
+<h2 id="design-by-contract">Design By Contract<a class="headerlink" href="#design-by-contract" title="Permanent link">&para;</a></h2>
+<p><a href="https://en.wikipedia.org/wiki/Design_by_contract">Wikipedia: Design by contract (DbC)</a>, also known as contract programming, programming by contract and design-by-contract programming, is an approach for designing software. </p>
+<p>It prescribes that software designers should define formal, precise and verifiable interface specifications for software components, which extend the ordinary definition of abstract data types with preconditions, postconditions and invariants. These specifications are referred to as &ldquo;contracts&rdquo;, in accordance with a conceptual metaphor with the conditions and obligations of business contracts.</p>
+<h2 id="git-cheat-sheets">Git Cheat Sheets<a class="headerlink" href="#git-cheat-sheets" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../cheatsheets/">Git and GitHub Cheat Sheets</a></li>
+</ul>
+<h2 id="monorepo-vs-polyrepo">Monorepo VS Polyrepo<a class="headerlink" href="#monorepo-vs-polyrepo" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.fourtheorem.com/blog/monorepo">fourtheorem.com: How to end Microservice pain and embrace the Monorepo</a></li>
+<li><a href="https://medium.com/better-programming/the-pros-and-cons-monorepos-explained-f86c998392e1">medium: The Pros and Cons of Monorepos, Explained</a> Should you keep all of your code in a single directory?</li>
+</ul>
+<h2 id="patterns-for-managing-source-code-branches-branching-modelsworkflows">Patterns for Managing Source Code Branches (Branching Models/Workflows)<a class="headerlink" href="#patterns-for-managing-source-code-branches-branching-modelsworkflows" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://paulhammant.com/2013/12/04/what_is_your_branching_model/">paulhammant.com: What is Your Branching Model?:</a> Mainline, Cascade, Trunk-Based Development, Short Lived Feature Branches, Continuous Deployment, Subversion noise on branching, etc.</li>
+<li><a href="https://adevait.com/software/creating-branching-strategy">adevait.com: Creating a Branching Strategy for Small Teams</a></li>
+<li><a href="https://confluence.atlassian.com/bitbucketserver/using-branches-in-bitbucket-server-776639968.html#UsingbranchesinBitbucketServer-model">atlassian.com: Configuring branching models 🌟</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Git-Branching-Branching-Workflows">git-scm.com: Git Branching - Branching Workflows</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow">git-scm.com: Distributed Git - Distributed Workflows</a><ul>
+<li><a href="https://git-scm.com/book/en/v2/Distributed-Git-Distributed-Workflows#Integration-Manager-Workflow">Distributed Git - Distributed Workflows - Integration-Manager Workflow</a></li>
+<li><a href="https://stackoverflow.com/questions/26003298/how-to-setup-local-git-with-local-blessed-repo-integration-manager-workflow">Setup Git Integration Manager Workflow in Eclipse</a></li>
+</ul>
+</li>
+<li><a href="https://dzone.com/refcardz/git-patterns-and-anti-patterns">Dzone refcard: Git Patterns and Anti-Patterns</a> Scaling from Workgroup to Enterprise. Suggests patterns and anti-patterns, including Hybrid SCM, Git champions, blessed repository, per-feature topic branches, and ALM integration.</li>
+<li><a href="https://dzone.com/articles/basic-git-branching">Dzone: Basic Git Branching</a> In this article, we walk through the basics of branching with Git to get you started with better managing your versioning during projects.</li>
+<li><a href="https://martinfowler.com/articles/branching-patterns.html">martinfowler.com: Patterns for Managing Source Code Branches</a><ul>
+<li><a href="https://martinfowler.com/articles/branching-patterns.html#release-branch">Release Branch Pattern:</a> A branch that only accepts commits accepted to stabilize a version of the product ready for release.</li>
+</ul>
+</li>
+<li><a href="https://medium.com/aventude/which-git-branching-model-should-i-select-73aafc503b5f">medium: Which Git branching model should I select for my project?</a></li>
+<li><a href="https://speakerdeck.com/lemiorhan/10-git-anti-patterns-you-should-be-aware-of">speakerdeck.com: 10 Git Anti Patterns You Should be Aware of 🌟</a></li>
+<li><a href="https://dzone.com/articles/git-branch-naming-conventions-1">Dzone: Git Branch Naming Conventions</a> A primer on naming branches for modern git workflows.</li>
+<li><a href="https://www.gitkraken.com/learn/git/branch">gitkraken.com: Branching in Git 🌟</a></li>
+</ul>
+<p><center>
+<script async class="speakerdeck-embed" data-id="1eaed7dabacb4f9b9c96b08de38eb9e1" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+</center></p>
+<h3 id="git-workflows">Git Workflows<a class="headerlink" href="#git-workflows" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>git help workflows</code></li>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows">atlassian.com: Comparing Workflows 🌟</a></li>
+<li><a href="https://docs.gitlab.com/ee/topics/gitlab_flow.html">GitLab Flow</a></li>
+<li><a href="https://guides.github.com/introduction/flow/">GitHub Flow</a></li>
+<li><a href="https://nvie.com/posts/a-successful-git-branching-model/">Git Flow</a></li>
+<li><a href="https://gist.github.com/djspiewak/9f2f91085607a4859a66">Git DMZ Flow</a></li>
+<li><a href="https://www.kubernetes.dev/docs/guide/github-workflow/">kubernetes.dev: GitHub Workflow</a> An overview of the GitHub workflow used by the Kubernetes project. It includes some tips and suggestions on things such as keeping your local environment in sync with upstream and commit hygiene.</li>
+</ul>
+<h3 id="trunk-based-development">Trunk Based Development<a class="headerlink" href="#trunk-based-development" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://trunkbaseddevelopment.com/">Trunk Based Development</a></li>
+<li><a href="https://paulhammant.com/2013/04/05/what-is-trunk-based-development/">paulhammant.com: What is Trunk-Based Development?</a></li>
+<li><a href="https://dzone.com/articles/origins-trunk-based">The Origins of Trunk Based Development</a></li>
+<li><a href="https://www.quora.com/What-is-trunk-based-development">quora.com: What is trunk based development?</a></li>
+<li><a href="https://kean.github.io/post/trunk-based-development">kean.github.io: Trunk-Based Development</a></li>
+<li><a href="https://paulhammant.com/2014/04/03/microsofts-trunk-based-development/">paulhammant.com: Microsoft&rsquo;s Trunk-Based Development</a></li>
+<li><a href="https://devblogs.microsoft.com/devops/release-flow-how-we-do-branching-on-the-vsts-team/">devblogs.microsoft.com: Release Flow: How We Do Branching on the VSTS Team</a></li>
+</ul>
+<h3 id="feature-branch-development-aka-gitflow">Feature Branch Development (aka GitFlow)<a class="headerlink" href="#feature-branch-development-aka-gitflow" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://nvie.com/posts/a-successful-git-branching-model/">nvie.com: Feature Branches. A successful Git branching model</a></li>
+</ul>
+<h4 id="git-flow">Git Flow<a class="headerlink" href="#git-flow" title="Permanent link">&para;</a></h4>
+<ul>
+<li>One of the main concepts of <strong>GitFlow</strong> is <strong>feature branches</strong>. The idea is that each feature should be developed in its own branch. When the feature is done, it gets merged into develop branch. </li>
+<li><a href="https://www.devopszone.info/post/an-introduction-to-git-flow-workflow">devopszone.info: An Introduction To Git-flow Workflow</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow">atlassian.com: Gitflow Workflow</a></li>
+<li><a href="https://support.gitkraken.com/git-workflows-and-extensions/git-flow/">gitkraken.com: GitFlow</a> is a list of rules to keep a repo’s history organized, and is used to make the release process, bug fixes, and feature creation easier.</li>
+<li><a href="https://git-flow.readthedocs.io/">git-flow.readthedocs.io</a></li>
+<li><a href="https://medium.com/@rafavinnce/gitflow-branch-guide-8a523360c053">medium.com: Gitflow — Branch Guide</a></li>
+<li><a href="https://medium.com/@thibault60000/git-flow-for-beginners-d7a152b2c1f9">medium.com: Git Flow for Beginners</a></li>
+<li><a href="https://medium.com/@okandavut/what-is-gitflow-c0be7a659992">medium.com: What is GitFlow?</a></li>
+<li><a href="https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac">gist.github.com/JamesMGreene: A comparison of using <code>git flow</code> commands versus raw <code>git</code> commands</a></li>
+<li><a href="https://danielkummer.github.io/git-flow-cheatsheet/index.html">Git-flow cheatsheet</a></li>
+<li><a href="http://aprendegit.com/git-flow-la-rama-develop-y-uso-de-feature-branches/">aprendegit.com: git-flow: la rama develop y uso de feature branches</a></li>
+</ul>
+<h3 id="trunk-based-development-vs-git-flow">Trunk-based Development vs. Git Flow<a class="headerlink" href="#trunk-based-development-vs-git-flow" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.toptal.com/software/trunk-based-development-git-flow">toptal.com: Trunk-based Development vs. Git Flow</a></li>
+<li><a href="https://victorops.com/blog/source-code-control-trunk-based-development-vs-gitflow">victorops.com: Source Code Control: Trunk-Based Development vs. GitFlow</a></li>
+<li><a href="https://medium.com/@vafrcor2009/gitflow-vs-trunk-based-development-3beff578030b">medium: GitFlow VS Trunk-Based-Development</a></li>
+<li><a href="https://dzone.com/articles/why-i-prefer-trunk-based-development-over-feature">Dzone: Why I Prefer Trunk-Based Development Over Feature Branching and GitFlow 🌟</a> Check out the components of Trunk-based Development as implemented by Facebook and Google, and see how it helps resolve and prevent merge conflicts.</li>
+<li><a href="https://team-coder.com/from-git-flow-to-trunk-based-development/">team-coder.com: From Git Flow to Trunk Based Development</a></li>
+<li><a href="https://www.stridenyc.com/podcasts/30-trunk-based-development-vs-gitflow">stridenyc.com/podcasts: Trunk Based Development vs Gitflow</a></li>
+<li><a href="https://www.freecodecamp.org/news/what-is-trunk-based-development">freecodecamp.org: What is Trunk Based Development? A Different Approach to the Software Development Lifecycle</a></li>
+</ul>
+<h3 id="alternative-branching-models">Alternative Branching Models<a class="headerlink" href="#alternative-branching-models" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://trunkbaseddevelopment.com/alternative-branching-models/">trunkbaseddevelopment.com: Alternative Branching Models</a></li>
+</ul>
+<h4 id="feature-flags-feature-toggles">Feature Flags (Feature Toggles)<a class="headerlink" href="#feature-flags-feature-toggles" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://featureflags.io/feature-flags-vs-branching/">featureflags.io: Flags vs Branching</a> Branch better with feature flag driven development.</li>
+<li><a href="https://martinfowler.com/articles/feature-toggles.html">martinfowler.com: Feature Toggles (aka Feature Flags)</a></li>
+<li><a href="https://twitter.com/hashtag/featureflag">#FeatureFlags</a></li>
+<li><a href="https://www.previous.cloudbees.com/press/cloudbees-releases-another-industry-first-feature-flagging-premise-use">CloudBees Releases Another Industry First: Feature Flagging for On-Premise Use 🌟</a></li>
+<li><a href="https://cioperu.pe/articulo/30477/devops-5-formas-de-impulsar-la-utilizacion-de-feature-flags/">cioperu.pe: 5 formas de impulsar la utilización de feature flags</a></li>
+<li><a href="https://www.cloudbees.com/blog/feature-flags-improve-developer-productivity">cloudbees.com: Testing with Feature Flags to Improve Developer Productivity</a></li>
+<li><a href="https://www.cloudbees.com/case-study/petdesk">cloudbees.com: Goodbye Sleepless Nights: De-Risking Deployments with Feature Flags</a></li>
+<li><a href="https://thenewstack.io/wave-goodbye-to-release-nights/">thenewstack.io: Wave Goodbye to Release Nights</a></li>
+<li><a href="https://www.infoworld.com/article/3600150/why-arent-you-using-feature-flags.amp.html">infoworld.com: Why aren’t you using feature flags?</a> Software development is changing. If you’re still focused on release management rather than feature management, then you’re doing it wrong.</li>
+<li><a href="https://www.cloudbees.com/blog/grow-cd-maturity">cloudbees.com: How to Grow Continuous Delivery Maturity Using Feature Flags</a></li>
+<li><a href="https://www.cloudbees.com/blog/change-management-in-production">cloudbees.com: Feature Flag Best Practices: Change Management in Production</a></li>
+<li><a href="https://www.cloudbees.com/blog/feature-flag-lifecycle">cloudbees.com: Feature Flag Best Practices: Understanding the Feature Flag Lifecycle</a></li>
+<li><a href="https://github.blog/2021-04-27-ship-code-faster-safer-feature-flags/">github.blog: How we ship code faster and safer with feature flags</a></li>
+<li><a href="https://www.cloudbees.com/blog/the-importance-of-feature-flags-in-cicd">cloudbees.com: The Importance of Feature Flags in CI/CD</a></li>
+</ul>
+<h5 id="keystone-interface-and-keystone-flags">Keystone Interface and Keystone Flags<a class="headerlink" href="#keystone-interface-and-keystone-flags" title="Permanent link">&para;</a></h5>
+<ul>
+<li><a href="https://martinfowler.com/bliki/KeystoneInterface.html">martinfowler.com: KeystoneInterface</a></li>
+<li><a href="https://split.io/blog/keystone-feature-flags/">split.io: Keystone Flags: Feature Flagging With Less Mess</a></li>
+</ul>
+<h2 id="git-commands">Git Commands<a class="headerlink" href="#git-commands" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Show commit logs:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git log --oneline --all --graph --decorate
+</code></pre></div>
+
+<ul>
+<li><a href="https://gist.github.com/CrookedNumber/8964442">Removing the last commit</a>:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>git reset --hard HEAD^
+git push origin -f
+</code></pre></div>
+
+<h2 id="bitbucket">BitBucket<a class="headerlink" href="#bitbucket" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://bitbucket.org/">bitbucket.org</a></li>
+<li><a href="https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet">Atlassian Git Cheatsheet</a></li>
+<li><a href="https://dzone.com/articles/source-control-using-atlassian-bitbucket">Dzone: source control using atlassian bitbucket</a></li>
+<li><a href="https://dzone.com/articles/how-i-use-bitbucket-in-my-regular-routine">Dzone: how I use bitbucket in my regular routine</a></li>
+</ul>
+<h2 id="gitlab">GitLab<a class="headerlink" href="#gitlab" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gitlab.com/">gitlab.com</a></li>
+<li><a href="https://dzone.com/articles/using-gitlab-rest-api-to-create-projects">Dzone: using gitlab API to create projects</a></li>
+<li><a href="https://about.gitlab.com/blog/2020/07/06/beginner-guide-ci-cd/">gitlab.com: GitLab’s guide to CI/CD for beginners</a> CI/CD is a key part of the DevOps journey. Here’s everything you need to understand about this game-changing process.</li>
+<li><a href="https://levelup.gitconnected.com/automating-integration-and-deployment-to-remote-server-63a2b6576ebf">levelup.gitconnected.com: Automating Integration and Deployment to Remote Server</a> GitLab CI/CD</li>
+<li><a href="https://about.gitlab.com/blog/2020/07/29/effective-ci-cd-pipelines/">about.gitlab.com: Want a more effective CI/CD pipeline? Try our pro tips</a> Here’s how to take your CI/CD pipeline to the next level with hands on advice about faster builds, better security and more.</li>
+<li><a href="https://about.gitlab.com/blog/2021/01/25/mr-reviews-with-vs-code/">gitlab.com: How to do GitLab merge request reviews in VS Code</a></li>
+<li><a href="https://about.gitlab.com/blog/2021/01/20/using-run-parallel-jobs/">about.gitlab.com: How we used parallel CI/CD jobs to increase our productivity</a> GitLab uses parallel jobs to help long-running jobs run faster.</li>
+<li><a href="https://about.gitlab.com/blog/2021/02/05/ci-deployment-and-environments/">about.gitlab.com: How to use GitLab CI to deploy to multiple environments</a></li>
+<li><a href="https://about.gitlab.com/blog/2021/02/22/pipeline-editor-overview/">about.gitlab.com: Meet Pipeline Editor, your one-stop-shop for building a CI/CD pipeline</a></li>
+<li><a href="https://about.gitlab.com/blog/2021/02/22/gitlab-kubernetes-agent-on-gitlab-com/">about.gitlab.com: A new era of Kubernetes integrations on GitLab.com</a> The GitLab Kubernetes Agent enables secure deployments from GitLab SaaS to your Kubernetes cluster and provides deep integrations of your cluster to GitLab.</li>
+<li><a href="https://docs.gitlab.com/runner/install/openshift.html">docs.gitlab.com: Install GitLab Runner on Red Hat OpenShift</a></li>
+<li><a href="https://devclass.com/2021/03/23/gitlab-march-release-focuses-on-security-and-scalability-pops-in-support-for-red-hat-openshift">devclass.com: Git a March on: GitLab 13.10 ramps up security, adds support for OpenShift, DORA</a></li>
+<li><a href="https://about.gitlab.com/releases/2021/04/22/gitlab-13-11-released/">about.gitlab.com: GitLab 13.11 released with Kubernetes Agent and Pipeline Compliance</a></li>
+<li><a href="https://www.lambdatest.com/blog/use-gitlab-ci-to-run-test-locally/">lambdatest.com: How To Use GitLab CI To Run Tests Locally? 🌟</a></li>
+<li><a href="https://sdtimes.com/devops/gitlab-14-aims-to-do-away-with-diy-devops-toolchains/">sdtimes: GitLab 14 aims to do away with DIY DevOps toolchains 🌟</a></li>
+</ul>
+<h2 id="github">GitHub<a class="headerlink" href="#github" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.githubstatus.com/">githubstatus.com 🌟</a></li>
+<li><a href="https://github.com/features/codespaces">GitHub Codespaces</a> Get the full Visual Studio Code experience without leaving GitHub.</li>
+<li><a href="https://cli.github.com/">GitHub CLI</a><ul>
+<li><a href="https://github.com/cli/cli">github.com/cli/cli</a></li>
+<li><a href="https://github.blog/changelog/2020-05-11-github-cli-allows-you-to-close-reopen-and-add-metadata-to-issues-and-pull-requests/">github.blog: GitHub CLI allows you to close, reopen, and add metadata to issues and pull requests</a></li>
+<li><a href="https://github.blog/changelog/2020-05-26-mark-pull-requests-as-ready-for-review-review-and-merge-from-github-cli/">github.blog: Mark pull requests as ready for review, view the diff, review, and merge from GitHub CLI</a></li>
+</ul>
+</li>
+<li><a href="https://www.githubstatus.com/uptime">githubstatus.com/uptime 🌟</a></li>
+<li><a href="https://github.blog/2020-07-02-how-we-launched-docs-github-com/">github.blog: How we launched docs.github.com</a></li>
+<li><a href="https://github.blog/2020-07-27-introducing-githubs-openapi-description/">Introducing GitHub’s OpenAPI Description</a></li>
+<li><a href="https://github.com/github/roadmap">GitHub public roadmap 🌟</a></li>
+<li><a href="https://github.blog/2020-07-30-token-authentication-requirements-for-api-and-git-operations/">Token authentication requirements for API and Git operations</a></li>
+<li><a href="https://blog.mayadata.io/github-chaos-actions-in-your-ci/cd-workflow-part-1">GitHub Chaos Actions in Your CI/CD workflow</a></li>
+<li><a href="https://www.infoq.com/news/2020/08/GitHub-open-api-spec/">GitHub&rsquo;s OpenAPI Spec Open-Sourced in Beta</a></li>
+<li><a href="https://sebastiandedeyne.com/things-you-didnt-know-you-could-diff-in-github/">Things you didn&rsquo;t know you could diff in GitHub</a></li>
+<li><a href="https://github.blog/changelog/2020-08-26-set-the-default-branch-for-newly-created-repositories/">github.blog: Set the default branch for newly-created repositories</a></li>
+<li><a href="https://grafana.com/blog/2020/09/21/how-we-use-the-grafana-github-plugin-to-track-outstanding-pull-requests/">grafana.com: How we use the Grafana GitHub plugin to track outstanding pull requests</a></li>
+<li><a href="https://itnext.io/build-ship-github-container-registry-kubernetes-aa06029b3f21">itnext.io: Build &amp; Ship: GitHub Container Registry &amp; Kubernetes</a></li>
+<li><a href="https://grafana.com/blog/2020/09/21/how-we-use-the-grafana-github-plugin-to-track-outstanding-pull-requests/">grafana: How we use the Grafana GitHub plugin to track outstanding pull requests</a></li>
+<li><a href="https://itnext.io/build-ship-github-container-registry-kubernetes-aa06029b3f21">itnext.io: Build &amp; Ship: GitHub Container Registry &amp; Kubernetes</a></li>
+<li><a href="https://www.theregister.com/2020/12/17/github_bans_passwords/">theregister.com: Passwords begone: GitHub will ban them next year for authenticating Git operations</a></li>
+<li><a href="https://github.blog/2020-12-18-learn-about-ghapi-a-new-third-party-python-client-for-the-github-api/">github.blog: Learn about ghapi, a new third-party Python client for the GitHub API</a></li>
+<li><a href="https://github.blog/2021-01-25-improving-how-we-deploy-github/">github.blog: Improving how we deploy GitHub</a> </li>
+<li><a href="https://github.blog/2021-02-03-deployment-reliability-at-github/">github.blog: Deployment reliability at GitHub</a></li>
+<li><a href="https://github.blog/2021-02-04-extending-gitops-to-reliability-as-code-with-github-and-stackpulse/">github.blog: Extending GitOps to reliability-as-code with GitHub and StackPulse</a></li>
+<li><a href="https://www.backhub.co/">backhub.co</a> Reliable GitHub repository backup, set up in minutes</li>
+<li><a href="https://github.com/github/roadmap">GitHub public roadmap 🌟</a></li>
+<li><a href="https://devops.com/make-github-backups-part-of-your-development-process/">devops.com: Make GitHub Backups Part of Your Development Process</a></li>
+<li><a href="https://github.blog/2021-03-23-solving-the-innersource-discovery-problem/">github.blog: Solving the innersource discovery problem - Discoverability</a></li>
+<li><a href="https://devopstips.net/create-host-and-share-docker-images-with-github-packages">devopstips.net: Create, Host and Share Docker Images with GitHub Packages</a></li>
+<li><a href="https://blog.gruntwork.io/introducing-git-xargs-an-open-source-tool-to-update-multiple-github-repos-753f9f3675ec">blog.gruntwork.io: Introducing git-xargs: an open source tool to update multiple GitHub repos</a></li>
+<li><a href="https://github.blog/2021-05-10-security-keys-supported-ssh-git-operations/">github.blog: Security keys are now supported for SSH Git operations 🌟</a></li>
+<li><a href="https://education.github.com/">education.github.com</a> Real-world tools, engaged students. GitHub Education helps students, teachers, and schools access the tools and events they need to shape the next generation of software development.</li>
+</ul>
+<h3 id="github-actions">GitHub Actions<a class="headerlink" href="#github-actions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.blog/2020-10-09-devops-cloud-testing/">github.blog: Testing cloud apps with GitHub Actions and cloud-native open source tools</a></li>
+<li><a href="https://www.docker.com/blog/docker-github-actions/">docker.com: Docker Github Actions</a></li>
+<li><a href="https://laravel-news.com/generate-github-actions-config-for-laravel-projects-with-ghygen">laravel-news.com: Generate GitHub Actions Config for Laravel Projects with Ghygen</a></li>
+<li><a href="https://blog.codecentric.de/en/2021/03/github-actions-nextgen-cicd/">blog.codecentric.de: Stop re-writing pipelines! Why GitHub Actions drive the future of CI/CD</a></li>
+<li><a href="https://particule.io/en/blog/cicd-ecr-ecs/">particule.io: CI/CD using Github Actions, AWS ECR and ECS Fargate</a></li>
+<li><a href="https://proandroiddev.com/continuous-integration-delivery-for-android-with-github-actions-part-1-b232ed2b1740">proandroiddev.com: “Continuous Integration/Delivery” for Android with GitHub Actions — Part 1</a></li>
+<li><a href="https://github.blog/2021-04-13-implementing-least-privilege-for-secrets-in-github-actions/">github.blog: Implementing least privilege for secrets in GitHub Actions</a></li>
+<li><a href="https://github.blog/2021-04-15-work-with-github-actions-in-your-terminal-with-github-cli/">github.blog: Work with GitHub Actions in your terminal with GitHub CLI</a></li>
+<li><a href="https://github.blog/changelog/2021-04-20-github-actions-control-permissions-for-github_token/">github.blog: GitHub Actions: Control permissions for GITHUB_TOKEN 🌟</a></li>
+<li><a href="https://github.blog/2021-04-22-github-actions-update-helping-maintainers-combat-bad-actors/">github.blog: GitHub Actions update: Helping maintainers combat bad actors</a></li>
+<li><a href="https://github.blog/2021-04-28-use-github-actions-manage-docs/">github.blog: How we use GitHub Actions to manage GitHub Docs</a></li>
+<li><a href="https://vimeo.com/552276182">vimeo.com: How to Create a CI/CD Pipeline with GitHub Actions and K8s Like a Boss</a></li>
+<li><a href="https://medium.com/codemonday/github-actions-for-ci-cd-with-ec2-codedeploy-and-s3-e93e75bf1ce0">medium: Create CI/CD with Github Actions + AWS EC2, CodeDeploy and S3</a></li>
+</ul>
+<h4 id="github-actions-marketplace">GitHub Actions Marketplace<a class="headerlink" href="#github-actions-marketplace" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/marketplace/actions/flat-data">flat-data</a> Flat Data is a GitHub action which makes it easy to fetch data and commit it to your repository as flatfiles. The action is intended to be run on a schedule, retrieving data from any supported target and creating a commit if there is any change to the fetched data. </li>
+</ul>
+<h3 id="github-actions-and-openshift">GitHub Actions and OpenShift<a class="headerlink" href="#github-actions-and-openshift" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.redhat.com/en/about/press-releases/red-hat-and-github-collaborate-expand-developer-experience-red-hat-openshift-github-actions">redhat.com: Red Hat and GitHub Collaborate to Expand the Developer Experience on Red Hat OpenShift with GitHub Actions 🌟</a> Industry’s leading enterprise Kubernetes platform now integrates with GitHub, bringing DevOps automation tools from the world’s largest developer platform into the OpenShift ecosystem</li>
+<li><a href="https://www.openshift.com/blog/deploying-to-openshift-using-github-actions">openshift.com: Deploying to OpenShift using GitHub Actions</a></li>
+<li><a href="https://github.com/redhat-actions">github.com: RedHat Actions 🌟</a></li>
+<li><a href="https://github.com/redhat-actions/openshift-actions-runner">github.com: OpenShift GitHub Actions Runner 🌟</a></li>
+<li><a href="https://github.com/redhat-actions/openshift-actions-runner-chart">github.com: OpenShift GitHub Actions Runner Chart 🌟</a></li>
+</ul>
+<h2 id="gitea">Gitea<a class="headerlink" href="#gitea" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://gitea.com/">Gitea</a></li>
+<li><a href="https://itnext.io/setup-a-private-git-repository-in-kubernetes-with-gitea-64f5ea1e5070">itnext.io: Setup a Private Git-Repository in Kubernetes with Gitea</a></li>
+</ul>
+<h2 id="git-tools">Git Tools<a class="headerlink" href="#git-tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://www.sourcetreeapp.com/">Atlassian Sourcetree</a><ul>
+<li><a href="https://kapeli.com/cheat_sheets/Sourcetree.docset/Contents/Resources/Documents/index">Sourcetree Cheat Sheet</a></li>
+</ul>
+</li>
+<li><a href="https://www.gitkraken.com/">gitkraken.com</a><ul>
+<li><a href="https://www.gitkraken.com/resources/gitkraken-cheat-sheet">GitKraken Git Cheat</a></li>
+<li><a href="https://dzone.com/articles/see-whats-new-in-gitkraken-v40">dzone.com: See What&rsquo;s New in GitKraken v4.0</a></li>
+<li><a href="https://www.youtube.com/watch?v=gjtXTm_TvvE&amp;list=PLe6EXFvnTV78WqGmGSq8JPnafR3lAa55n">youtube: GitKraken Tutorials and Tips</a></li>
+</ul>
+</li>
+<li><a href="https://gmaster.io/">gmaster</a></li>
+<li><a href="../visual-studio/">Visual Studio Code (Git Extensions)</a></li>
+<li><a href="https://visualstudio.microsoft.com/services/visual-studio-codespaces/">Visual Studio Online</a></li>
+</ul>
+<h3 id="semantic-release-cicd-semantic-release-workflow-semantic-versioning-commit-format-and-releases">Semantic-release. CI/CD semantic release workflow (semantic Versioning, commit format and releases)<a class="headerlink" href="#semantic-release-cicd-semantic-release-workflow-semantic-versioning-commit-format-and-releases" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://semantic-release.gitbook.io/semantic-release/">semantic-release.gitbook.io 🌟</a> Semantic-release automates the whole package release workflow including: determining the next version number, generating the release notes and publishing the package.</li>
+<li><a href="https://css-tricks.com/how-to-automate-project-versioning-and-releases-with-continuous-deployment/">css-tricks.com: How to Automate Project Versioning and Releases with Continuous Deployment 🌟</a></li>
+</ul>
+<h2 id="azure-devops-formerly-known-as-vsts">Azure DevOps (formerly known as VSTS)<a class="headerlink" href="#azure-devops-formerly-known-as-vsts" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Azure_DevOps">Wikipedia: Azure DevOps</a><ul>
+<li><a href="https://en.wikipedia.org/wiki/Azure_DevOps_Server">wikipedia: Azure DevOps Server</a> Collaboration software for software development formerly known as Team Foundation Server and Visual Studio Team System</li>
+<li><a href="https://en.wikipedia.org/wiki/Microsoft_Visual_Studio#Azure_DevOps_Services">wikipedia: Azure DevOps Services</a> Cloud service for software development formerly known as Visual Studio Team Services, Visual Studio Online and Team Foundation Service Preview</li>
+</ul>
+</li>
+<li><a href="https://azuredevopslabs.com/">Azure DevOps Labs 🌟</a></li>
+<li><a href="https://twitter.com/azuredevops">twitter.com/azuredevops</a></li>
+<li><a href="https://www.dotnetcurry.com/visualstudio/1322/what-is-visual-studio-team-system-vsts">Microsoft Visual Studio Team Services (VSTS)</a></li>
+<li><a href="https://www.softwaretestinghelp.com/microsoft-vsts-tutorial-1/">Microsoft Visual Studio Team Services (VSTS) Tutorial: The Cloud ALM Platform</a></li>
+<li><a href="https://www.slideshare.net/arunmurughan/git-version-control-and-trunk-based-approach-with-vsts">slideshare.net: Git version control and trunk based approach with VSTS</a></li>
+<li><a href="https://redmondmag.com/articles/2018/09/10/microsoft-replacing-vsts-with-azure-devops.aspx">Microsoft Replacing Visual Studio Team Services with Azure DevOps</a></li>
+<li><a href="https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/use-git-microsoft">How We Use Git at Microsoft</a></li>
+</ul>
+<h2 id="pre-commit-hooks">Pre Commit Hooks<a class="headerlink" href="#pre-commit-hooks" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://pre-commit.com/">pre-commit</a> A framework for managing and maintaining multi-language pre-commit hooks.</li>
+<li><a href="https://towardsdatascience.com/ci-cd-by-example-in-python-46f1533cb09d">towardsdatascience.com: CI/CD by Example in Python</a> A simple demonstration of CI/CD in Python with poetry and pre-commit hooks, <a href="https://github.com/edkrueger/poetry-template">poetry-template</a></li>
+</ul>
+<h2 id="merge-bots">Merge BOTs<a class="headerlink" href="#merge-bots" title="Permanent link">&para;</a></h2>
+<ul>
+<li>The Merge Bot is a tool to orchestrate pull requests merging into the stable branches.</li>
+<li><a href="https://en.wikipedia.org/wiki/Software_bot">Wikipedia: Software bot</a></li>
+</ul>
+<h3 id="tips">Tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use bots to accomplish tasks like merging PR&rsquo;s that have been approved and automatically updating dependencies. Usage of one of these bots might allow us to trigger certain builds based off of specific GitHub tags,  it would allow us to only selectively run certain test suites and increase the throughput of the build by only testing changes made in a branch / PR.</li>
+<li>Investigate options that are available and see if we can integrate them with CI.</li>
+<li>We should be able to configure this bot to automatically apply labels to PR&rsquo;s based off of what is changed in a PR. For instance, if a PR contains any documentation changes, the area/Documentation label can be applied.</li>
+</ul>
+<h3 id="jenkins-for-git-merges">Jenkins for git merges<a class="headerlink" href="#jenkins-for-git-merges" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://plugins.jenkins.io/git/#merge-extensions"><strong>Git Plugin</strong>: Merge Extensions</a></li>
+<li><a href="https://docs.cloudbees.com/docs/admin-resources/latest/plugins/validated-merge#chapter-validated-merge_validated-merge"><strong>Validated Merge Plugin</strong> for Git in CloudBees Jenkins Enterprise 🌟</a></li>
+<li><a href="https://support.cloudbees.com/hc/en-us/articles/227246387-How-to-Configure-Jenkins-for-Git-Merge-">How to configure Jenkins for git merge</a></li>
+<li><a href="https://plugins.jenkins.io/ghprb/">GitHub Pull Request Builder Plugin</a> , <a href="https://github.com/jenkinsci/ghprb-plugin">github ref</a>. You should probably migrate to GitHub Branch Source Plugin.</li>
+<li><a href="https://plugins.jenkins.io/github-branch-source/">GitHub Branch Source Plugin:</a> Allows you to create a new project based on the repository structure from one or more GitHub users or organizations.</li>
+</ul>
+<h3 id="bitbucket-for-git-merges">Bitbucket for git merges<a class="headerlink" href="#bitbucket-for-git-merges" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://confluence.atlassian.com/bitbucketserver/automatic-branch-merging-776639993.html">Automatic branch merging</a></li>
+<li><a href="https://github.com/bluefrg/bitbucket-auto-merge">BitBucket Auto Merge</a> Automatically create and merge pull request to keep branches in sync.</li>
+<li><a href="https://confluence.atlassian.com/bitbucketserver/checks-for-merging-pull-requests-776640039.html">Checks for merging pull requests</a></li>
+<li><a href="https://techcommunity.microsoft.com/t5/microsoft-teams-blog/new-bitbucket-bot-for-microsoft-teams/ba-p/218212">BitBucket Bot for Microsoft Teams</a></li>
+<li><a href="https://code-dog.app/">Code Dog</a> Merge your Pull Requests sooner. Some of the Slack messages your team sends are critical for productivity.
+Automate them.</li>
+<li><a href="https://plugins.jenkins.io/bitbucket-push-and-pull-request/">Jenkins Plugin: Bitbucket Push and Pull Request</a></li>
+<li><a href="https://poolofthought.com/how-to-implement-the-automerge-feature-that-is-missing-from-bitbucket-cloud/">How to Implement the Automerge feature that is missing from BitBucket cloud</a></li>
+<li><a href="https://community.atlassian.com/t5/Bitbucket-questions/configure-bitbucket-pipelines-yml-to-automatically-merge-feature/qaq-p/793222">Configure bitbucket-pipelines.yml to automatically merge feature branch to master?</a></li>
+</ul>
+<h3 id="gitlab-for-git-merges">GitLab for git merges<a class="headerlink" href="#gitlab-for-git-merges" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/2785">Auto-merge between release branches</a></li>
+<li><a href="https://gitlab.com/gitlab-org/gitlab/-/issues/14595">Provide merge bot functionality</a></li>
+<li><a href="https://lab.texthtml.net/gitlab/merge-bot">lab.texthtml.net: Gitlab Merge Bot</a><ul>
+<li><a href="https://hub.docker.com/r/texthtml/gitlab-merge-bot/">DockerHub: Gitlab Merge Bot</a> Bot assistant for code review and merge requests approval for Gitlab</li>
+</ul>
+</li>
+<li><a href="https://www.mergecrush.com/">Mergecrush</a> A email &amp; slack reminder bot for Gitlab merge requests.</li>
+<li><a href="https://stackoverflow.com/questions/58019605/how-can-we-programmatically-approve-merge-requests-in-gitlab">stackoverflow.com: How can we programmatically approve merge requests in GitLab?</a> <ul>
+<li>Our group has a bot that creates merge requests for certain mechanical changes to our code base. We&rsquo;d like these MRs to get merged in automatically if/when the CI pipeline succeeds, but our projects require an approval from a member of our group. This means that right now a human has to manually click on &ldquo;approve&rdquo; and &ldquo;merge&rdquo; for each bot-created MR. Apparently GitLab doesn&rsquo;t have a way to set different approval rules for some users, so I haven&rsquo;t found a way to make the bot&rsquo;s user immune to this requirement.</li>
+<li>My current idea is to have a separate process that approves each of the merge requests created by the bot. Is there an easy way to do this programmatically? That is, is there an API (or better yet, a command line tool) that, when given the name of the branch for a merge request, approves the merge request associated with that branch?</li>
+<li>I&rsquo;m also open to other ways of getting these changes in with minimal human intervention. I do want them to pass the CI pipeline, though (which is currently accomplished by having them use MRs) and the MRs also help in the rare cases where the pipeline fails, so we can debug what went wrong.</li>
+</ul>
+</li>
+</ul>
+<h4 id="marge-gitlab-bot">Marge GitLab bot<a class="headerlink" href="#marge-gitlab-bot" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://github.com/smarkets/marge-bot">Marge-bot: A merge-bot for GitLab</a></li>
+<li><a href="https://gitlab.gnome.org/marge-merge-bot">Example: gitlab.gnome.org/marge-merge-bot</a></li>
+<li><a href="https://smarketshq.com/marge-bot-for-gitlab-keeps-master-always-green-6070e9d248df">Example: Smarkets&rsquo;s Marge-bot for GitLab keeps master always green</a></li>
+<li><a href="https://gitlab.freedesktop.org/gstreamer-merge-bot">Example: GStreamer Merge Bot</a></li>
+</ul>
+<h3 id="jenkins-x-bots">Jenkins-X bots<a class="headerlink" href="#jenkins-x-bots" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/jenkins-x/updatebot">Jenkins-X UpdateBOT</a> A simple bot for updating dependencies in source code and automatically generating Pull Requests in downstream projects.</li>
+</ul>
+<h3 id="plastic-scm-bot">Plastic SCM bot<a class="headerlink" href="#plastic-scm-bot" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.plasticscm.com/">Plastic SCM</a></li>
+<li><a href="http://blog.plasticscm.com/2018/09/add-mergebot-to-your-repo.html">blog.plasticscm.com: Add a mergebot to your repo!</a></li>
+<li><a href="https://github.com/PlasticSCM/trunk-mergebot">Plastic SCM DevOps Mergebot to implement a trunk-based development cycle </a></li>
+<li><a href="https://wiki.jenkins.io/display/JENKINS/PlasticSCM+MergeBot+plugin">PlasticSCM MergeBot Jenkins Plugin</a></li>
+<li><a href="https://www.genbeta.com/desarrollo/plastic-scm-mergebot-automatizando-tu-pipeline-desarrollo">genbeta.com: Plastic SCM Mergebot: automatizando tu pipeline de desarrollo</a></li>
+</ul>
+<h3 id="mergify-bot">Mergify bot<a class="headerlink" href="#mergify-bot" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://mergify.io/">mergify.io</a>  </li>
+<li><a href="https://medium.com/mergify/merging-bots-pull-requests-automatically-548ed0b4a424">medium: Merging Bots’ Pull Requests Automatically</a></li>
+</ul>
+<h3 id="github-bots">GitHub bots<a class="headerlink" href="#github-bots" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://github.com/nicolai86/github-rebase-bot">github-rebase-bot</a> A github bot that monitors repository PRs, rebases them and merges them as they pass tests.</li>
+<li><a href="https://github.com/palantir/bulldozer">Bulldozer: GitHub Pull Request Auto-Merge Bot</a> </li>
+<li><a href="https://github.com/depop/github-merge-bot">github-merge-bot</a> Automates the process of merging pull requests and keeping them up-to-date.</li>
+<li><a href="https://github.com/squalrus/merge-bot">github.com/squalrus/merge-bot: PR Merge Bot</a> A GitHub action that manages pull request integrations</li>
+<li><a href="https://github.com/odoo/odoo/wiki/Mergebot">Odoo Mergebot</a></li>
+<li><a href="https://gmaster.io/mergedroid">gmaster.io - Mergedroid: Automate merging just by analyzing your GitHub repo.</a> A BOT that solves conflicts in pull requests without manual intervention.</li>
+<li><a href="https://kodiakhq.com/">Kodiak</a> GitHub bot for updating and merging pull requests</li>
+<li><a href="http://www.rultor.com/">Rultor</a> A merging bot for Github pull requests<ul>
+<li><a href="https://www.yegor256.com/2014/07/24/rultor-automated-merging.html">Rultor, a Merging Bot</a></li>
+</ul>
+</li>
+<li><a href="https://stackoverflow.com/questions/27820309/bot-to-automatically-reverse-github-pull-request-merges">stackoverflow.com: Bot to automatically reverse GitHub pull request merges</a>. Maybe it&rsquo;s best to not allow the merges instead of reverting them:<ul>
+<li><a href="https://help.github.com/en/github/administering-a-repository/configuring-protected-branches">help.github.com: Configuring protected branches</a></li>
+<li><a href="https://help.github.com/en/github/administering-a-repository/enabling-required-status-checks">help.github.com: Enabling required status checks:</a><ul>
+<li>Select Require status checks to pass before merging </li>
+<li>Choose (create) a status check, that always fails</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="bors-github-bot">Bors GitHub bot<a class="headerlink" href="#bors-github-bot" title="Permanent link">&para;</a></h4>
+<ul>
+<li><a href="https://bors.tech/">Bors Bot</a></li>
+<li><a href="https://bors.tech/devdocs/bors-ng/readme.html">Bors - Readme</a></li>
+<li><a href="https://github.com/bors-ng/bors-ng">Bors-ng: A merge bot for GitHub Pull Requests</a></li>
+<li><a href="https://wiki.crdb.io/wiki/spaces/CRDB/pages/73204099/Bors+Merge+Bot">Example: CockroachDB&rsquo;s Bors Merge Bot</a></li>
+</ul>
+<hr />
+<p><center>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Today&#39;s <a href="https://twitter.com/code?ref_src=twsrc%5Etfw">@code</a> tip: the git stash commands<br><br>Create, apply, and manage <a href="https://twitter.com/hashtag/git?src=hash&amp;ref_src=twsrc%5Etfw">#git</a> stashes using VS Code commands.<br><br>Stashes let you quickly save off your workspace changes and restore them when they are needed again<a href="https://twitter.com/hashtag/code2020?src=hash&amp;ref_src=twsrc%5Etfw">#code2020</a> <a href="https://t.co/VPursGdRka">pic.twitter.com/VPursGdRka</a></p>&mdash; Matt Bierner (@mattbierner) <a href="https://twitter.com/mattbierner/status/1276915695788470273?ref_src=twsrc%5Etfw">June 27, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Writing good Git commit messages matters!<br><br>A thread about how to write clean commit messages:<br><br>🧵 👇</p>&mdash; Deni Moka⚡ (@dmokafa) <a href="https://twitter.com/dmokafa/status/1351152452179996682?ref_src=twsrc%5Etfw">January 18, 2021</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here are _some_ of the most essential git operations you will need when working as a developer.<br><br>🧵🔽 <a href="https://t.co/ZTUUObuj70">pic.twitter.com/ZTUUObuj70</a></p>&mdash; Oliver Jumpertz (@oliverjumpertz) <a href="https://twitter.com/oliverjumpertz/status/1374323799991054339?ref_src=twsrc%5Etfw">March 23, 2021</a></blockquote>
+
+<p><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</center></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../cicd/" title="CI/CD - Continuous Integration & Continuous Delivery" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                CI/CD - Continuous Integration & Continuous Delivery
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../jenkins/" title="Jenkins & Cloudbees" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Jenkins & Cloudbees
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            2020 <a href="https://twitter.com/RedHatSpain">Red Hat Spain</a>, <a href="https://redhatspain.com/about/">about</a>.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/redhatspain" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/groups/1937212/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/redhatspain" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.youtube.com/channel/UCCGQ2G2rGAkHzVFhhed-xVw/playlists" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://speakerdeck.com/redhatspain/stars" target="_blank" rel="noopener" title="speakerdeck.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M213.86 296H100a100 100 0 0 1 0-200h132.84a40 40 0 0 1 0 80H98c-26.47 0-26.45 40 0 40h113.82a100 100 0 0 1 0 200H40a40 40 0 0 1 0-80h173.86c26.48 0 26.46-40 0-40zM298 416a120.21 120.21 0 0 0 51.11-80h64.55a19.83 19.83 0 0 0 19.66-20V196a19.83 19.83 0 0 0-19.66-20H296.42a60.77 60.77 0 0 0 0-80h136.93c43.44 0 78.65 35.82 78.65 80v160c0 44.18-35.21 80-78.65 80z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://es.slideshare.net/RedHatSpain/favorites" target="_blank" rel="noopener" title="es.slideshare.net" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M187.7 153.7c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7s61.7-26 61.7-57.7c0-32-27.7-57.7-61.7-57.7zm143.4 0c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7 34.3 0 61.7-26 61.7-57.7.1-32-27.4-57.7-61.7-57.7zm156.6 90l-6 4.3V49.7c0-27.4-20.6-49.7-46-49.7H76.6c-25.4 0-46 22.3-46 49.7V248c-2-1.4-4.3-2.9-6.3-4.3-15.1-10.6-25.1 4-16 17.7 18.3 22.6 53.1 50.3 106.3 72C58.3 525.1 252 555.7 248.9 457.5c0-.7.3-56.6.3-96.6 5.1 1.1 9.4 2.3 13.7 3.1 0 39.7.3 92.8.3 93.5-3.1 98.3 190.6 67.7 134.3-124 53.1-21.7 88-49.4 106.3-72 9.1-13.8-.9-28.3-16.1-17.8zm-30.5 19.2c-68.9 37.4-128.3 31.1-160.6 29.7-23.7-.9-32.6 9.1-33.7 24.9-10.3-7.7-18.6-15.5-20.3-17.1-5.1-5.4-13.7-8-27.1-7.7-31.7 1.1-89.7 7.4-157.4-28V72.3c0-34.9 8.9-45.7 40.6-45.7h317.7c30.3 0 40.9 12.9 40.9 45.7v190.6z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://redhatspain.slack.com/" target="_blank" rel="noopener" title="redhatspain.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../javascript/extra.js"></script>
+      
+    
+  </body>
+</html>

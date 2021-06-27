@@ -1,0 +1,3112 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A curated list of awesome IT projects and resources. Inspired by the awesome list.">
+      
+      
+        <link rel="canonical" href="https://redhatspain.com/">
+      
+      
+        <meta name="author" content="info@redhatspain.com">
+      
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Awesome Kubernetes</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.89dc9fe3.min.css">
+      
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="static/extra.css">
+    
+    
+      
+        
+<link rel="preconnect dns-prefetch" href="https://www.google-analytics.com">
+<script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-168051035-1","redhatspain.com"),ga("set","anonymizeIp",!0),ga("send","pageview"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}),document.addEventListener("DOMContentSwitch",function(){ga("send","pageview")})</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#awesome-kubernetes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-header-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Awesome Kubernetes
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://redhatspain.com" title="Awesome Kubernetes" class="md-nav__button md-logo" aria-label="Awesome Kubernetes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,8A3,3 0 0,0 15,5A3,3 0 0,0 12,2A3,3 0 0,0 9,5A3,3 0 0,0 12,8M12,11.54C9.64,9.35 6.5,8 3,8V19C6.5,19 9.64,20.35 12,22.54C14.36,20.35 17.5,19 21,19V8C17.5,8 14.36,9.35 12,11.54Z" /></svg>
+
+    </a>
+    Awesome Kubernetes
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/redhatspain/awesome-kubernetes/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Home
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="." title="Home" class="md-nav__link md-nav__link--active">
+      Home
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#site-reliability-engineering-sre" class="md-nav__link">
+    Site Reliability Engineering (SRE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-devsecops-container-security" class="md-nav__link">
+    Security and DevSecOps. Container Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noops" class="md-nav__link">
+    NoOps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finops-cloud-financial-management" class="md-nav__link">
+    FinOps - Cloud Financial Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testops-and-continuous-testing" class="md-nav__link">
+    TestOps and Continuous Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-management-methodology" class="md-nav__link">
+    Project Management Methodology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift" class="md-nav__link">
+    OpenShift
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openshift-streaming-training" class="md-nav__link">
+    OpenShift Streaming &amp; Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-on-public-cloud" class="md-nav__link">
+    OpenShift on Public Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-success-stories" class="md-nav__link">
+    Customer Success Stories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-delivery-pipeline" class="md-nav__link">
+    Software Delivery Pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Delivery Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-cloudbees" class="md-nav__link">
+    Jenkins &amp; CloudBees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-pipelines" class="md-nav__link">
+    OpenShift Pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-alternatives" class="md-nav__link">
+    Jenkins Alternatives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchain" class="md-nav__link">
+    Toolchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-servers-reverse-proxies-java-runtimes-caching-solutions" class="md-nav__link">
+    Web Servers, Reverse Proxies, Java Runtimes &amp; Caching Solutions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-and-performance-prometheus-grafana-apms-and-more" class="md-nav__link">
+    Monitoring and Performance. Prometheus, Grafana, APMs and more
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    Configuration Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-management-tools" class="md-nav__link">
+    Infrastructure Management Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases-on-kubernetes" class="md-nav__link">
+    Databases on Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-based-integration-messaging-data-processing-streaming-aka-data-pipeline" class="md-nav__link">
+    Cloud Based Integration &amp; Messaging. Data Processing &amp; Streaming (aka Data Pipeline)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-mesh" class="md-nav__link">
+    Service Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-native-storage" class="md-nav__link">
+    Cloud Native Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-with-soap-rest-and-grpc" class="md-nav__link">
+    APIs with SOAP, REST and gRPC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-frameworks" class="md-nav__link">
+    Development &amp; Frameworks
+  </a>
+  
+    <nav class="md-nav" aria-label="Development &amp; Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-environment" class="md-nav__link">
+    Dev Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-cloud" class="md-nav__link">
+    Public Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-data" class="md-nav__link">
+    Big Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-references" class="md-nav__link">
+    More References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recruitment-and-freelancing" class="md-nav__link">
+    Recruitment and Freelancing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Introduction
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Introduction
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="introduction/" title="From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes" class="md-nav__link">
+      From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="faq/" title="Microservices FAQ & Kubernetes Native" class="md-nav__link">
+      Microservices FAQ & Kubernetes Native
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="sre/" title="Site Reliability Engineering (SRE)" class="md-nav__link">
+      Site Reliability Engineering (SRE)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      DevOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="DevOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        DevOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="devops/" title="DevOps" class="md-nav__link">
+      DevOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cheatsheets/" title="Cheat Sheets" class="md-nav__link">
+      Cheat Sheets
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="gitops/" title="GitOps" class="md-nav__link">
+      GitOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="mlops/" title="MLOps" class="md-nav__link">
+      MLOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="demos/" title="Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more" class="md-nav__link">
+      Demos & Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Security and DevSecOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Security and DevSecOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Security and DevSecOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="devsecops/" title="DevSecOps. Container Security" class="md-nav__link">
+      DevSecOps. Container Security
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="securityascode/" title="Security Policy as Code" class="md-nav__link">
+      Security Policy as Code
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      NoOps
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="NoOps" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        NoOps
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="noops/" title="NoOps" class="md-nav__link">
+      NoOps
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="serverless/" title="Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless" class="md-nav__link">
+      Serverless Architectures & Frameworks. OpenFaaS, Knative & Kubeless
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="finops/" title="FinOps - Cloud Financial Management" class="md-nav__link">
+      FinOps - Cloud Financial Management
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TestOps and Continuous Testing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestOps and Continuous Testing" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestOps and Continuous Testing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="testops/" title="TestOps and Continuous Testing" class="md-nav__link">
+      TestOps and Continuous Testing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="qa/" title="QA" class="md-nav__link">
+      QA
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      Project Management Methodology
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Project Management Methodology" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Project Management Methodology
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="project-management-methodology/" title="Project Management Methodology" class="md-nav__link">
+      Project Management Methodology
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="project-management-tools/" title="Project Management Tools" class="md-nav__link">
+      Project Management Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="appointment-scheduling/" title="Appointment Scheduling" class="md-nav__link">
+      Appointment Scheduling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="workfromhome/" title="Work From Home" class="md-nav__link">
+      Work From Home
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="docker/" title="Docker" class="md-nav__link">
+      Docker
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
+    
+    <label class="md-nav__link" for="nav-12">
+      Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-12">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kubernetes/" title="Kubernetes" class="md-nav__link">
+      Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kubernetes-tools/" title="Kubernetes Tools" class="md-nav__link">
+      Kubernetes Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="rancher/" title="Rancher - Enterprise management for Kubernetes" class="md-nav__link">
+      Rancher - Enterprise management for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="matrix-table/" title="Kubernetes Matrix Table" class="md-nav__link">
+      Kubernetes Matrix Table
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kubernetes-alternatives/" title="Kubernetes alternatives" class="md-nav__link">
+      Kubernetes alternatives
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
+    
+    <label class="md-nav__link" for="nav-13">
+      OpenShift
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OpenShift" data-md-level="1">
+      <label class="md-nav__title" for="nav-13">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        OpenShift
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="openshift/" title="OpenShift docs" class="md-nav__link">
+      OpenShift docs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ocp3/" title="OCP 3" class="md-nav__link">
+      OCP 3
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ocp4/" title="OCP 4" class="md-nav__link">
+      OCP 4
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="customer/" title="Customer Success Stories" class="md-nav__link">
+      Customer Success Stories
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
+    
+    <label class="md-nav__link" for="nav-14">
+      Software Delivery Pipeline
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Software Delivery Pipeline" data-md-level="1">
+      <label class="md-nav__title" for="nav-14">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Software Delivery Pipeline
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cicd/" title="CI/CD - Continuous Integration & Continuous Delivery" class="md-nav__link">
+      CI/CD - Continuous Integration & Continuous Delivery
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="git/" title="Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs" class="md-nav__link">
+      Git & Git Patterns. Trunk Devel, Git Flow & Feature Flags. Merge BOTs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="jenkins/" title="Jenkins & Cloudbees" class="md-nav__link">
+      Jenkins & Cloudbees
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="openshift-pipelines/" title="OpenShift Pipelines with Jenkins, Tekton and more..." class="md-nav__link">
+      OpenShift Pipelines with Jenkins, Tekton and more...
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="performance-testing-with-jenkins-and-jmeter/" title="Performance testing with Jenkins and JMeter or Gatling" class="md-nav__link">
+      Performance testing with Jenkins and JMeter or Gatling
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="jenkins-alternatives/" title="Jenkins Alternatives for Continuous Integration" class="md-nav__link">
+      Jenkins Alternatives for Continuous Integration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-7" type="checkbox" id="nav-14-7">
+    
+    <label class="md-nav__link" for="nav-14-7">
+      Toolchain
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Toolchain" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Toolchain
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="container-managers/" title="Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo" class="md-nav__link">
+      Container Runtimes/Managers & Base Images. Podman, Buildah & Skopeo
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="maven-gradle/" title="Maven, Gradle & SDKMAN" class="md-nav__link">
+      Maven, Gradle & SDKMAN
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="sonarqube/" title="SonarQube" class="md-nav__link">
+      SonarQube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nexus-jfrog/" title="Nexus & JFrog Artifactory" class="md-nav__link">
+      Nexus & JFrog Artifactory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="selenium-appium-zephyr/" title="Selenium, Cucumber, Appium & Zephyr Jira plugin" class="md-nav__link">
+      Selenium, Cucumber, Appium & Zephyr Jira plugin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="linux/" title="Linux & SSH" class="md-nav__link">
+      Linux & SSH
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="mkdocs/" title="MkDocs & GitHub Pages" class="md-nav__link">
+      MkDocs & GitHub Pages
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14-8" type="checkbox" id="nav-14-8">
+    
+    <label class="md-nav__link" for="nav-14-8">
+      Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions" data-md-level="2">
+      <label class="md-nav__title" for="nav-14-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Web Servers, Reverse Proxies, Java Runtimes & Caching Solutions
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="web-servers/" title="Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more" class="md-nav__link">
+      Web Servers & Reverse Proxies - Apache, Nginx, HAProxy, Traefik and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java_app_servers/" title="Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more" class="md-nav__link">
+      Java EE/Jakarta EE and MicroProfile Runtimes - Payara, JBoss EAP, WebSphere Liberty, WildFly and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="embedded-servlet-containers/" title="Embedded Servlet Containers in SpringBoot" class="md-nav__link">
+      Embedded Servlet Containers in SpringBoot
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="caching/" title="Caching Solutions" class="md-nav__link">
+      Caching Solutions
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="monitoring/" title="Monitoring and Performance. Prometheus, Grafana, APMs and more" class="md-nav__link">
+      Monitoring and Performance. Prometheus, Grafana, APMs and more
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-16" type="checkbox" id="nav-16">
+    
+    <label class="md-nav__link" for="nav-16">
+      Configuration Management
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Configuration Management" data-md-level="1">
+      <label class="md-nav__title" for="nav-16">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Configuration Management
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ansible/" title="Ansible" class="md-nav__link">
+      Ansible
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="argocd/" title="Argo CD - Declarative GitOps for Kubernetes" class="md-nav__link">
+      Argo CD - Declarative GitOps for Kubernetes
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="chef/" title="Chef" class="md-nav__link">
+      Chef
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cicd-kubernetes-plugins/" title="CI/CD Kubernetes Plugins" class="md-nav__link">
+      CI/CD Kubernetes Plugins
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kubernetes-client-libraries/" title="Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube" class="md-nav__link">
+      Client Libraries for Kubernetes - Go client, Python, Fabric8 & JKube
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="helm/" title="Helm Kubernetes Tool" class="md-nav__link">
+      Helm Kubernetes Tool
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="liquibase/" title="Liquibase & Flyway" class="md-nav__link">
+      Liquibase & Flyway
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="kustomize/" title="Template-Free Kubernetes Configuration Customization with Kustomize" class="md-nav__link">
+      Template-Free Kubernetes Configuration Customization with Kustomize
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="yaml/" title="Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files" class="md-nav__link">
+      Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-17" type="checkbox" id="nav-17">
+    
+    <label class="md-nav__link" for="nav-17">
+      Infrastructure Management Tools
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Infrastructure Management Tools" data-md-level="1">
+      <label class="md-nav__title" for="nav-17">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Infrastructure Management Tools
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="iac/" title="IaC Infrastructure as Code" class="md-nav__link">
+      IaC Infrastructure as Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="pulumi/" title="Pulumi" class="md-nav__link">
+      Pulumi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="terraform/" title="Terraform & Packer" class="md-nav__link">
+      Terraform & Packer
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-18" type="checkbox" id="nav-18">
+    
+    <label class="md-nav__link" for="nav-18">
+      Databases on Kubernetes
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Databases on Kubernetes" data-md-level="1">
+      <label class="md-nav__title" for="nav-18">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Databases on Kubernetes
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="databases/" title="Relational Databases and Database DevOps. CrunchyData Postgres Operator" class="md-nav__link">
+      Relational Databases and Database DevOps. CrunchyData Postgres Operator
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="nosql/" title="NoSQL Databases" class="md-nav__link">
+      NoSQL Databases
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="message-queue/" title="Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)" class="md-nav__link">
+      Cloud Based Integration & Messaging. Data Processing & Streaming (aka Data Pipeline)
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-20" type="checkbox" id="nav-20">
+    
+    <label class="md-nav__link" for="nav-20">
+      Service Mesh
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Service Mesh" data-md-level="1">
+      <label class="md-nav__title" for="nav-20">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Service Mesh
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="servicemesh/" title="Service Mesh" class="md-nav__link">
+      Service Mesh
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="istio/" title="Istio" class="md-nav__link">
+      Istio
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="storage/" title="Cloud Native Storage" class="md-nav__link">
+      Cloud Native Storage
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-22" type="checkbox" id="nav-22">
+    
+    <label class="md-nav__link" for="nav-22">
+      APIs
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APIs" data-md-level="1">
+      <label class="md-nav__title" for="nav-22">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        APIs
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="api/" title="APIs with SOAP, REST and gRPC" class="md-nav__link">
+      APIs with SOAP, REST and gRPC
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="swagger-code-generator-for-rest-apis/" title="Swagger code generator for REST APIs" class="md-nav__link">
+      Swagger code generator for REST APIs
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="postman/" title="API Test Automation with Postman" class="md-nav__link">
+      API Test Automation with Postman
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="developerportals/" title="API Marketplaces. API Management with API Gateways & Developer Portals" class="md-nav__link">
+      API Marketplaces. API Management with API Gateways & Developer Portals
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23" type="checkbox" id="nav-23">
+    
+    <label class="md-nav__link" for="nav-23">
+      Development & Frameworks
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development & Frameworks" data-md-level="1">
+      <label class="md-nav__title" for="nav-23">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development & Frameworks
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="angular/" title="Angular" class="md-nav__link">
+      Angular
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="dom/" title="Document Object Model (DOM)" class="md-nav__link">
+      Document Object Model (DOM)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="golang/" title="Go" class="md-nav__link">
+      Go
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="javascript/" title="JavaScript - node.js & npm" class="md-nav__link">
+      JavaScript - node.js & npm
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="python/" title="Python - Django & Flask" class="md-nav__link">
+      Python - Django & Flask
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="xamarin/" title="Xamarin" class="md-nav__link">
+      Xamarin
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="devel-sites/" title="Websites for web developers" class="md-nav__link">
+      Websites for web developers
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-8" type="checkbox" id="nav-23-8">
+    
+    <label class="md-nav__link" for="nav-23-8">
+      Java
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Java" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Java
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java_frameworks/" title="Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more" class="md-nav__link">
+      Java & Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="java-and-java-performance-optimization/" title="Java Memory Management & Java Performance Optimization" class="md-nav__link">
+      Java Memory Management & Java Performance Optimization
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="jvm-parameters-matrix-table/" title="Java Parameters Matrix Table" class="md-nav__link">
+      Java Parameters Matrix Table
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-23-9" type="checkbox" id="nav-23-9">
+    
+    <label class="md-nav__link" for="nav-23-9">
+      Dev Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Dev Environment" data-md-level="2">
+      <label class="md-nav__title" for="nav-23-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Dev Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="visual-studio/" title="Visual Studio Code" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="linux-dev-env/" title="WSL - Linux Dev Environment on Windows" class="md-nav__link">
+      WSL - Linux Dev Environment on Windows
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="scaffolding/" title="Scaffolding Tools" class="md-nav__link">
+      Scaffolding Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ChromeDevTools/" title="Chrome & Firefox DevTools. HTTP Protocols & WebSockets" class="md-nav__link">
+      Chrome & Firefox DevTools. HTTP Protocols & WebSockets
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-24" type="checkbox" id="nav-24">
+    
+    <label class="md-nav__link" for="nav-24">
+      Public Cloud
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Public Cloud" data-md-level="1">
+      <label class="md-nav__title" for="nav-24">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Public Cloud
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="public-cloud-solutions/" title="Public Cloud Solutions" class="md-nav__link">
+      Public Cloud Solutions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="edge-computing/" title="Edge Computing" class="md-nav__link">
+      Edge Computing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cloud-arch-diagrams/" title="Cloud Architecture Diagram Tools" class="md-nav__link">
+      Cloud Architecture Diagram Tools
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="aws/" title="AWS" class="md-nav__link">
+      AWS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="GoogleCloudPlatform/" title="Google Cloud Platform" class="md-nav__link">
+      Google Cloud Platform
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="azure/" title="Microsoft Azure" class="md-nav__link">
+      Microsoft Azure
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="ibm_cloud/" title="IBM & IBM Cloud" class="md-nav__link">
+      IBM & IBM Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="oraclecloud/" title="Oracle Cloud" class="md-nav__link">
+      Oracle Cloud
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="digitalocean/" title="Digital Ocean" class="md-nav__link">
+      Digital Ocean
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="cloudflare/" title="Cloudflare" class="md-nav__link">
+      Cloudflare
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="bigdata/" title="Big Data" class="md-nav__link">
+      Big Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-26" type="checkbox" id="nav-26">
+    
+    <label class="md-nav__link" for="nav-26">
+      More References
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="More References" data-md-level="1">
+      <label class="md-nav__title" for="nav-26">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        More References
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="elearning/" title="E-Learning" class="md-nav__link">
+      E-Learning
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="newsfeeds/" title="Subreddits" class="md-nav__link">
+      Subreddits
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="other-awesome-lists/" title="Other Awesome Lists" class="md-nav__link">
+      Other Awesome Lists
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-27" type="checkbox" id="nav-27">
+    
+    <label class="md-nav__link" for="nav-27">
+      Recruitment and Freelancing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Recruitment and Freelancing" data-md-level="1">
+      <label class="md-nav__title" for="nav-27">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Recruitment and Freelancing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="recruitment/" title="Recruitment" class="md-nav__link">
+      Recruitment
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="freelancing/" title="Freelancing" class="md-nav__link">
+      Freelancing
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="remote-tech-jobs/" title="Remote Tech Jobs" class="md-nav__link">
+      Remote Tech Jobs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="about/" title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    Motivation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#site-reliability-engineering-sre" class="md-nav__link">
+    Site Reliability Engineering (SRE)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#devops" class="md-nav__link">
+    DevOps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#security-and-devsecops-container-security" class="md-nav__link">
+    Security and DevSecOps. Container Security
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noops" class="md-nav__link">
+    NoOps
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finops-cloud-financial-management" class="md-nav__link">
+    FinOps - Cloud Financial Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testops-and-continuous-testing" class="md-nav__link">
+    TestOps and Continuous Testing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-management-methodology" class="md-nav__link">
+    Project Management Methodology
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docker" class="md-nav__link">
+    Docker
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kubernetes" class="md-nav__link">
+    Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#openshift" class="md-nav__link">
+    OpenShift
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenShift">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#openshift-streaming-training" class="md-nav__link">
+    OpenShift Streaming &amp; Training
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-on-public-cloud" class="md-nav__link">
+    OpenShift on Public Cloud
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-success-stories" class="md-nav__link">
+    Customer Success Stories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-delivery-pipeline" class="md-nav__link">
+    Software Delivery Pipeline
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Delivery Pipeline">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-cloudbees" class="md-nav__link">
+    Jenkins &amp; CloudBees
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#openshift-pipelines" class="md-nav__link">
+    OpenShift Pipelines
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jenkins-alternatives" class="md-nav__link">
+    Jenkins Alternatives
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toolchain" class="md-nav__link">
+    Toolchain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-servers-reverse-proxies-java-runtimes-caching-solutions" class="md-nav__link">
+    Web Servers, Reverse Proxies, Java Runtimes &amp; Caching Solutions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#monitoring-and-performance-prometheus-grafana-apms-and-more" class="md-nav__link">
+    Monitoring and Performance. Prometheus, Grafana, APMs and more
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuration-management" class="md-nav__link">
+    Configuration Management
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#infrastructure-management-tools" class="md-nav__link">
+    Infrastructure Management Tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#databases-on-kubernetes" class="md-nav__link">
+    Databases on Kubernetes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-based-integration-messaging-data-processing-streaming-aka-data-pipeline" class="md-nav__link">
+    Cloud Based Integration &amp; Messaging. Data Processing &amp; Streaming (aka Data Pipeline)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-mesh" class="md-nav__link">
+    Service Mesh
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloud-native-storage" class="md-nav__link">
+    Cloud Native Storage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apis-with-soap-rest-and-grpc" class="md-nav__link">
+    APIs with SOAP, REST and gRPC
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#development-frameworks" class="md-nav__link">
+    Development &amp; Frameworks
+  </a>
+  
+    <nav class="md-nav" aria-label="Development &amp; Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#java" class="md-nav__link">
+    Java
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dev-environment" class="md-nav__link">
+    Dev Environment
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#public-cloud" class="md-nav__link">
+    Public Cloud
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#big-data" class="md-nav__link">
+    Big Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#more-references" class="md-nav__link">
+    More References
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recruitment-and-freelancing" class="md-nav__link">
+    Recruitment and Freelancing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/redhatspain/awesome-kubernetes/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="awesome-kubernetes">Awesome Kubernetes <a href="https://github.com/sindresorhus/awesome"><img alt="Awesome" src="https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg" /></a><a class="headerlink" href="#awesome-kubernetes" title="Permanent link">&para;</a></h1>
+<p>A curated list of awesome references collected since 2018. Microservices architectures rely on DevOps practices, automation, CI/CD (Continuous Integration &amp; Delivery), and API-focused designs.</p>
+<p><a href="https://awesome-kubernetes.readthedocs.io/">Awesome Kubernetes</a> is also available at <a href="https://redhatspain.com">redhatspain.com</a></p>
+<p>&ldquo;I do not believe you can do today&rsquo;s job with yesterday&rsquo;s methods and be in business tomorrow&rdquo; (<a href="https://en.wikipedia.org/wiki/Horatio_Nelson_Jackson">Horatio Nelson Jackson</a>) 
+<center>
+<a href="https://www.cncf.io/certification/software-conformance/"><img alt="container_with_cars" src="images/container_with_cars.png" /></a> <br/>
+<a href="https://www.youtube.com/user/dockerrun"><img alt="docker videos" src="images/docker_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCvqbFHwN-nwalWPjPUKpvTA"><img alt="cncf videos" src="images/cncf_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/kubernetescommunity"><img alt="kubernetes logo" src="images/kubernetes_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/RedHatVideos"><img alt="redhat videos" src="images/redhat_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/rhopenshift"><img alt="openshift videos" src="images/openshift_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA"><img alt="rancher logo" src="images/rancher-logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/CloudBeesTV"><img alt="cloudbees videos" src="images/cloudbees_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/jenkinsci"><img alt="jenkins videos" src="images/jenkins-logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCN2kblPjXKMcjjVYmwvquvg"><img alt="jenkins-x videos" src="images/jenkins_x_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCcxQbw8kT1-FRhFhO2QCetg"><img alt="spinnaker videos" src="images/spinnaker_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/goPivotal"><img alt="vmware tanzu logo" src="images/vmware_tanzu_logo.jpg" style="width:7%" /></a><br/> 
+<a href="https://www.youtube.com/user/IBMCloud"><img alt="ibm cloud videos" src="images/ibm_cloud_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/AmazonWebServices"><img alt="aws videos" src="images/aws_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/googlecloudplatform/"><img alt="gcp videos" src="images/gcp_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/windowsazure"><img alt="azure videos" src="images/azure_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC60OcDzeEtn194-UPYNJs8A"><img alt="oraclecloud videos" src="images/oracle_cloud_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/DigitalOceanVideos"><img alt="digitalocean videos" src="images/digital_ocean_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/cloudflare"><img alt="cloudflare" src="images/cloudflare_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/OpenStackFoundation"><img alt="openstack" src="images/openstack_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC-AdvAxaagE9W2f0webyNUQ"><img alt="harhicorp videos" src="images/hashicorp_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC2Dhyn4Ev52YSbcpfnfP0Mw"><img alt="pulumi videos" src="images/pulumi_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC5qMsRjObu685rTBq0PJX8w"><img alt="liquibase video" src="images/liquibase_logo.jpg" style="width:7%" /></a><br/> 
+<a href="https://www.youtube.com/c/dzone/"><img alt="dzone videos" src="images/dzone_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC4pLFely0-Odea4B2NL1nWA"><img alt="prometheus videos" src="images/prometheus_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"><img alt="grafana videos" src="images/grafana_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC-zVlo1F3mUbExQ96fABWcQ"><img alt="istio videos" src="images/istio_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/elasticsearch"><img alt="elastic videos" src="images/elasticsearch_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCcYJ-5q_AfmjQ4XTjTS0o3g"><img alt="dynatrace videos" src="images/dynatrace_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCTL2V4fqMMERSWQa1kT4EMw"><img alt="appdynamics videos" src="images/appdynamics_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/NewRelicInc"><img alt="newrelic videos" src="images/newrelic_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC8uN3yhpeBeerGNwDiQbcgw"><img alt="tigera calico" src="images/tigera_calico_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/c/WeaveWorksInc"><img alt="weavecloud" src="images/weavecloud_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCCymWVaTozpEng_ep0mdUyw"><img alt="lambdatest" src="images/lambdatest.jpg" style="width:7%" /></a><br/>
+<a href="https://www.youtube.com/user/GoAtlassian"><img alt="atlassian videos" src="images/atlassian_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCs5Y5_7XK8HLDX0SLNwkd3w"><img alt="vscode videos" src="images/vscode_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/github"><img alt="github videos" src="images/github_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCnMGQ8QHMAnVIsI3xJrihhg"><img alt="gitlab video" src="images/gitlab_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCp06FAzrFalo3txskS1gCfA"><img alt="gitkraken" src="images/gitkraken_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCin9nv7mUjoqrRiwrzS5UVQ"><img alt="rocketchat videos" src="images/rocket_chat_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCY3YECgeBcLCzIrFLP4gblw"><img alt="slack videos" src="images/slack_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCNR05H72hi692y01bWaFXNA"><img alt="mattermost videos" src="images/mattermost_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/officevideos"><img alt="microsoft365" src="images/microsoft_365_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCpDojas1X9ccix4mxadabpw"><img alt="openproject" src="images/openproject_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/DEISERCHANNEL"><img alt="deiser" src="images/deiser_logo.jpg" style="width:7%" /></a><br/> 
+<a href="https://www.youtube.com/channel/UC7noUdfWp-ukXUlAsJnSm-Q/"><img alt="rh devel" src="images/rh_developer_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/SpringSourceDev"><img alt="spring logo" src="images/spring-logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCaW8QG_QoIk_FnjLgr5eOqg"><img alt="quarkus logo" src="images/quarkus-logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCcxTiKb1h2lY_gpTCDgXn1g"><img alt="lightbend videos" src="images/lightbend_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCocudCGVb3MmhWQ1aoIgUQw"><img alt="postman videos" src="images/postman_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/SmartBearSoftware"><img alt="swagger videos" src="images/smartbear_swagger_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/artifrog"><img alt="jfrog" src="images/jfrog_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/sonatype"><img alt="sonatype" src="images/sonatype_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCS5-gTYteN9rnFd98YxYtrA"><img alt="sonarsource sonarqube" src="images/sonarsource_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/ChromeDevelopers"><img alt="chrome developers videos" src="images/chromedevtools_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCh5UlGiu9d6LegIeUCW4N1w"><img alt="mozilla developer" src="images/mozilla_developer_logo.jpg" style="width:7%" /></a><br/> 
+<a href="https://www.youtube.com/channel/UCooRnlDz6VLAbFyKIChz4fg"><img alt="crunchydata" src="images/crunchydata_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCxObRDZ0DtaQe_cCP-dN-xg"><img alt="kubedb appscode" src="images/kubedb_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCc-m3P54YDVTjtMUJlmAuow"><img alt="cockroachdb" src="images/cockroachdb_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/MongoDB"><img alt="mongodb" src="images/mongodb_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCD78lHSwYqMlyetR0_P4Vig/"><img alt="redis" src="images/redis_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCmZz-Gj3caLLzEWBtbYUXaA"><img alt="confluent video" src="images/confluent_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCud7fErZAyMC6lHT_cWZNfA"><img alt="kubemq video" src="images/kubemq_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC3ywadaAUQ1FI4YsHZ8wa0g"><img alt="openebs" src="images/openebs_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCm63IQg81KP9vXRWSHQpu1w"><img alt="storageos" src="images/storageos_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCt7N400Z8gB_3yKq1qrjP2w"><img alt="robin" src="images/robin_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/c/Portworx"><img alt="portworx" src="images/portworx_logo.jpg" style="width:7%" /></a><br/>
+<a href="https://www.youtube.com/channel/UCp8lLM2JP_1pv6E0NQ38pqw"><img alt="acloudguru" src="images/acloudguru_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/c/Devopsdotcom"><img alt="devops_tv" src="images/devops_tv_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/xebialabs"><img alt="xebialabs" src="images/xebialabs_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCOnioSzUZS-ZqsRnf38V2nA"><img alt="devops library" src="images/devops_library_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UC5CMtpogD_P3mOoeiDHD5eQ"><img alt="codecademy" src="images/codecademy.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/coursera"><img alt="coursera" src="images/coursera_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w"><img alt="academind" src="images/academind_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/guru99com"><img alt="guru99" src="images/guru99_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/user/intellipaaat"><img alt="intellipaat" src="images/intellipaat_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/CodelyTV"><img alt="codelytv" src="images/codelytv_logo.jpg" style="width:7%" /></a> <a href="https://www.youtube.com/channel/UCqXZGcpbF67Xc6LS-INKTTw"><img alt="malt freelancing" src="images/malt.jpg" style="width:7%" /></a>
+</center></p>
+<hr />
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://microservices.io/">microservices.io</a></li>
+<li><a href="https://www.cncf.io/">cncf.io</a><ul>
+<li><a href="https://landscape.cncf.io/">landscape.cncf.io</a></li>
+<li><a href="https://www.cncf.io/certification/software-conformance/">Certified Kubernetes offerings</a></li>
+<li><a href="https://www.cncf.io/wp-content/uploads/2020/03/CNCF_Survey_Report.pdf">CNCF Survey Report 2019</a></li>
+</ul>
+</li>
+<li><a href="https://cri-o.io/">CRI-O Lightweight Container Runtime for Kubernetes</a></li>
+<li><a href="https://www.opencontainers.org/">Open Container Initiative</a></li>
+<li><a href="http://agilemethodology.org/">agilemethodology.org</a></li>
+<li><a href="http://agilemanifesto.org/">agilemanifesto.org</a></li>
+<li><a href="https://12factor.net/">12factor.net</a> - <a href="https://dzone.com/articles/are-you-12-factor-application-ready">Are You 12-Factor Application Ready?</a> - <a href="https://dzone.com/whitepapers/the-12-factor-app-infographic">12-factor app infographic</a> - <a href="https://www.redhat.com/architect/12-factor-app">An illustrated guide to 12 Factor Apps 🌟</a></li>
+<li><a href="https://openpracticelibrary.com/">openpracticelibrary.com</a></li>
+<li><a href="https://roadmap.sh/">roadmap.sh</a> - <a href="https://roadmap.sh/devops">DevOps Roadmap</a></li>
+<li><a href="https://www.apidays.co/api-landscape">API Landscape</a></li>
+<li><a href="https://insights.stackoverflow.com/survey">Stack Overflow Annual Developer Survey</a></li>
+<li><a href="https://opensource.guide/">Open Source Guides</a></li>
+<li><a href="https://www.opengroup.org/">The Open Group: Making Standards Work</a> - <a href="http://publications.opengroup.org/">publications.opengroup.org</a> - <a href="https://www.opengroup.org/togaf">The TOGAF® Standard, a standard of The Open Group</a></li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="introduction/">From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes</a></li>
+<li><a href="faq/">Microservices FAQ &amp; Kubernetes Native</a></li>
+</ul>
+<h2 id="site-reliability-engineering-sre">Site Reliability Engineering (SRE)<a class="headerlink" href="#site-reliability-engineering-sre" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="sre/">Site Reliability Engineering (SRE)</a></li>
+</ul>
+<h2 id="devops">DevOps<a class="headerlink" href="#devops" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="devops/">DevOps 🌟</a></li>
+<li><a href="cheatsheets/">Cheat Sheets 🌟</a></li>
+<li><a href="gitops/">GitOps 🌟</a></li>
+<li><a href="mlops/">MLOps</a></li>
+<li><a href="demos/">Demos &amp; Screencasts. OpenShift, Kubernetes, Jenkins Pipelines with JCasC and more 🌟</a></li>
+<li><a href="chaos-engineering/">Chaos Engineering</a></li>
+</ul>
+<h2 id="security-and-devsecops-container-security">Security and DevSecOps. Container Security<a class="headerlink" href="#security-and-devsecops-container-security" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="devsecops/">Security and DevSecOps. Container Security</a></li>
+<li><a href="securityascode/">Security Policy as Code</a></li>
+</ul>
+<h2 id="noops">NoOps<a class="headerlink" href="#noops" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="noops/">NoOps</a></li>
+<li><a href="serverless/">Serverless Architectures &amp; Frameworks. OpenFaaS, Knative &amp; Kubeless</a></li>
+</ul>
+<h2 id="finops-cloud-financial-management">FinOps - Cloud Financial Management<a class="headerlink" href="#finops-cloud-financial-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="finops/">FinOps - Cloud Financial Management</a></li>
+</ul>
+<h2 id="testops-and-continuous-testing">TestOps and Continuous Testing<a class="headerlink" href="#testops-and-continuous-testing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="testops/">TestOps and Continuous Testing</a></li>
+<li><a href="qa/">QA</a></li>
+</ul>
+<h2 id="project-management-methodology">Project Management Methodology<a class="headerlink" href="#project-management-methodology" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="project-management-methodology/">Project Management Methodology</a></li>
+<li><a href="project-management-tools/">Project Management Tools</a></li>
+<li><a href="appointment-scheduling/">Appointment Scheduling</a></li>
+<li><a href="workfromhome/">Work From Home</a></li>
+</ul>
+<h2 id="docker">Docker<a class="headerlink" href="#docker" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="docker/">Docker</a></li>
+</ul>
+<h2 id="kubernetes">Kubernetes<a class="headerlink" href="#kubernetes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="kubernetes/">Kubernetes 🌟</a><ul>
+<li><a href="kubernetes-tools/">Kubernetes Plugins, Tools, Extensions and Projects 🌟</a></li>
+</ul>
+</li>
+<li><a href="rancher/">Rancher - Enterprise management for Kubernetes 🌟</a></li>
+<li><a href="matrix-table/">Kubernetes Matrix Table 🌟</a></li>
+<li><a href="kubernetes-alternatives/">Kubernetes Alternatives</a></li>
+</ul>
+<h2 id="openshift">OpenShift<a class="headerlink" href="#openshift" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="openshift/">OpenShift 🌟</a></li>
+<li><a href="ocp3/">OCP 3</a></li>
+<li><a href="ocp4/">OCP 4 🌟</a></li>
+</ul>
+<h3 id="openshift-streaming-training">OpenShift Streaming &amp; Training<a class="headerlink" href="#openshift-streaming-training" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://openshift.tv">OpenShift.tv</a> </li>
+<li><a href="https://www.twitch.tv/redhatopenshift">twitch.tv/redhatopenshift</a></li>
+<li><a href="https://www.udemy.com/course/openshift-4-desde-cero">Udemy: OpenShift 4 desde cero 🌟</a></li>
+</ul>
+<h3 id="openshift-on-public-cloud">OpenShift on Public Cloud<a class="headerlink" href="#openshift-on-public-cloud" title="Permanent link">&para;</a></h3>
+<ul>
+<li>OCP4 on AWS: <a href="https://github.com/openshift/installer/blob/master/docs/user/aws/README.md">ref1</a> , <a href="https://aws.amazon.com/blogs/opensource/openshift-4-on-aws-quick-start/">ref2</a></li>
+<li><a href="https://www.openshift.com/products/dedicated/">OpenShift Dedicated</a> - <a href="https://www.redhat.com/en/blog/red-hat-openshift-dedicated-price-reduction">Price lowered by 75% on average, SLA improved to 99.95% 🌟</a></li>
+<li><a href="https://www.openshift.com/products/amazon-openshift/faq">Amazon Red Hat OpenShift</a></li>
+<li><a href="https://cloud.google.com/solutions/partners/openshift-on-gcp">OpenShift on Google Cloud</a></li>
+<li><a href="https://www.openshift.com/products/azure-openshift">Microsoft Azure Red Hat OpenShift</a></li>
+<li><a href="https://www.ibm.com/cloud/openshift">Red Hat OpenShift on IBM Cloud</a></li>
+<li><a href="https://www.openshift.com/products/online/">OpenShift Online</a></li>
+<li><a href="https://openshift.io/">OpenShift.io</a></li>
+<li><a href="https://developers.redhat.com/developer-sandbox">Developer Sandbox</a></li>
+<li><a href="https://marketplace.redhat.com/">Red Hat Marketplace</a> </li>
+</ul>
+<h3 id="customer-success-stories">Customer Success Stories<a class="headerlink" href="#customer-success-stories" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="customer/">Customer Success Stories 🌟</a></li>
+</ul>
+<h2 id="software-delivery-pipeline">Software Delivery Pipeline<a class="headerlink" href="#software-delivery-pipeline" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="cicd/">CI/CD - Continuous Integration &amp; Continuous Delivery</a></li>
+<li><a href="git/">Git &amp; Git Patterns. Trunk Devel, Git Flow &amp; Feature Flags. Merge BOTs 🌟</a></li>
+</ul>
+<h3 id="jenkins-cloudbees">Jenkins &amp; CloudBees<a class="headerlink" href="#jenkins-cloudbees" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="jenkins/">Jenkins &amp; CloudBees 😀</a></li>
+<li><a href="performance-testing-with-jenkins-and-jmeter/">Performance testing with Jenkins and JMeter or Gatling</a></li>
+</ul>
+<h3 id="openshift-pipelines">OpenShift Pipelines<a class="headerlink" href="#openshift-pipelines" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="openshift-pipelines/">OpenShift Pipelines with Jenkins, Tekton and more&hellip; 🌟</a></li>
+</ul>
+<h3 id="jenkins-alternatives">Jenkins Alternatives<a class="headerlink" href="#jenkins-alternatives" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="jenkins-alternatives/">Jenkins Alternatives for Continuous Integration</a></li>
+</ul>
+<h3 id="toolchain">Toolchain<a class="headerlink" href="#toolchain" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="container-managers/">Container Runtimes/Managers &amp; Base Images. Podman, Buildah &amp; Skopeo</a></li>
+<li><a href="maven-gradle/">Maven, Gradle &amp; SDKMAN</a></li>
+<li><a href="sonarqube/">SonarQube</a></li>
+<li><a href="nexus-jfrog/">Nexus &amp; JFrog Artifactory</a></li>
+<li><a href="selenium-appium-zephyr/">Selenium, Cucumber, Appium &amp; Zephyr Jira plugin</a></li>
+<li><a href="linux/">Linux &amp; SSH 🌟</a></li>
+<li><a href="mkdocs/">MkDocs &amp; GitHub Pages</a></li>
+</ul>
+<h3 id="web-servers-reverse-proxies-java-runtimes-caching-solutions">Web Servers, Reverse Proxies, Java Runtimes &amp; Caching Solutions<a class="headerlink" href="#web-servers-reverse-proxies-java-runtimes-caching-solutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="web-servers/">Web Servers &amp; Reverse Proxies: Apache, Nginx, HAProxy, Traefik and more</a></li>
+<li><a href="java_app_servers/">Java EE/Jakarta EE and MicroProfile Runtimes: Payara, JBoss EAP, WebSphere Liberty, WildFly and more</a> </li>
+<li><a href="embedded-servlet-containers/">Embedded Servlet Containers in SpringBoot: Jetty, Tomcat, Undertow and more</a></li>
+<li><a href="caching/">Caching Solutions</a></li>
+</ul>
+<h2 id="monitoring-and-performance-prometheus-grafana-apms-and-more">Monitoring and Performance. Prometheus, Grafana, APMs and more<a class="headerlink" href="#monitoring-and-performance-prometheus-grafana-apms-and-more" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="monitoring/">Monitoring and Performance. Prometheus, Grafana, APMs and more 🌟</a></li>
+</ul>
+<h2 id="configuration-management">Configuration Management<a class="headerlink" href="#configuration-management" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="ansible/">Ansible</a></li>
+<li><a href="argocd/">Argo CD - Declarative GitOps for Kubernetes</a></li>
+<li><a href="chef/">Chef</a></li>
+<li><a href="cicd-kubernetes-plugins/">CI/CD Kubernetes Plugins</a></li>
+<li><a href="kubernetes-client-libraries/">Client Libraries for Kubernetes: Go client, Python, Fabric8 &amp; JKube</a></li>
+<li><a href="https://fluxcd.io/">Flux. The GitOps operator for Kubernetes</a> </li>
+<li><a href="helm/">Helm Kubernetes Tool</a></li>
+<li><a href="liquibase/">Liquibase and Flyway</a></li>
+<li><a href="https://dzone.com/articles/gitops-with-openshift-applier">redhat-cop: Openshift Applier</a></li>
+<li><a href="stackstorm/">StackStorm</a></li>
+<li><a href="kustomize/">Template-Free Kubernetes Configuration Customization with Kustomize</a></li>
+<li><a href="yaml/">Templating YAML with YAML Processors. Static Checking of Kubernetes YAML Files</a></li>
+</ul>
+<h2 id="infrastructure-management-tools">Infrastructure Management Tools<a class="headerlink" href="#infrastructure-management-tools" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="iac/">IaC Infrastructure as Code</a></li>
+<li><a href="pulumi/">Pulumi</a></li>
+<li><a href="terraform/">Terraform &amp; Packer 🌟</a></li>
+<li><a href="https://crossplane.io/">Crossplane</a></li>
+<li><a href="https://www.kubestack.com/">Kubestack: Terraform GitOps Framework</a></li>
+</ul>
+<h2 id="databases-on-kubernetes">Databases on Kubernetes<a class="headerlink" href="#databases-on-kubernetes" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="databases/">Relational Databases and Database DevOps. CrunchyData Postgres Operator 🌟</a></li>
+<li><a href="nosql/">NoSQL Databases</a></li>
+</ul>
+<h2 id="cloud-based-integration-messaging-data-processing-streaming-aka-data-pipeline">Cloud Based Integration &amp; Messaging. Data Processing &amp; Streaming (aka Data Pipeline)<a class="headerlink" href="#cloud-based-integration-messaging-data-processing-streaming-aka-data-pipeline" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="message-queue/">Cloud Based Integration &amp; Messaging. Data Processing &amp; Streaming (aka Data Pipeline) 🌟</a> </li>
+</ul>
+<h2 id="service-mesh">Service Mesh<a class="headerlink" href="#service-mesh" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="servicemesh/">Service Mesh</a></li>
+<li><a href="istio/">Istio</a></li>
+</ul>
+<h2 id="cloud-native-storage">Cloud Native Storage<a class="headerlink" href="#cloud-native-storage" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="storage/">Cloud Native Storage</a></li>
+</ul>
+<h2 id="apis-with-soap-rest-and-grpc">APIs with SOAP, REST and gRPC<a class="headerlink" href="#apis-with-soap-rest-and-grpc" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="api/">APIs with SOAP, REST and gRPC 🌟</a></li>
+<li><a href="swagger-code-generator-for-rest-apis/">Swagger code generator for REST APIs</a></li>
+<li><a href="postman/">API Test Automation with Postman</a></li>
+<li><a href="developerportals/">API Marketplaces. API Management with API Gateways &amp; Developer Portals 🌟</a></li>
+</ul>
+<h2 id="development-frameworks">Development &amp; Frameworks<a class="headerlink" href="#development-frameworks" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="angular/">Angular</a></li>
+<li><a href="dom/">Document Object Model (DOM)</a></li>
+<li><a href="golang/">Go</a></li>
+<li><a href="javascript/">JavaScript - node.js &amp; npm</a></li>
+<li><a href="python/">Python - Django &amp; Flask</a></li>
+<li><a href="xamarin/">Xamarin</a></li>
+<li><a href="devel-sites/">Websites for web developers</a></li>
+</ul>
+<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="java_frameworks/">Java &amp; Open Source Microservices Frameworks. SpringBoot, MicroProfile, Quarkus and more 🌟</a></li>
+<li><a href="java-and-java-performance-optimization/">Java Memory Management &amp; Java Performance Optimization</a></li>
+<li><a href="jvm-parameters-matrix-table/">Java Parameters Matrix Table 🌟</a></li>
+</ul>
+<h3 id="dev-environment">Dev Environment<a class="headerlink" href="#dev-environment" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="visual-studio/">Visual Studio Code 🌟</a></li>
+<li><a href="linux-dev-env/">WSL: Linux Dev Environment on Windows</a></li>
+<li><a href="scaffolding/">Scaffolding Tools</a></li>
+<li><a href="ChromeDevTools/">Chrome &amp; Firefox DevTools. HTTP Protocols &amp; WebSockets</a></li>
+</ul>
+<h2 id="public-cloud">Public Cloud<a class="headerlink" href="#public-cloud" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="public-cloud-solutions/">Public Cloud Solutions</a></li>
+<li><a href="edge-computing/">Edge Computing</a></li>
+<li><a href="cloud-arch-diagrams/">Cloud Architecture Diagram Tools</a></li>
+<li><a href="aws/">AWS</a></li>
+<li><a href="GoogleCloudPlatform/">Google Cloud Platform</a></li>
+<li><a href="azure/">Microsoft Azure</a></li>
+<li><a href="ibm_cloud/">IBM &amp; IBM Cloud</a></li>
+<li><a href="oraclecloud/">Oracle Cloud</a> </li>
+<li><a href="digitalocean/">Digital Ocean</a></li>
+<li><a href="cloudflare/">Cloudflare</a></li>
+</ul>
+<h2 id="big-data">Big Data<a class="headerlink" href="#big-data" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="bigdata/">Big Data</a></li>
+</ul>
+<h2 id="more-references">More References<a class="headerlink" href="#more-references" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="elearning/">E-Learning</a></li>
+<li><a href="newsfeeds/">Subreddits and Newsfeeds</a></li>
+<li><a href="other-awesome-lists/">Other Awesome Lists 🌟</a></li>
+</ul>
+<h2 id="recruitment-and-freelancing">Recruitment and Freelancing<a class="headerlink" href="#recruitment-and-freelancing" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="recruitment/">Recruitment</a></li>
+<li><a href="freelancing/">Freelancing</a></li>
+<li><a href="remote-tech-jobs/">Remote Tech Jobs</a></li>
+</ul>
+<hr />
+<p><center>
+<a href="https://www.ansible.com/blog/migrating-the-runbook-a-journey-from-legacy-to-devops"><img alt="automated_ansible" src="images/automated_ansible.jpg" /></a>
+</center></p>
+<!--
+[![white square](images/empty_logo.jpg){: style="width:7%"}](https://www.youtube.com)
+-->
+
+<!-- youtube player 
+<div id="player"></div>
+-->
+
+<!--
+<img alt="Container with cars" src="images/container_with_cars.png"> 
+<head>
+<meta property="og:image" content="https://awesome-kubernetes.readthedocs.io/images/container_with_cars.png">
+</head>
+-->
+
+<!-- El fin de la memoria? Documental 
+<center>
+
+<div class="container">
+<iframe src="https://www.youtube.com/embed/tentcmxz3Bo?start=633&end=654" frameborder="0" allowfullscreen class="video"></iframe>   
+</div>
+</br>
+
+[![white square](images/empty_logo.jpg){: style="width:7%"}](https://www.youtube.com)
+-->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="introduction/" title="From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                From Java EE To Cloud Native. Microservice Architecture. Openshift VS Kubernetes
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            2020 <a href="https://twitter.com/RedHatSpain">Red Hat Spain</a>, <a href="https://redhatspain.com/about/">about</a>.
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://twitter.com/redhatspain" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.linkedin.com/groups/1937212/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://github.com/redhatspain" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.youtube.com/channel/UCCGQ2G2rGAkHzVFhhed-xVw/playlists" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://speakerdeck.com/redhatspain/stars" target="_blank" rel="noopener" title="speakerdeck.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M213.86 296H100a100 100 0 0 1 0-200h132.84a40 40 0 0 1 0 80H98c-26.47 0-26.45 40 0 40h113.82a100 100 0 0 1 0 200H40a40 40 0 0 1 0-80h173.86c26.48 0 26.46-40 0-40zM298 416a120.21 120.21 0 0 0 51.11-80h64.55a19.83 19.83 0 0 0 19.66-20V196a19.83 19.83 0 0 0-19.66-20H296.42a60.77 60.77 0 0 0 0-80h136.93c43.44 0 78.65 35.82 78.65 80v160c0 44.18-35.21 80-78.65 80z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://es.slideshare.net/RedHatSpain/favorites" target="_blank" rel="noopener" title="es.slideshare.net" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M187.7 153.7c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7s61.7-26 61.7-57.7c0-32-27.7-57.7-61.7-57.7zm143.4 0c-34 0-61.7 25.7-61.7 57.7 0 31.7 27.7 57.7 61.7 57.7 34.3 0 61.7-26 61.7-57.7.1-32-27.4-57.7-61.7-57.7zm156.6 90l-6 4.3V49.7c0-27.4-20.6-49.7-46-49.7H76.6c-25.4 0-46 22.3-46 49.7V248c-2-1.4-4.3-2.9-6.3-4.3-15.1-10.6-25.1 4-16 17.7 18.3 22.6 53.1 50.3 106.3 72C58.3 525.1 252 555.7 248.9 457.5c0-.7.3-56.6.3-96.6 5.1 1.1 9.4 2.3 13.7 3.1 0 39.7.3 92.8.3 93.5-3.1 98.3 190.6 67.7 134.3-124 53.1-21.7 88-49.4 106.3-72 9.1-13.8-.9-28.3-16.1-17.8zm-30.5 19.2c-68.9 37.4-128.3 31.1-160.6 29.7-23.7-.9-32.6 9.1-33.7 24.9-10.3-7.7-18.6-15.5-20.3-17.1-5.1-5.4-13.7-8-27.1-7.7-31.7 1.1-89.7 7.4-157.4-28V72.3c0-34.9 8.9-45.7 40.6-45.7h317.7c30.3 0 40.9 12.9 40.9 45.7v190.6z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://redhatspain.slack.com/" target="_blank" rel="noopener" title="redhatspain.slack.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M94.12 315.1c0 25.9-21.16 47.06-47.06 47.06S0 341 0 315.1c0-25.9 21.16-47.06 47.06-47.06h47.06v47.06zm23.72 0c0-25.9 21.16-47.06 47.06-47.06s47.06 21.16 47.06 47.06v117.84c0 25.9-21.16 47.06-47.06 47.06s-47.06-21.16-47.06-47.06V315.1zm47.06-188.98c-25.9 0-47.06-21.16-47.06-47.06S139 32 164.9 32s47.06 21.16 47.06 47.06v47.06H164.9zm0 23.72c25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06H47.06C21.16 243.96 0 222.8 0 196.9s21.16-47.06 47.06-47.06H164.9zm188.98 47.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06s-21.16 47.06-47.06 47.06h-47.06V196.9zm-23.72 0c0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06V79.06c0-25.9 21.16-47.06 47.06-47.06 25.9 0 47.06 21.16 47.06 47.06V196.9zM283.1 385.88c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06-25.9 0-47.06-21.16-47.06-47.06v-47.06h47.06zm0-23.72c-25.9 0-47.06-21.16-47.06-47.06 0-25.9 21.16-47.06 47.06-47.06h117.84c25.9 0 47.06 21.16 47.06 47.06 0 25.9-21.16 47.06-47.06 47.06H283.1z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: ".",
+          features: [],
+          search: Object.assign({
+            worker: "assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="javascript/extra.js"></script>
+      
+    
+  </body>
+</html>
